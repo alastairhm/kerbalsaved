@@ -1,0 +1,1693 @@
+GAME
+{
+	version = 0.24.0
+	Title = Career Rankle (CAREER)
+	Description = No description available.
+	linkURL = 
+	linkCaption = 
+	Mode = CAREER
+	Status = 1
+	scene = 5
+	flag = Squad/Flags/squadLogo2
+	launchID = 4
+	PARAMETERS
+	{
+		FLIGHT
+		{
+			CanQuickSave = True
+			CanQuickLoad = True
+			CanAutoSave = True
+			CanUseMap = True
+			CanSwitchVesselsNear = True
+			CanSwitchVesselsFar = True
+			CanTimeWarpHigh = True
+			CanTimeWarpLow = True
+			CanEVA = True
+			CanIVA = True
+			CanBoard = True
+			CanRestart = True
+			CanLeaveToEditor = True
+			CanLeaveToTrackingStation = True
+			CanLeaveToSpaceCenter = True
+			CanLeaveToMainMenu = False
+		}
+		EDITOR
+		{
+			CanSave = True
+			CanLoad = True
+			CanStartNew = True
+			CanLaunch = True
+			CanLeaveToSpaceCenter = True
+			CanLeaveToMainMenu = False
+			startUpMode = 0
+			craftFileToLoad = 
+		}
+		TRACKINGSTATION
+		{
+			CanFlyVessel = True
+			CanAbortVessel = True
+			CanLeaveToSpaceCenter = True
+			CanLeaveToMainMenu = False
+		}
+		SPACECENTER
+		{
+			CanGoInVAB = True
+			CanGoInSPH = True
+			CanGoInTrackingStation = True
+			CanLaunchAtPad = True
+			CanLaunchAtRunway = True
+			CanLeaveToMainMenu = True
+		}
+		DIFFICULTY
+		{
+			MissingCrewsRespawn = True
+			AllowStockVessels = False
+		}
+	}
+	SCENARIO
+	{
+		name = ScenarioDiscoverableObjects
+		scene = 7, 8, 5
+		 = 1748662324
+		sizeCurve
+		{
+			key = 0 0 1.5 1.5
+			key = 0.3 0.45 0.875 0.875
+			key = 0.7 0.55 0.875 0.875
+			key = 1 1 1.5 1.5
+		}
+	}
+	SCENARIO
+	{
+		name = ContractSystem
+		scene = 7, 8, 5, 6, 9
+		update = 999.672392577716
+		CONTRACTS
+		{
+			CONTRACT
+			{
+				guid = 0c2ec5c3-ebc9-4139-b004-f8c07daefa43
+				type = PartTest
+				prestige = 0
+				seed = -2064792962
+				state = Active
+				agent = Research & Development Department
+				deadlineType = Floating
+				expiryType = Floating
+				values = 61920,9201600,2891,6391,6391,6,122,91,62204.0608984375,287.860898437512,9201887.86089844,0
+				part = liquidEngine2
+				dest = 1
+				sit = FLYING
+				exp = False
+				PARAM
+				{
+					name = PartTest
+					id = runTest
+					state = Incomplete
+					values = 0,0,0,0,0
+					part = liquidEngine2
+					notes = To perform the test, activate the part through the staging sequence when all test conditions are met.
+					PARAM
+					{
+						name = ReachDestination
+						id = testDestination
+						state = Complete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						dest = 1
+						title = 
+					}
+					PARAM
+					{
+						name = ReachSituation
+						id = testSituation
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						sit = FLYING
+						title = 
+					}
+					PARAM
+					{
+						name = ReachAltitudeEnvelope
+						id = testAltitudeEnvelope
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						maxAlt = 29600
+						minAlt = 24800
+						useAltLimit = True
+						title = 
+					}
+					PARAM
+					{
+						name = ReachSpeedEnvelope
+						id = testSpeedEnvelope
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						maxSpd = 520
+						minSpd = 220
+						useSpdLimit = True
+						title = 
+					}
+				}
+			}
+			CONTRACT
+			{
+				guid = 3091a5f4-acc3-487f-913c-28a588bbac1c
+				type = PartTest
+				prestige = 0
+				seed = -1239178027
+				state = Active
+				agent = Research & Development Department
+				deadlineType = Floating
+				expiryType = Floating
+				values = 37020,9201600,1302,1302,1302,0,104,78,37065.02,287.860898437512,9201887.86089844,0
+				part = parachuteSingle
+				dest = 1
+				sit = FLYING
+				exp = False
+				PARAM
+				{
+					name = PartTest
+					id = runTest
+					state = Incomplete
+					values = 0,0,0,0,0
+					part = parachuteSingle
+					notes = To perform the test, activate the part through the staging sequence when all test conditions are met.
+					PARAM
+					{
+						name = ReachDestination
+						id = testDestination
+						state = Complete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						dest = 1
+						title = 
+					}
+					PARAM
+					{
+						name = ReachSituation
+						id = testSituation
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						sit = FLYING
+						title = 
+					}
+					PARAM
+					{
+						name = ReachAltitudeEnvelope
+						id = testAltitudeEnvelope
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						maxAlt = 25200
+						minAlt = 20500
+						useAltLimit = True
+						title = 
+					}
+					PARAM
+					{
+						name = ReachSpeedEnvelope
+						id = testSpeedEnvelope
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						maxSpd = 560
+						minSpd = 360
+						useSpdLimit = True
+						title = 
+					}
+				}
+			}
+			CONTRACT
+			{
+				guid = e45359f0-99c7-44a4-884a-ed56ce0e8e99
+				type = PartTest
+				prestige = 0
+				seed = -2064792947
+				state = Offered
+				agent = Research & Development Department
+				deadlineType = Floating
+				expiryType = Floating
+				values = 33660,9201600,350,1400,1400,4,20,15,33944.0608984375,0,0,0
+				part = parachuteRadial
+				dest = 1
+				sit = FLYING
+				exp = True
+				PARAM
+				{
+					name = PartTest
+					id = runTest
+					state = Incomplete
+					values = 0,0,0,0,0
+					part = parachuteRadial
+					notes = To perform the test, activate the part through the staging sequence when all test conditions are met.
+					PARAM
+					{
+						name = ReachDestination
+						id = testDestination
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						dest = 1
+						title = 
+					}
+					PARAM
+					{
+						name = ReachSituation
+						id = testSituation
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						sit = FLYING
+						title = 
+					}
+					PARAM
+					{
+						name = ReachAltitudeEnvelope
+						id = testAltitudeEnvelope
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						maxAlt = 11900
+						minAlt = 2900
+						useAltLimit = True
+						title = 
+					}
+					PARAM
+					{
+						name = ReachSpeedEnvelope
+						id = testSpeedEnvelope
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						maxSpd = 730
+						minSpd = 230
+						useSpdLimit = True
+						title = 
+					}
+				}
+			}
+			CONTRACT
+			{
+				guid = d05f0b04-b25a-4e79-b872-e84d70f87b74
+				type = PartTest
+				prestige = 0
+				seed = -2064792949
+				state = Offered
+				agent = Rockomax Conglomerate
+				deadlineType = Floating
+				expiryType = Floating
+				values = 32837.0233267125,8228571.72775267,72.7932663327684,327.569683621515,324.44997625351,6,4.096533,3,33121.08422515,0,0,0
+				part = solidBooster1-1
+				dest = 1
+				sit = LANDED
+				exp = True
+				PARAM
+				{
+					name = PartTest
+					id = runTest
+					state = Incomplete
+					values = 0,0,0,0,0
+					part = solidBooster1-1
+					notes = To perform the test, activate the part through the staging sequence when all test conditions are met.
+					PARAM
+					{
+						name = ReachDestination
+						id = testDestination
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						dest = 1
+						title = 
+					}
+					PARAM
+					{
+						name = ReachSituation
+						id = testSituation
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						sit = LANDED
+						title = 
+					}
+				}
+			}
+			CONTRACT
+			{
+				guid = e271cd70-b06d-49c6-bf2b-e5d7c8db876a
+				type = PartTest
+				prestige = 0
+				seed = -1239178046
+				state = Offered
+				agent = Research & Development Department
+				deadlineType = Floating
+				expiryType = Floating
+				values = 48300,9201600,1039,1039,1039,0,83,62,48345.02,0,0,0
+				part = solidBooster
+				dest = 1
+				sit = FLYING
+				exp = False
+				PARAM
+				{
+					name = PartTest
+					id = runTest
+					state = Incomplete
+					values = 0,0,0,0,0
+					part = solidBooster
+					notes = To perform the test, activate the part through the staging sequence when all test conditions are met.
+					PARAM
+					{
+						name = ReachDestination
+						id = testDestination
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						dest = 1
+						title = 
+					}
+					PARAM
+					{
+						name = ReachSituation
+						id = testSituation
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						sit = FLYING
+						title = 
+					}
+					PARAM
+					{
+						name = ReachAltitudeEnvelope
+						id = testAltitudeEnvelope
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						maxAlt = 20500
+						minAlt = 16000
+						useAltLimit = True
+						title = 
+					}
+					PARAM
+					{
+						name = ReachSpeedEnvelope
+						id = testSpeedEnvelope
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						maxSpd = 750
+						minSpd = 250
+						useSpdLimit = True
+						title = 
+					}
+				}
+			}
+			CONTRACT
+			{
+				guid = fa66b39f-d974-4440-bedb-a61c4f12ff29
+				type = PartTest
+				prestige = 0
+				seed = -649537226
+				state = Offered
+				agent = Periapsis Rocket Supplies Co
+				deadlineType = Floating
+				expiryType = Floating
+				values = 62160,9201600,50,110,110,6,4,3,62474.8808984375,0,0,0
+				part = sepMotor1
+				dest = 1
+				sit = LANDED
+				exp = True
+				PARAM
+				{
+					name = PartTest
+					id = runTest
+					state = Incomplete
+					values = 0,0,0,0,0
+					part = sepMotor1
+					notes = To perform the test, activate the part through the staging sequence when all test conditions are met.
+					PARAM
+					{
+						name = ReachDestination
+						id = testDestination
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						dest = 1
+						title = 
+					}
+					PARAM
+					{
+						name = ReachSituation
+						id = testSituation
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						sit = LANDED
+						title = 
+					}
+				}
+			}
+			CONTRACT
+			{
+				guid = 281d9267-d3aa-42a0-aa72-608f47a9f7c5
+				type = PartTest
+				prestige = 1
+				seed = -2064792884
+				state = Offered
+				agent = Research & Development Department
+				deadlineType = Floating
+				expiryType = Floating
+				values = 62520,9201600,281,600,600,6,15,11,62804.0608984375,0,0,0
+				part = liquidEngine3
+				dest = 1
+				sit = SPLASHED
+				exp = True
+				PARAM
+				{
+					name = PartTest
+					id = runTest
+					state = Incomplete
+					values = 0,0,0,0,0
+					part = liquidEngine3
+					notes = To perform the test, activate the part through the staging sequence when all test conditions are met.
+					PARAM
+					{
+						name = ReachDestination
+						id = testDestination
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						dest = 1
+						title = 
+					}
+					PARAM
+					{
+						name = ReachSituation
+						id = testSituation
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						sit = SPLASHED
+						title = 
+					}
+				}
+			}
+			CONTRACT
+			{
+				guid = a7fd147b-2e79-4c43-bb7c-04e3f51badb5
+				type = PartTest
+				prestige = 1
+				seed = -2064792881
+				state = Offered
+				agent = O.M.B. Demolition Enterprises
+				deadlineType = Floating
+				expiryType = Floating
+				values = 26820,9201600,6902,15185.5003291368,15185.5003291368,7,418.1818,345,27104.0608984375,0,0,0
+				part = radialDecoupler
+				dest = 1
+				sit = ORBITING
+				exp = True
+				PARAM
+				{
+					name = PartTest
+					id = runTest
+					state = Incomplete
+					values = 0,0,0,0,0
+					part = radialDecoupler
+					notes = To perform the test, activate the part through the staging sequence when all test conditions are met.
+					PARAM
+					{
+						name = ReachDestination
+						id = testDestination
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						dest = 1
+						title = 
+					}
+					PARAM
+					{
+						name = ReachSituation
+						id = testSituation
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						sit = ORBITING
+						title = 
+					}
+					PARAM
+					{
+						name = ReachAltitudeEnvelope
+						id = testAltitudeEnvelope
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						maxAlt = 83400
+						minAlt = 81200
+						useAltLimit = True
+						title = 
+					}
+				}
+			}
+			CONTRACT
+			{
+				guid = 90d26436-07aa-4497-a516-17fe68f422e7
+				type = OrbitKerbin
+				prestige = 2
+				seed = -241056848
+				state = Offered
+				agent = Kerbin World-Firsts Record-Keeping Society
+				deadlineType = None
+				expiryType = None
+				values = 0,0,14763.7791931629,59055.1167726517,18750,30,142.24,0,0,0,0,0
+				PARAM
+				{
+					name = EnterOrbit
+					state = Incomplete
+					values = 0,0,0,0,0
+					body = 1
+				}
+			}
+			CONTRACT_FINISHED
+			{
+				guid = ba676eb8-26b4-4b56-8a6d-c9c9a2485b5e
+				type = ReachSpace
+				prestige = 2
+				seed = -241056853
+				state = Completed
+				agent = Kerbin World-Firsts Record-Keeping Society
+				deadlineType = None
+				expiryType = None
+				values = 0,0,9448.81868362427,29527.5583863258,12000,15,95.25,0,0,293.000898437507,0,0
+				PARAM
+				{
+					name = ReachSpace
+					enabled = False
+					state = Complete
+					values = 0,0,0,0,0
+				}
+			}
+			CONTRACT_FINISHED
+			{
+				guid = 735a1ce1-9e9a-4bfe-91f4-b4b2edfe4abf
+				type = FirstLaunch
+				prestige = 0
+				seed = -241056852
+				state = Completed
+				agent = Kerbin World-Firsts Record-Keeping Society
+				deadlineType = None
+				expiryType = None
+				values = 0,0,1834.86235141754,4587.15587854385,2000,5,10.9,0,0,10.2199999999999,0,0
+				PARAM
+				{
+					name = LaunchVessel
+					enabled = False
+					state = Complete
+					values = 0,0,0,0,0
+				}
+			}
+			CONTRACT_FINISHED
+			{
+				guid = b613e39d-9084-4b3e-b3c6-3ccf601825b9
+				type = AltitudeRecord
+				prestige = 0
+				seed = -241056860
+				state = Completed
+				agent = Kerbin World-Firsts Record-Keeping Society
+				deadlineType = None
+				expiryType = None
+				values = 0,0,458.715587854385,2293.57793927193,500,0,10.9,0,0,10.2199999999999,0,0
+				alt = 5000
+				PARAM
+				{
+					name = AltitudeRecord
+					enabled = False
+					state = Complete
+					values = 0,0,0,0,0
+					alt = 5000
+				}
+			}
+			CONTRACT_FINISHED
+			{
+				guid = 94d05959-597c-47c0-ac0d-406c6502b99c
+				type = PartTest
+				prestige = 0
+				seed = -1239178024
+				state = Completed
+				agent = O.M.B. Demolition Enterprises
+				deadlineType = Floating
+				expiryType = Floating
+				values = 35700,9201600,50,125.999994277954,125.999994277954,2,3.809524,3,35745.02,943.652392577767,9202543.65239258,963.952392577748
+				part = stackDecoupler
+				dest = 1
+				sit = LANDED
+				exp = False
+				PARAM
+				{
+					name = PartTest
+					id = runTest
+					enabled = False
+					state = Complete
+					values = 0,0,0,0,0
+					part = stackDecoupler
+					notes = To perform the test, activate the part through the staging sequence when all test conditions are met.
+					tested = 536163107
+					PARAM
+					{
+						name = ReachDestination
+						id = testDestination
+						state = Complete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						dest = 1
+						title = 
+					}
+					PARAM
+					{
+						name = ReachSituation
+						id = testSituation
+						state = Complete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						sit = LANDED
+						title = 
+					}
+				}
+			}
+		}
+	}
+	SCENARIO
+	{
+		name = Funding
+		scene = 7, 8, 5, 6, 9
+		funds = 58030.1532549859
+	}
+	SCENARIO
+	{
+		name = ProgressTracking
+		scene = 7, 8, 5
+		Progress
+		{
+			FirstLaunch
+			{
+				completed = 35.0199999999998
+			}
+			FirstCrewToSurvive
+			{
+				completed = 274.000898437525
+				crew
+				{
+					crews = Newtop Kerman
+				}
+			}
+			AltitudeRecord
+			{
+				completed = 438.020898437376
+				record = 70000
+			}
+			ReachedSpace
+			{
+				completed = 438.020898437376
+				vessel
+				{
+					name = Untitled Space Craft
+					flag = Squad/Flags/squadLogo2
+				}
+				crew
+				{
+					crews = Jebediah Kerman
+				}
+			}
+			Spacewalk
+			{
+				completed = 450.380898437364
+				crew
+				{
+					crews = Jebediah Kerman
+				}
+			}
+			Kerbin
+			{
+				reached = 268.800898437529
+				Landing
+				{
+					completed = 268.800898437529
+					vessel
+					{
+						name = Untitled Space Craft
+						flag = Squad/Flags/squadLogo2
+					}
+					crew
+					{
+						crews = Newtop Kerman
+					}
+				}
+				SurfaceEVA
+				{
+					completed = 869.712392577833
+					crew
+					{
+						crews = Jebediah Kerman
+					}
+				}
+			}
+		}
+	}
+	SCENARIO
+	{
+		name = ResearchAndDevelopment
+		scene = 7, 8, 5, 6, 9
+		sci = 34.2
+		Tech
+		{
+			id = start
+			state = Available
+			part = Engineer7500
+			part = EngineerChip
+			part = EngineerChipFlight
+			part = mk1pod
+			part = liquidEngine
+			part = solidBooster
+			part = fuelTankSmall
+			part = trussPiece1x
+			part = longAntenna
+			part = parachuteSingle
+		}
+		Tech
+		{
+			id = basicRocketry
+			state = Available
+			part = fuelTank
+			part = fuelTankSmallFlat
+			part = GooExperiment
+			part = stackDecoupler
+		}
+		Tech
+		{
+			id = survivability
+			state = Available
+			part = liquidEngine3
+			part = landingLeg1
+			part = parachuteRadial
+		}
+		Tech
+		{
+			id = stability
+			state = Available
+			part = noseCone
+			part = winglet
+			part = radialDecoupler
+		}
+		Tech
+		{
+			id = generalRocketry
+			state = Available
+			part = liquidEngine2
+			part = sepMotor1
+			part = solidBooster1-1
+		}
+		Science
+		{
+			id = crewReport@KerbinSrfLandedLaunchPad
+			title = Crew Report from LaunchPad
+			dsc = 1
+			scv = 0
+			sbv = 0.3
+			sci = 1.5
+			cap = 1.5
+		}
+		Science
+		{
+			id = crewReport@KerbinFlyingLowShores
+			title = Crew Report while flying over Kerbin's Shores
+			dsc = 1
+			scv = 0
+			sbv = 0.7
+			sci = 3.5
+			cap = 3.5
+		}
+		Science
+		{
+			id = recovery@KerbinFlew
+			title = Recovery of a vessel that survived a flight.
+			dsc = 1
+			scv = 0.1666667
+			sbv = 5
+			sci = 5
+			cap = 6
+		}
+		Science
+		{
+			id = mysteryGoo@KerbinSrfLandedLaunchPad
+			title = Mystery Goo™ Observation from LaunchPad
+			dsc = 1
+			scv = 0.2307692
+			sbv = 0.3
+			sci = 3
+			cap = 3.9
+		}
+		Science
+		{
+			id = mysteryGoo@KerbinFlyingLow
+			title = Mystery Goo™ Observation while flying at Kerbin
+			dsc = 1
+			scv = 0.2307692
+			sbv = 0.7
+			sci = 7
+			cap = 9.099999
+		}
+		Science
+		{
+			id = crewReport@KerbinInSpaceLow
+			title = Crew Report while in space near Kerbin
+			dsc = 1
+			scv = 0
+			sbv = 1
+			sci = 5
+			cap = 5
+		}
+		Science
+		{
+			id = evaReport@KerbinInSpaceLowShores
+			title = EVA Report from space just above Kerbin's Shores
+			dsc = 1
+			scv = 0
+			sbv = 1
+			sci = 8
+			cap = 8
+		}
+		Science
+		{
+			id = evaReport@KerbinFlyingLowGrasslands
+			title = EVA Report while flying over Kerbin's Grasslands
+			dsc = 1
+			scv = 0
+			sbv = 0.7
+			sci = 5.6
+			cap = 5.6
+		}
+		Science
+		{
+			id = surfaceSample@KerbinSrfLandedGrasslands
+			title = Surface Sample from Kerbin's Grasslands
+			dsc = 1
+			scv = 0.25
+			sbv = 0.3
+			sci = 9
+			cap = 12
+		}
+		Science
+		{
+			id = recovery@KerbinSubOrbited
+			title = Recovery of a vessel after a sub-orbital flight.
+			dsc = 1
+			scv = 0.1666667
+			sbv = 8
+			sci = 8
+			cap = 9.6
+		}
+		Science
+		{
+			id = evaReport@KerbinFlyingLowShores
+			title = EVA Report while flying over Kerbin's Shores
+			dsc = 1
+			scv = 0
+			sbv = 0.7
+			sci = 5.6
+			cap = 5.6
+		}
+		Science
+		{
+			id = surfaceSample@KerbinSrfLandedLaunchPad
+			title = Surface Sample from LaunchPad
+			dsc = 1
+			scv = 0.25
+			sbv = 0.3
+			sci = 9
+			cap = 12
+		}
+	}
+	SCENARIO
+	{
+		name = VesselRecovery
+		scene = 5, 7, 8, 6, 9
+	}
+	SCENARIO
+	{
+		name = Reputation
+		scene = 7, 8, 5, 6, 9
+		rep = 195.7311
+	}
+	FLIGHTSTATE
+	{
+		version = 0.24.0
+		UT = 1005.61239257771
+		activeVessel = 0
+		VESSEL
+		{
+			pid = 0ef4d208e5dd4bd29ae50eaa17c41ff1
+			name = Ast. HSJ-227
+			type = SpaceObject
+			sit = ORBITING
+			landed = False
+			landedAt = 
+			splashed = False
+			met = 0.02
+			lct = 0.02
+			root = 0
+			lat = -2.83448050932825
+			lon = 181.081315066233
+			alt = 14594728255.0571
+			hgt = -1
+			nrm = 0,1,0
+			rot = -0.2984336,0.402898,-0.8173988,0.283672
+			CoM = 0,0,0
+			stg = 0
+			prst = False
+			ref = 0
+			ctrl = False
+			ORBIT
+			{
+				SMA = 15240607796.703
+				ECC = 0.109160500140316
+				INC = 2.87223667476957
+				LPE = 2.11729112088327
+				LAN = 261.773338233754
+				MNA = 6.22770561673311
+				EPH = 2043585.75608398
+				REF = 0
+			}
+			PART
+			{
+				name = PotatoRoid
+				uid = 559298752
+				mid = 559298752
+				launchID = 0
+				parent = 0
+				position = 0,0,0
+				rotation = 0,0,0,1
+				mirror = 1,1,1
+				istg = 0
+				dstg = 0
+				sqor = 0
+				sidx = 0
+				attm = 0
+				srfN = None, -1
+				mass = 150
+				temp = -1
+				expt = 0.1
+				state = 1
+				connected = True
+				attached = True
+				flag = 
+				rTrf = 
+			}
+			ACTIONGROUPS
+			{
+			}
+			DISCOVERY
+			{
+				state = 1
+				lastObservedTime = 0.02
+				lifetime = 586354.751586914
+				refTime = 1728000
+				size = 4
+			}
+			FLIGHTPLAN
+			{
+			}
+			CTRLSTATE
+			{
+			}
+		}
+		VESSEL
+		{
+			pid = b12a9bba56b943ce9fccfeb7d6d7279b
+			name = Ast. YDU-467
+			type = SpaceObject
+			sit = ORBITING
+			landed = False
+			landedAt = 
+			splashed = False
+			met = 8.57999999999991
+			lct = 8.57999999999991
+			root = 0
+			lat = -0.142596565171063
+			lon = 190.236323954728
+			alt = 15584133818.9043
+			hgt = -1
+			nrm = 0,1,0
+			rot = -0.623334,0.4446592,-0.0315528,0.6424463
+			CoM = 0,0,0
+			stg = 0
+			prst = False
+			ref = 0
+			ctrl = False
+			ORBIT
+			{
+				SMA = 14874893846.9946
+				ECC = 0.0929610316445207
+				INC = 1.23518178557867
+				LPE = 324.904150716742
+				LAN = 3.61515287132681
+				MNA = 0.386319764485719
+				EPH = 4472446.18986328
+				REF = 0
+			}
+			PART
+			{
+				name = PotatoRoid
+				uid = 1828649868
+				mid = 1828649868
+				launchID = 0
+				parent = 0
+				position = 0,0,0
+				rotation = 0,0,0,1
+				mirror = 1,1,1
+				istg = 0
+				dstg = 0
+				sqor = 0
+				sidx = 0
+				attm = 0
+				srfN = None, -1
+				mass = 150
+				temp = -1
+				expt = 0.1
+				state = 1
+				connected = True
+				attached = True
+				flag = 
+				rTrf = 
+			}
+			ACTIONGROUPS
+			{
+			}
+			DISCOVERY
+			{
+				state = 1
+				lastObservedTime = 8.57999999999991
+				lifetime = 670108.062744141
+				refTime = 1728000
+				size = 4
+			}
+			FLIGHTPLAN
+			{
+			}
+			CTRLSTATE
+			{
+			}
+		}
+		VESSEL
+		{
+			pid = 562b907e59ea41128d13b06bcbf631c8
+			name = Ast. RNW-784
+			type = SpaceObject
+			sit = ORBITING
+			landed = False
+			landedAt = 
+			splashed = False
+			met = 11.6799999999998
+			lct = 11.6799999999998
+			root = 0
+			lat = 1.41700647353704
+			lon = 176.903478049147
+			alt = 14036868159.001
+			hgt = -1
+			nrm = 0,1,0
+			rot = 0.1824132,-0.6949434,-0.6851543,0.1197611
+			CoM = 0,0,0
+			stg = 0
+			prst = False
+			ref = 0
+			ctrl = False
+			ORBIT
+			{
+				SMA = 16093117403.0859
+				ECC = 0.156679791417815
+				INC = 1.55004519296804
+				LPE = 165.246244050195
+				LAN = 62.9963111281876
+				MNA = 0.170799755780439
+				EPH = 1583022.47101562
+				REF = 0
+			}
+			PART
+			{
+				name = PotatoRoid
+				uid = 1364392152
+				mid = 1364392152
+				launchID = 0
+				parent = 0
+				position = 0,0,0
+				rotation = 0,0,0,1
+				mirror = 1,1,1
+				istg = 0
+				dstg = 0
+				sqor = 0
+				sidx = 0
+				attm = 0
+				srfN = None, -1
+				mass = 150
+				temp = -1
+				expt = 0.1
+				state = 1
+				connected = True
+				attached = True
+				flag = 
+				rTrf = 
+			}
+			ACTIONGROUPS
+			{
+			}
+			DISCOVERY
+			{
+				state = 1
+				lastObservedTime = 11.6799999999998
+				lifetime = 1520055.17578125
+				refTime = 1728000
+				size = 2
+			}
+			FLIGHTPLAN
+			{
+			}
+			CTRLSTATE
+			{
+			}
+		}
+		VESSEL
+		{
+			pid = ec344f22cb9f4d5ebb3a44cbe9974aad
+			name = Ast. BTW-084
+			type = SpaceObject
+			sit = ORBITING
+			landed = False
+			landedAt = 
+			splashed = False
+			met = 57.2200000000033
+			lct = 57.2200000000033
+			root = 0
+			lat = -0.0921222707428518
+			lon = 185.83301521314
+			alt = 14069347853.1164
+			hgt = -1
+			nrm = 0,1,0
+			rot = -0.8229076,-0.07760175,0.5276513,0.1959211
+			CoM = 0,0,0
+			stg = 0
+			prst = False
+			ref = 0
+			ctrl = False
+			ORBIT
+			{
+				SMA = 13943830355.0587
+				ECC = 0.0285997151147477
+				INC = 0.107972560760842
+				LPE = 45.0532996881818
+				LAN = 307.319203185894
+				MNA = 5.77112132294954
+				EPH = 3619541.03347656
+				REF = 0
+			}
+			PART
+			{
+				name = PotatoRoid
+				uid = 2105606944
+				mid = 2105606944
+				launchID = 0
+				parent = 0
+				position = 0,0,0
+				rotation = 0,0,0,1
+				mirror = 1,1,1
+				istg = 0
+				dstg = 0
+				sqor = 0
+				sidx = 0
+				attm = 0
+				srfN = None, -1
+				mass = 150
+				temp = -1
+				expt = 0.1
+				state = 1
+				connected = True
+				attached = True
+				flag = 
+				rTrf = 
+			}
+			ACTIONGROUPS
+			{
+			}
+			DISCOVERY
+			{
+				state = 1
+				lastObservedTime = 57.2200000000033
+				lifetime = 639581.739807129
+				refTime = 1728000
+				size = 2
+			}
+			FLIGHTPLAN
+			{
+			}
+			CTRLSTATE
+			{
+			}
+		}
+		VESSEL
+		{
+			pid = ffa27482df6140a38bdf881843f104b8
+			name = Ast. SJN-729
+			type = SpaceObject
+			sit = ORBITING
+			landed = False
+			landedAt = 
+			splashed = False
+			met = 102.279999999997
+			lct = 102.279999999997
+			root = 0
+			lat = -1.11505213915869
+			lon = 179.708212383544
+			alt = 13607358255.9808
+			hgt = -1
+			nrm = 0,1,0
+			rot = 0.3810233,-0.2198592,-0.5069277,0.7412878
+			CoM = 0,0,0
+			stg = 0
+			prst = False
+			ref = 0
+			ctrl = False
+			ORBIT
+			{
+				SMA = 14078680258.8131
+				ECC = 0.0310205917666116
+				INC = 1.31655657949375
+				LPE = 4.98852334629345
+				LAN = 237.669925322437
+				MNA = 0.00169378282361657
+				EPH = 1611408.85348633
+				REF = 0
+			}
+			PART
+			{
+				name = PotatoRoid
+				uid = 401627670
+				mid = 401627670
+				launchID = 0
+				parent = 0
+				position = 0,0,0
+				rotation = 0,0,0,1
+				mirror = 1,1,1
+				istg = 0
+				dstg = 0
+				sqor = 0
+				sidx = 0
+				attm = 0
+				srfN = None, -1
+				mass = 150
+				temp = -1
+				expt = 0.1
+				state = 1
+				connected = True
+				attached = True
+				flag = 
+				rTrf = 
+			}
+			ACTIONGROUPS
+			{
+			}
+			DISCOVERY
+			{
+				state = 1
+				lastObservedTime = 102.279999999997
+				lifetime = 714519.058227539
+				refTime = 1728000
+				size = 4
+			}
+			FLIGHTPLAN
+			{
+			}
+			CTRLSTATE
+			{
+			}
+		}
+		VESSEL
+		{
+			pid = 58b87fba19a547d9a5d1ef2d5189178b
+			name = Ast. IVM-839
+			type = SpaceObject
+			sit = ORBITING
+			landed = False
+			landedAt = 
+			splashed = False
+			met = 125.026921997065
+			lct = 125.026921997065
+			root = 0
+			lat = 0.154362398244679
+			lon = 202.424738370762
+			alt = 16614801600.4138
+			hgt = -1
+			nrm = 0,1,0
+			rot = -0.4274119,-0.5641269,0.6664131,0.2344644
+			CoM = 0,0,0
+			stg = 0
+			prst = False
+			ref = 0
+			ctrl = False
+			ORBIT
+			{
+				SMA = 15352667223.351
+				ECC = 0.113657082103505
+				INC = 0.364670876366674
+				LPE = 178.911022928566
+				LAN = 177.486601279504
+				MNA = 0.119937268236132
+				EPH = 4738766.75055481
+				REF = 0
+			}
+			PART
+			{
+				name = PotatoRoid
+				uid = 2114113257
+				mid = 2114113257
+				launchID = 0
+				parent = 0
+				position = 0,0,0
+				rotation = 0,0,0,1
+				mirror = 1,1,1
+				istg = 0
+				dstg = 0
+				sqor = 0
+				sidx = 0
+				attm = 0
+				srfN = None, -1
+				mass = 150
+				temp = -1
+				expt = 0.1
+				state = 1
+				connected = True
+				attached = True
+				flag = 
+				rTrf = 
+			}
+			ACTIONGROUPS
+			{
+			}
+			DISCOVERY
+			{
+				state = 1
+				lastObservedTime = 125.026921997065
+				lifetime = 1441343.35327148
+				refTime = 1728000
+				size = 2
+			}
+			FLIGHTPLAN
+			{
+			}
+			CTRLSTATE
+			{
+			}
+		}
+		VESSEL
+		{
+			pid = 380471921b974ada86972782d0c6855d
+			name = Ast. EGV-587
+			type = SpaceObject
+			sit = ORBITING
+			landed = False
+			landedAt = 
+			splashed = False
+			met = 779.845043945052
+			lct = 779.845043945052
+			root = 0
+			lat = 0.450975291580539
+			lon = 176.90747466538
+			alt = 13931634202.8188
+			hgt = -1
+			nrm = 0,1,0
+			rot = 0.8219044,0.2566029,0.5077643,0.0283491
+			CoM = 0,0,0
+			stg = 0
+			prst = False
+			ref = 0
+			ctrl = False
+			ORBIT
+			{
+				SMA = 14633063718.5732
+				ECC = 0.0793009908055068
+				INC = 0.458012154994244
+				LPE = 151.943768450997
+				LAN = 97.6140469709721
+				MNA = 0.429768684493078
+				EPH = 2515889.33601074
+				REF = 0
+			}
+			PART
+			{
+				name = PotatoRoid
+				uid = 1748662324
+				mid = 1748662324
+				launchID = 0
+				parent = 0
+				position = 0,0,0
+				rotation = 0,0,0,1
+				mirror = 1,1,1
+				istg = 0
+				dstg = 0
+				sqor = 0
+				sidx = 0
+				attm = 0
+				srfN = None, -1
+				mass = 150
+				temp = -1
+				expt = 0.1
+				state = 1
+				connected = True
+				attached = True
+				flag = 
+				rTrf = 
+			}
+			ACTIONGROUPS
+			{
+			}
+			DISCOVERY
+			{
+				state = 1
+				lastObservedTime = 779.845043945052
+				lifetime = 1517654.44335938
+				refTime = 1728000
+				size = 0
+			}
+			FLIGHTPLAN
+			{
+			}
+			CTRLSTATE
+			{
+			}
+		}
+	}
+	ROSTER
+	{
+		KERBAL
+		{
+			name = Jebediah Kerman
+			type = Crew
+			brave = 0.5
+			dumb = 0.5
+			badS = True
+			state = Available
+			ToD = 0
+			idx = 0
+		}
+		KERBAL
+		{
+			name = Bill Kerman
+			type = Crew
+			brave = 0.5
+			dumb = 0.8
+			badS = False
+			state = Available
+			ToD = 0
+			idx = -1
+		}
+		KERBAL
+		{
+			name = Bob Kerman
+			type = Crew
+			brave = 0.3
+			dumb = 0.1
+			badS = False
+			state = Available
+			ToD = 0
+			idx = -1
+		}
+		KERBAL
+		{
+			name = Newtop Kerman
+			type = Crew
+			brave = 0.983789
+			dumb = 0.4016197
+			badS = False
+			state = Available
+			ToD = 165719.09052063
+			idx = 0
+		}
+		KERBAL
+		{
+			name = Seesel Kerman
+			type = Crew
+			brave = 0.872313
+			dumb = 0.9352696
+			badS = True
+			state = Available
+			ToD = 160950.419866333
+			idx = -1
+		}
+		KERBAL
+		{
+			name = Ludmal Kerman
+			type = Crew
+			brave = 0.8311738
+			dumb = 0.639593
+			badS = False
+			state = Available
+			ToD = 119965.129720459
+			idx = -1
+		}
+		KERBAL
+		{
+			name = Millong Kerman
+			type = Crew
+			brave = 0.007190585
+			dumb = 0.1731867
+			badS = False
+			state = Available
+			ToD = 195627.401601563
+			idx = -1
+		}
+		KERBAL
+		{
+			name = Jenfield Kerman
+			type = Crew
+			brave = 0.8370662
+			dumb = 0.8101059
+			badS = False
+			state = Available
+			ToD = 94310.474263916
+			idx = -1
+		}
+		KERBAL
+		{
+			name = Kirgan Kerman
+			type = Crew
+			brave = 0.2340978
+			dumb = 0.6478684
+			badS = False
+			state = Available
+			ToD = 238918.800985107
+			idx = -1
+		}
+		KERBAL
+		{
+			name = Jenely Kerman
+			type = Crew
+			brave = 0.6428486
+			dumb = 0.007667899
+			badS = False
+			state = Available
+			ToD = 195962.038289795
+			idx = -1
+		}
+		KERBAL
+		{
+			name = Lonard Kerman
+			type = Crew
+			brave = 0.8316345
+			dumb = 0.3239653
+			badS = False
+			state = Available
+			ToD = 245812.708150635
+			idx = -1
+		}
+		KERBAL
+		{
+			name = Samemone Kerman
+			type = Crew
+			brave = 0.1069803
+			dumb = 0.2399436
+			badS = False
+			state = Available
+			ToD = 89634.3565576172
+			idx = -1
+		}
+		KERBAL
+		{
+			name = Genebles Kerman
+			type = Crew
+			brave = 0.3887212
+			dumb = 0.347769
+			badS = False
+			state = Available
+			ToD = 182725.153981934
+			idx = -1
+		}
+		KERBAL
+		{
+			name = Charlie Kerman
+			type = Crew
+			brave = 0.8037329
+			dumb = 0.7006489
+			badS = False
+			state = Available
+			ToD = 189590.180837402
+			idx = -1
+		}
+		KERBAL
+		{
+			name = Jorlie Kerman
+			type = Crew
+			brave = 0.4290883
+			dumb = 0.8932914
+			badS = True
+			state = Available
+			ToD = 196358.534871826
+			idx = -1
+		}
+	}
+	MESSAGESYSTEM
+	{
+		flash = False
+		MESSAGE
+		{
+			title = Contract Complete
+			message = <b>Test TR-18A Stack Decoupler landed at Kerbin.</>~n~nTest Complete! We got some good data here. Thanks!~n~n<b><#8BED8B>Completion Rewards:</></> <#B4D455>£126.00   </><#6DCFF6>©2.0   </><#E0D503>¡3.809524   </>~n~n
+			color = 2
+			icon = 3
+			read = True
+		}
+		MESSAGE
+		{
+			title = Contract Complete
+			message = <b>Escape the Atmosphere!</>~n~nExternal atmospheric pressure sensors all read zero. You have broken past Kerbin's atmosphere and reached Space! Hooray!~n~n<b><#8BED8B>Completion Rewards:</></> <#B4D455>£29527.56   </><#6DCFF6>©15.0   </><#E0D503>¡95.25   </>~n~n
+			color = 2
+			icon = 3
+			read = False
+		}
+		MESSAGE
+		{
+			title = Contract Complete
+			message = <b>Set altitude record of 5000m.</>~n~nAltitude record reached! Well Done!~n~n<b><#8BED8B>Completion Rewards:</></> <#B4D455>£2293.58   </><#E0D503>¡10.9   </>~n~n
+			color = 2
+			icon = 3
+			read = True
+		}
+		MESSAGE
+		{
+			title = Contract Complete
+			message = <b>Launch a new vessel.</>~n~nLaunch Confirmed! We've taken our first steps towards space. Excellent!~n~n<b><#8BED8B>Completion Rewards:</></> <#B4D455>£4587.16   </><#6DCFF6>©5.0   </><#E0D503>¡10.9   </>~n~n
+			color = 2
+			icon = 3
+			read = True
+		}
+	}
+}
