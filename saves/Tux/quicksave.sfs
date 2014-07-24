@@ -1,0 +1,1779 @@
+GAME
+{
+	version = 0.24.0
+	Title = Rankle (CAREER)
+	Description = No description available.
+	linkURL = 
+	linkCaption = 
+	Mode = CAREER
+	Status = 1
+	scene = 7
+	flag = Squad/Flags/kerbal2
+	launchID = 2
+	PARAMETERS
+	{
+		FLIGHT
+		{
+			CanQuickSave = True
+			CanQuickLoad = True
+			CanAutoSave = True
+			CanUseMap = True
+			CanSwitchVesselsNear = True
+			CanSwitchVesselsFar = True
+			CanTimeWarpHigh = True
+			CanTimeWarpLow = True
+			CanEVA = True
+			CanIVA = True
+			CanBoard = True
+			CanRestart = True
+			CanLeaveToEditor = True
+			CanLeaveToTrackingStation = True
+			CanLeaveToSpaceCenter = True
+			CanLeaveToMainMenu = False
+		}
+		EDITOR
+		{
+			CanSave = True
+			CanLoad = True
+			CanStartNew = True
+			CanLaunch = True
+			CanLeaveToSpaceCenter = True
+			CanLeaveToMainMenu = False
+			startUpMode = 0
+			craftFileToLoad = 
+		}
+		TRACKINGSTATION
+		{
+			CanFlyVessel = True
+			CanAbortVessel = True
+			CanLeaveToSpaceCenter = True
+			CanLeaveToMainMenu = False
+		}
+		SPACECENTER
+		{
+			CanGoInVAB = True
+			CanGoInSPH = True
+			CanGoInTrackingStation = True
+			CanLaunchAtPad = True
+			CanLaunchAtRunway = True
+			CanLeaveToMainMenu = True
+		}
+		DIFFICULTY
+		{
+			MissingCrewsRespawn = True
+			AllowStockVessels = False
+		}
+	}
+	SCENARIO
+	{
+		name = ScenarioDiscoverableObjects
+		scene = 7, 8, 5
+		 = 119548635
+		sizeCurve
+		{
+			key = 0 0 1.5 1.5
+			key = 0.3 0.45 0.875 0.875
+			key = 0.7 0.55 0.875 0.875
+			key = 1 1 1.5 1.5
+		}
+	}
+	SCENARIO
+	{
+		name = ProgressTracking
+		scene = 7, 8, 5
+		Progress
+		{
+			FirstLaunch
+			{
+				completed = 41.5000000000009
+			}
+			AltitudeRecord
+			{
+				reached = 127.519999999992
+				record = 6748.6684331873
+			}
+			Sun
+			{
+				reached = 11.9199999999999
+				Orbit
+				{
+					completed = 11.9199999999999
+					vessel
+					{
+						name = Ast. HSJ-227
+						flag = 
+					}
+				}
+			}
+			Kerbin
+			{
+				reached = 64.2400000000045
+				Landing
+				{
+					completed = 64.2800000000044
+					vessel
+					{
+						name = Bill Kerman
+						flag = 
+					}
+					crew
+					{
+						crews = Bill Kerman
+					}
+				}
+				SurfaceEVA
+				{
+					completed = 64.2400000000045
+					crew
+					{
+						crews = Bill Kerman
+					}
+				}
+			}
+		}
+	}
+	SCENARIO
+	{
+		name = ResearchAndDevelopment
+		scene = 7, 8, 5, 6, 9
+		sci = 7.1
+		Tech
+		{
+			id = start
+			state = Available
+			part = mk1pod
+			part = liquidEngine
+			part = solidBooster
+			part = fuelTankSmall
+			part = trussPiece1x
+			part = longAntenna
+			part = parachuteSingle
+		}
+		Science
+		{
+			id = crewReport@KerbinSrfLandedLaunchPad
+			title = Crew Report from LaunchPad
+			dsc = 1
+			scv = 0
+			sbv = 0.3
+			sci = 1.5
+			cap = 1.5
+		}
+		Science
+		{
+			id = evaReport@KerbinFlyingLowShores
+			title = EVA Report while flying over Kerbin's Shores
+			dsc = 1
+			scv = 0
+			sbv = 0.7
+			sci = 5.6
+			cap = 5.6
+		}
+	}
+	SCENARIO
+	{
+		name = ContractSystem
+		scene = 7, 8, 5, 6, 9
+		update = 120.079999999993
+		CONTRACTS
+		{
+			CONTRACT
+			{
+				guid = c9e952d5-cacc-44e2-a643-4972b5e9a63a
+				type = PartTest
+				prestige = 0
+				seed = -23911384
+				state = Offered
+				agent = Research & Development Department
+				deadlineType = Floating
+				expiryType = Floating
+				values = 58140,9201600,250,250,250,0,20,15,58198.3,0,0,0
+				part = parachuteSingle
+				dest = 1
+				sit = FLYING
+				exp = False
+				PARAM
+				{
+					name = PartTest
+					id = runTest
+					state = Incomplete
+					values = 0,0,0,0,0
+					part = parachuteSingle
+					notes = To perform the test, activate the part through the staging sequence when all test conditions are met.
+					PARAM
+					{
+						name = ReachDestination
+						id = testDestination
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						dest = 1
+						title = 
+					}
+					PARAM
+					{
+						name = ReachSituation
+						id = testSituation
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						sit = FLYING
+						title = 
+					}
+					PARAM
+					{
+						name = ReachAltitudeEnvelope
+						id = testAltitudeEnvelope
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						maxAlt = 11100
+						minAlt = 3200
+						useAltLimit = True
+						title = 
+					}
+					PARAM
+					{
+						name = ReachSpeedEnvelope
+						id = testSpeedEnvelope
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						maxSpd = 630
+						minSpd = 130
+						useSpdLimit = True
+						title = 
+					}
+				}
+			}
+			CONTRACT
+			{
+				guid = d5a84c83-293f-42e5-b0d0-f084abde07a8
+				type = PartTest
+				prestige = 0
+				seed = -23911417
+				state = Offered
+				agent = Research & Development Department
+				deadlineType = Floating
+				expiryType = Floating
+				values = 54720,9201600,50,50,50,0,4,3,54778.3,0,0,0
+				part = solidBooster
+				dest = 1
+				sit = LANDED
+				exp = False
+				PARAM
+				{
+					name = PartTest
+					id = runTest
+					state = Incomplete
+					values = 0,0,0,0,0
+					part = solidBooster
+					notes = To perform the test, activate the part through the staging sequence when all test conditions are met.
+					PARAM
+					{
+						name = ReachDestination
+						id = testDestination
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						dest = 1
+						title = 
+					}
+					PARAM
+					{
+						name = ReachSituation
+						id = testSituation
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						sit = LANDED
+						title = 
+					}
+				}
+			}
+			CONTRACT
+			{
+				guid = 8111bb3b-dcd1-4a79-b0a9-5d1eb38d39ea
+				type = PartTest
+				prestige = 0
+				seed = -23911445
+				state = Offered
+				agent = O.M.B. Demolition Enterprises
+				deadlineType = Floating
+				expiryType = Floating
+				values = 56940,9201600,466,1173.89994668961,1173.89994668961,2,35.2381,28,56998.3,0,0,0
+				part = stackDecoupler
+				dest = 1
+				sit = FLYING
+				exp = True
+				PARAM
+				{
+					name = PartTest
+					id = runTest
+					state = Incomplete
+					values = 0,0,0,0,0
+					part = stackDecoupler
+					notes = To perform the test, activate the part through the staging sequence when all test conditions are met.
+					PARAM
+					{
+						name = ReachDestination
+						id = testDestination
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						dest = 1
+						title = 
+					}
+					PARAM
+					{
+						name = ReachSituation
+						id = testSituation
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						sit = FLYING
+						title = 
+					}
+					PARAM
+					{
+						name = ReachAltitudeEnvelope
+						id = testAltitudeEnvelope
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						maxAlt = 11300
+						minAlt = 6900
+						useAltLimit = True
+						title = 
+					}
+					PARAM
+					{
+						name = ReachSpeedEnvelope
+						id = testSpeedEnvelope
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						maxSpd = 550
+						minSpd = 350
+						useSpdLimit = True
+						title = 
+					}
+				}
+			}
+			CONTRACT
+			{
+				guid = d8a7dcdc-d507-4f61-92ce-34c6e7f316bc
+				type = ReachSpace
+				prestige = 2
+				seed = -23911438
+				state = Offered
+				agent = Kerbin World-Firsts Record-Keeping Society
+				deadlineType = None
+				expiryType = None
+				values = 0,0,9448.81868362427,29527.5583863258,12000,15,95.25,0,0,0,0,0
+				PARAM
+				{
+					name = ReachSpace
+					state = Incomplete
+					values = 0,0,0,0,0
+				}
+			}
+			CONTRACT
+			{
+				guid = 4e932f0a-ca18-42bc-89d6-c4d51e8bf8cf
+				type = OrbitKerbin
+				prestige = 2
+				seed = -23911449
+				state = Offered
+				agent = Kerbin World-Firsts Record-Keeping Society
+				deadlineType = None
+				expiryType = None
+				values = 0,0,14763.7791931629,59055.1167726517,18750,30,142.24,0,0,0,0,0
+				PARAM
+				{
+					name = EnterOrbit
+					state = Incomplete
+					values = 0,0,0,0,0
+					body = 1
+				}
+			}
+			CONTRACT
+			{
+				guid = 05bbed86-f4db-44fc-b8ff-e0405a77fbc9
+				type = AltitudeRecord
+				prestige = 0
+				seed = -2140604283
+				state = Offered
+				agent = Kerbin World-Firsts Record-Keeping Society
+				deadlineType = None
+				expiryType = None
+				values = 0,0,1009.17429327965,5045.87146639824,1100,0,23.98,0,0,0,0,0
+				alt = 11000
+				PARAM
+				{
+					name = AltitudeRecord
+					state = Incomplete
+					values = 0,0,0,0,0
+					alt = 11000
+				}
+			}
+			CONTRACT_FINISHED
+			{
+				guid = 65935d0e-85bb-489d-b538-80e6b0c7e2c1
+				type = AltitudeRecord
+				prestige = 0
+				seed = -23911427
+				state = Completed
+				agent = Kerbin World-Firsts Record-Keeping Society
+				deadlineType = None
+				expiryType = None
+				values = 0,0,458.715587854385,2293.57793927193,500,0,10.9,0,0,59.3000000000038,0,0
+				alt = 5000
+				PARAM
+				{
+					name = AltitudeRecord
+					enabled = False
+					state = Complete
+					values = 0,0,0,0,0
+					alt = 5000
+				}
+			}
+		}
+	}
+	SCENARIO
+	{
+		name = Funding
+		scene = 7, 8, 5, 6, 9
+		funds = 9430.29352712633
+	}
+	SCENARIO
+	{
+		name = VesselRecovery
+		scene = 5, 7, 8, 6, 9
+	}
+	SCENARIO
+	{
+		name = Reputation
+		scene = 7, 8, 5, 6, 9
+		rep = 10.89935
+	}
+	FLIGHTSTATE
+	{
+		version = 0.24.0
+		UT = 129.439999999992
+		activeVessel = 3
+		VESSEL
+		{
+			pid = 73901b4da60c48638bf1d629256efa72
+			name = Ast. HSJ-227
+			type = SpaceObject
+			sit = ORBITING
+			landed = False
+			landedAt = 
+			splashed = False
+			met = 0.02
+			lct = 0.02
+			root = 0
+			lat = 0.826658874487466
+			lon = 182.277691246837
+			alt = 14484400926.9107
+			hgt = -1
+			nrm = 0,1,0
+			rot = -0.2984337,0.402898,-0.8173988,0.283672
+			CoM = 0,0,0
+			stg = 0
+			prst = False
+			ref = 0
+			ctrl = False
+			ORBIT
+			{
+				SMA = 14827990271.1381
+				ECC = 0.0797402374764635
+				INC = 0.876153129111458
+				LPE = 199.948837181939
+				LAN = 72.9258641742322
+				MNA = 6.08678314767788
+				EPH = 2043585.75608398
+				REF = 0
+			}
+			PART
+			{
+				name = PotatoRoid
+				uid = 559298752
+				mid = 559298752
+				launchID = 0
+				parent = 0
+				position = 0,0,0
+				rotation = 0,0,0,1
+				mirror = 1,1,1
+				istg = 0
+				dstg = 0
+				sqor = 0
+				sidx = 0
+				attm = 0
+				srfN = None, -1
+				mass = 150
+				temp = 0
+				expt = 0.1
+				state = 1
+				connected = True
+				attached = True
+				flag = 
+				rTrf = 
+			}
+			ACTIONGROUPS
+			{
+			}
+			DISCOVERY
+			{
+				state = 1
+				lastObservedTime = 0.02
+				lifetime = 1717762.28027344
+				refTime = 1728000
+				size = 2
+			}
+			FLIGHTPLAN
+			{
+			}
+			CTRLSTATE
+			{
+			}
+		}
+		VESSEL
+		{
+			pid = 68c1a923d5684341a3d2eb97cad2d40c
+			name = Ast. VHE-227
+			type = SpaceObject
+			sit = ORBITING
+			landed = False
+			landedAt = 
+			splashed = False
+			met = 26.3999999999996
+			lct = 26.3999999999996
+			root = 0
+			lat = -0.0347986715674905
+			lon = 199.57880416844
+			alt = 16991887735.4089
+			hgt = -1
+			nrm = 0,1,0
+			rot = 0.4156617,-0.1887583,0.5486579,0.7004071
+			CoM = 0,0,0
+			stg = 0
+			prst = False
+			ref = 0
+			ctrl = False
+			ORBIT
+			{
+				SMA = 15724976722.9428
+				ECC = 0.140171681591115
+				INC = 0.135067487337045
+				LPE = 334.374358457819
+				LAN = 4.67080794773051
+				MNA = 0.0638700643463343
+				EPH = 4188706.60019531
+				REF = 0
+			}
+			PART
+			{
+				name = PotatoRoid
+				uid = 212795577
+				mid = 212795577
+				launchID = 0
+				parent = 0
+				position = 0,0,0
+				rotation = 0,0,0,1
+				mirror = 1,1,1
+				istg = 0
+				dstg = 0
+				sqor = 0
+				sidx = 0
+				attm = 0
+				srfN = None, -1
+				mass = 150
+				temp = 0
+				expt = 0.1
+				state = 1
+				connected = True
+				attached = True
+				flag = 
+				rTrf = 
+			}
+			ACTIONGROUPS
+			{
+			}
+			DISCOVERY
+			{
+				state = 1
+				lastObservedTime = 26.3999999999996
+				lifetime = 877763.754272461
+				refTime = 1728000
+				size = 1
+			}
+			FLIGHTPLAN
+			{
+			}
+			CTRLSTATE
+			{
+			}
+		}
+		VESSEL
+		{
+			pid = ae7446a9ceba4fbe9fd7fcce9629dfbf
+			name = Ast. HSJ-227
+			type = SpaceObject
+			sit = ORBITING
+			landed = False
+			landedAt = 
+			splashed = False
+			met = 58.3000000000036
+			lct = 58.3000000000036
+			root = 0
+			lat = -2.83488081939458
+			lon = 181.030796717375
+			alt = 14591250137.6061
+			hgt = -1
+			nrm = 0,1,0
+			rot = -0.2984337,0.402898,-0.8173988,0.283672
+			CoM = 0,0,0
+			stg = 0
+			prst = False
+			ref = 0
+			ctrl = False
+			ORBIT
+			{
+				SMA = 15234850648.1613
+				ECC = 0.10884260689648
+				INC = 2.87262093946485
+				LPE = 2.13315846409086
+				LAN = 261.773990636502
+				MNA = 6.22744959271928
+				EPH = 2043644.03608398
+				REF = 0
+			}
+			PART
+			{
+				name = PotatoRoid
+				uid = 559298752
+				mid = 559298752
+				launchID = 0
+				parent = 0
+				position = 0,0,0
+				rotation = 0,0,0,1
+				mirror = 1,1,1
+				istg = 0
+				dstg = 0
+				sqor = 0
+				sidx = 0
+				attm = 0
+				srfN = None, -1
+				mass = 150
+				temp = -1
+				expt = 0.1
+				state = 1
+				connected = True
+				attached = True
+				flag = 
+				rTrf = 
+			}
+			ACTIONGROUPS
+			{
+			}
+			DISCOVERY
+			{
+				state = 1
+				lastObservedTime = 58.3000000000036
+				lifetime = 586354.710388184
+				refTime = 1728000
+				size = 4
+			}
+			FLIGHTPLAN
+			{
+			}
+			CTRLSTATE
+			{
+			}
+		}
+		VESSEL
+		{
+			pid = f3b0cfadcd8c4443a843d4f98cdc3884
+			name = Rocket 1
+			type = Ship
+			sit = FLYING
+			landed = False
+			landedAt = 
+			splashed = False
+			met = 41.8399999999927
+			lct = 87.5599999999998
+			root = 0
+			lat = -0.0972918950091771
+			lon = 285.438246137409
+			alt = 6731.29266641149
+			hgt = 6661.536
+			nrm = -0.1970148,0.9804003,-0.0009294504
+			rot = -0.6969241,-0.1172043,-0.1221398,0.6968802
+			CoM = 5.781651E-05,-1.960942,1.108274E-07
+			stg = 0
+			prst = False
+			ref = 3496177291
+			ctrl = True
+			cPch = 0.5199999
+			cHdg = 0.3
+			cMod = 0
+			ORBIT
+			{
+				SMA = 304173.09622844
+				ECC = 0.99473949880655
+				INC = 0.0974030609509159
+				LPE = 87.2323985425228
+				LAN = 110.33221403516
+				MNA = 3.162808716092
+				EPH = 129.439999999992
+				REF = 1
+			}
+			PART
+			{
+				name = mk1pod
+				uid = 3496177291
+				mid = 1911456917
+				launchID = 1
+				parent = 0
+				position = 0,0,0
+				rotation = 0,0,0,1
+				mirror = 1,1,1
+				istg = 0
+				dstg = 0
+				sqor = -1
+				sidx = -1
+				attm = 0
+				srfN = None, -1
+				attN = bottom, 1
+				attN = top, 6
+				mass = 0.8
+				temp = -15.48146
+				expt = 0.5
+				state = 1
+				connected = True
+				attached = True
+				flag = Squad/Flags/kerbal2
+				rTrf = mk1pod
+				crew = Bill Kerman
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+				}
+				MODULE
+				{
+					name = ModuleCommand
+					isEnabled = True
+					controlSrcStatusText = Operational
+					EVENTS
+					{
+						MakeReference
+						{
+							active = True
+							guiActive = True
+							guiIcon = Control From Here
+							guiName = Control From Here
+							category = Control From Here
+							guiActiveUnfocused = False
+							unfocusedRange = 2
+							externalToEVAOnly = True
+						}
+						RenameVessel
+						{
+							active = True
+							guiActive = True
+							guiIcon = Rename Vessel
+							guiName = Rename Vessel
+							category = Rename Vessel
+							guiActiveUnfocused = False
+							unfocusedRange = 2
+							externalToEVAOnly = True
+						}
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleSAS
+					isEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleReactionWheel
+					isEnabled = True
+					stateString = Operational
+					WheelState = Active
+					EVENTS
+					{
+						OnToggle
+						{
+							active = True
+							guiActive = True
+							guiIcon = Toggle Torque
+							guiName = Toggle Torque
+							category = Toggle Torque
+							guiActiveUnfocused = False
+							unfocusedRange = 2
+							externalToEVAOnly = True
+						}
+					}
+					ACTIONS
+					{
+						Activate
+						{
+							actionGroup = None
+						}
+						Deactivate
+						{
+							actionGroup = None
+						}
+						Toggle
+						{
+							actionGroup = None
+						}
+					}
+				}
+				MODULE
+				{
+					name = ModuleScienceExperiment
+					isEnabled = True
+					Deployed = False
+					Inoperable = False
+					EVENTS
+					{
+						DeployExperiment
+						{
+							active = True
+							guiActive = True
+							guiIcon = Deploy
+							guiName = Crew Report
+							category = Deploy
+							guiActiveUnfocused = False
+							unfocusedRange = 2
+							externalToEVAOnly = True
+						}
+						CollectDataExternalEvent
+						{
+							active = False
+							guiActive = False
+							guiIcon = 
+							guiName = Take Data
+							category = 
+							guiActiveUnfocused = True
+							unfocusedRange = 1.5
+							externalToEVAOnly = True
+						}
+						ReviewDataEvent
+						{
+							active = False
+							guiActive = True
+							guiIcon = Review Data
+							guiName = Review Report
+							category = Review Data
+							guiActiveUnfocused = False
+							unfocusedRange = 2
+							externalToEVAOnly = True
+						}
+						ResetExperiment
+						{
+							active = False
+							guiActive = True
+							guiIcon = Reset
+							guiName = Discard Crew Report
+							category = Reset
+							guiActiveUnfocused = False
+							unfocusedRange = 2
+							externalToEVAOnly = True
+						}
+						ResetExperimentExternal
+						{
+							active = False
+							guiActive = False
+							guiIcon = Reset
+							guiName = Discard Crew Report
+							category = Reset
+							guiActiveUnfocused = True
+							unfocusedRange = 1.5
+							externalToEVAOnly = True
+						}
+					}
+					ACTIONS
+					{
+						DeployAction
+						{
+							actionGroup = None
+						}
+						ResetAction
+						{
+							actionGroup = None
+						}
+					}
+				}
+				MODULE
+				{
+					name = ModuleScienceContainer
+					isEnabled = True
+					EVENTS
+					{
+						StoreDataExternalEvent
+						{
+							active = False
+							guiActive = False
+							guiIcon = 
+							guiName = Store Experiments (0)
+							category = 
+							guiActiveUnfocused = True
+							unfocusedRange = 1.3
+							externalToEVAOnly = True
+						}
+						CollectDataExternalEvent
+						{
+							active = False
+							guiActive = False
+							guiIcon = 
+							guiName = Take Data (0)
+							category = 
+							guiActiveUnfocused = True
+							unfocusedRange = 1.3
+							externalToEVAOnly = True
+						}
+						ReviewDataEvent
+						{
+							active = False
+							guiActive = True
+							guiIcon = Review Data
+							guiName = Review Stored Data (0)
+							category = Review Data
+							guiActiveUnfocused = False
+							unfocusedRange = 2
+							externalToEVAOnly = True
+						}
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = FlagDecal
+					isEnabled = True
+					flagDisplayed = True
+					EVENTS
+					{
+						ToggleFlag
+						{
+							active = True
+							guiActive = False
+							guiActiveEditor = True
+							guiIcon = ToggleFlag
+							guiName = ToggleFlag
+							category = ToggleFlag
+							guiActiveUnfocused = False
+							unfocusedRange = 2
+							externalToEVAOnly = True
+						}
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleTripLogger
+					isEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					Surfaced
+					{
+					}
+					Flew
+					{
+						at = Kerbin
+					}
+					FlewBy
+					{
+					}
+					Orbited
+					{
+					}
+					SubOrbited
+					{
+					}
+				}
+				RESOURCE
+				{
+					name = ElectricCharge
+					amount = 49.9903816456575
+					maxAmount = 50
+					flowState = True
+					isTweakable = True
+					hideFlow = False
+					flowMode = Both
+				}
+				RESOURCE
+				{
+					name = MonoPropellant
+					amount = 10
+					maxAmount = 10
+					flowState = True
+					isTweakable = True
+					hideFlow = False
+					flowMode = Both
+				}
+			}
+			PART
+			{
+				name = fuelTankSmall
+				uid = 1943637984
+				mid = 1911456917
+				launchID = 1
+				parent = 0
+				position = 0,-0.960288047790527,0
+				rotation = 0,0,0,1
+				mirror = 1,1,1
+				istg = 0
+				dstg = 0
+				sqor = -1
+				sidx = -1
+				attm = 0
+				srfN = None, -1
+				attN = top, 0
+				attN = bottom, 2
+				mass = 0.125
+				temp = -5.47282
+				expt = 0.5
+				state = 1
+				connected = True
+				attached = True
+				flag = Squad/Flags/kerbal2
+				rTrf = fuelTankSmall
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+				}
+				RESOURCE
+				{
+					name = LiquidFuel
+					amount = 0
+					maxAmount = 90
+					flowState = True
+					isTweakable = True
+					hideFlow = False
+					flowMode = Both
+				}
+				RESOURCE
+				{
+					name = Oxidizer
+					amount = 0
+					maxAmount = 110
+					flowState = True
+					isTweakable = True
+					hideFlow = False
+					flowMode = Both
+				}
+			}
+			PART
+			{
+				name = fuelTankSmall
+				uid = 3140495368
+				mid = 1911456917
+				launchID = 1
+				parent = 1
+				position = 0,-2.07078790664673,0
+				rotation = 0,0,0,1
+				mirror = 1,1,1
+				istg = 0
+				dstg = 0
+				sqor = -1
+				sidx = -1
+				attm = 0
+				srfN = None, -1
+				attN = top, 1
+				attN = bottom, 3
+				mass = 0.125
+				temp = 16.22686
+				expt = 0.5
+				state = 1
+				connected = True
+				attached = True
+				flag = Squad/Flags/kerbal2
+				rTrf = fuelTankSmall
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+				}
+				RESOURCE
+				{
+					name = LiquidFuel
+					amount = 58.7267648629995
+					maxAmount = 90
+					flowState = True
+					isTweakable = True
+					hideFlow = False
+					flowMode = Both
+				}
+				RESOURCE
+				{
+					name = Oxidizer
+					amount = 71.7771552137597
+					maxAmount = 110
+					flowState = True
+					isTweakable = True
+					hideFlow = False
+					flowMode = Both
+				}
+			}
+			PART
+			{
+				name = liquidEngine
+				uid = 3692890750
+				mid = 1911456917
+				launchID = 1
+				parent = 2
+				position = 0,-3.52786493301392,0
+				rotation = 0,0,0,1
+				mirror = 1,1,1
+				istg = 0
+				dstg = 0
+				sqor = 0
+				sidx = 1
+				attm = 0
+				srfN = None, -1
+				attN = top, 2
+				attN = None, -1
+				mass = 1.25
+				temp = 30.95127
+				expt = 0.5
+				state = 1
+				connected = True
+				attached = True
+				flag = Squad/Flags/kerbal2
+				rTrf = liquidEngine
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+				}
+				MODULE
+				{
+					name = ModuleEngines
+					isEnabled = True
+					staged = True
+					flameout = False
+					EngineIgnited = True
+					engineShutdown = False
+					currentThrottle = 0
+					thrustPercentage = 100
+					manuallyOverridden = False
+					thrustPercentage_UIFlight
+					{
+						controlEnabled = True
+						minValue = 0
+						maxValue = 100
+						stepIncrement = 0.5
+					}
+					EVENTS
+					{
+						Activate
+						{
+							active = False
+							guiActive = True
+							guiIcon = Activate Engine
+							guiName = Activate Engine
+							category = Activate Engine
+							guiActiveUnfocused = False
+							unfocusedRange = 2
+							externalToEVAOnly = True
+						}
+						Shutdown
+						{
+							active = True
+							guiActive = True
+							guiIcon = Shutdown Engine
+							guiName = Shutdown Engine
+							category = Shutdown Engine
+							guiActiveUnfocused = False
+							unfocusedRange = 2
+							externalToEVAOnly = True
+						}
+					}
+					ACTIONS
+					{
+						OnAction
+						{
+							actionGroup = None
+						}
+						ShutdownAction
+						{
+							actionGroup = None
+						}
+						ActivateAction
+						{
+							actionGroup = None
+						}
+					}
+				}
+				MODULE
+				{
+					name = ModuleJettison
+					isEnabled = True
+					EVENTS
+					{
+						Jettison
+						{
+							active = False
+							guiActive = True
+							guiIcon = Jettison
+							guiName = Jettison
+							category = Jettison
+							guiActiveUnfocused = False
+							unfocusedRange = 2
+							externalToEVAOnly = True
+						}
+					}
+					ACTIONS
+					{
+						JettisonAction
+						{
+							actionGroup = None
+						}
+					}
+				}
+				MODULE
+				{
+					name = ModuleAnimateHeat
+					isEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleAlternator
+					isEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+				}
+				RESOURCE
+				{
+					name = ElectricCharge
+					amount = 0
+					maxAmount = 0.139999996870756
+					flowState = True
+					isTweakable = False
+					hideFlow = True
+					flowMode = Both
+				}
+			}
+			PART
+			{
+				name = longAntenna
+				uid = 2228286649
+				mid = 1911456917
+				launchID = 1
+				parent = 1
+				position = -0.561444520950317,-0.961458206176758,0.036887101829052
+				rotation = 0.5000001,-0.4999999,0.4999999,0.5000001
+				mirror = 1,1,1
+				istg = 0
+				dstg = 0
+				sqor = -1
+				sidx = -1
+				attm = 1
+				sym = 5
+				srfN = srfAttach, 1
+				attN = None, -1
+				mass = 0.005
+				temp = -10.09991
+				expt = 0.5
+				state = 1
+				connected = True
+				attached = True
+				flag = Squad/Flags/kerbal2
+				rTrf = longAntenna
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+				}
+				MODULE
+				{
+					name = ModuleAnimateGeneric
+					isEnabled = True
+					status = Locked
+					animSwitch = False
+					animTime = 0
+					animSpeed = 1
+					EVENTS
+					{
+						Toggle
+						{
+							active = True
+							guiActive = True
+							guiIcon = Toggle
+							guiName = Extend
+							category = Toggle
+							guiActiveUnfocused = False
+							unfocusedRange = 2
+							externalToEVAOnly = True
+						}
+					}
+					ACTIONS
+					{
+						ToggleAction
+						{
+							actionGroup = None
+						}
+					}
+				}
+				MODULE
+				{
+					name = ModuleDataTransmitter
+					isEnabled = True
+					EVENTS
+					{
+						StartTransmission
+						{
+							active = True
+							guiActive = True
+							guiIcon = Transmit Data
+							guiName = Transmit Data
+							category = Transmit Data
+							guiActiveUnfocused = False
+							unfocusedRange = 2
+							externalToEVAOnly = True
+						}
+						StopTransmission
+						{
+							active = False
+							guiActive = True
+							guiIcon = Stop Transmitting
+							guiName = Stop Transmitting
+							category = Stop Transmitting
+							guiActiveUnfocused = False
+							unfocusedRange = 2
+							externalToEVAOnly = True
+						}
+					}
+					ACTIONS
+					{
+					}
+				}
+			}
+			PART
+			{
+				name = longAntenna
+				uid = 562889913
+				mid = 1911456917
+				launchID = 1
+				parent = 1
+				position = 0.561444520950317,-0.961458206176758,-0.0368871502578259
+				rotation = 0.4999999,0.5000001,-0.5000001,0.4999999
+				mirror = 1,1,1
+				istg = 0
+				dstg = 0
+				sqor = -1
+				sidx = -1
+				attm = 1
+				sym = 4
+				srfN = srfAttach, 1
+				attN = None, -1
+				mass = 0.005
+				temp = -10.1232
+				expt = 0.5
+				state = 1
+				connected = True
+				attached = True
+				flag = Squad/Flags/kerbal2
+				rTrf = longAntenna
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+				}
+				MODULE
+				{
+					name = ModuleAnimateGeneric
+					isEnabled = True
+					status = Locked
+					animSwitch = True
+					animTime = 0
+					animSpeed = 1
+					EVENTS
+					{
+						Toggle
+						{
+							active = True
+							guiActive = True
+							guiIcon = Toggle
+							guiName = Extend
+							category = Toggle
+							guiActiveUnfocused = False
+							unfocusedRange = 2
+							externalToEVAOnly = True
+						}
+					}
+					ACTIONS
+					{
+						ToggleAction
+						{
+							actionGroup = None
+						}
+					}
+				}
+				MODULE
+				{
+					name = ModuleDataTransmitter
+					isEnabled = True
+					EVENTS
+					{
+						StartTransmission
+						{
+							active = True
+							guiActive = True
+							guiIcon = Transmit Data
+							guiName = Transmit Data
+							category = Transmit Data
+							guiActiveUnfocused = False
+							unfocusedRange = 2
+							externalToEVAOnly = True
+						}
+						StopTransmission
+						{
+							active = False
+							guiActive = True
+							guiIcon = Stop Transmitting
+							guiName = Stop Transmitting
+							category = Stop Transmitting
+							guiActiveUnfocused = False
+							unfocusedRange = 2
+							externalToEVAOnly = True
+						}
+					}
+					ACTIONS
+					{
+					}
+				}
+			}
+			PART
+			{
+				name = parachuteSingle
+				uid = 3069675509
+				mid = 1911456917
+				launchID = 1
+				parent = 0
+				position = 0,0.65746021270752,0
+				rotation = 0,0,0,1
+				mirror = 1,1,1
+				istg = 0
+				dstg = 0
+				sqor = 0
+				sidx = 0
+				attm = 0
+				srfN = None, -1
+				attN = bottom, 0
+				mass = 0.1
+				temp = -20.84387
+				expt = 0.5
+				state = 1
+				connected = True
+				attached = True
+				flag = Squad/Flags/kerbal2
+				rTrf = parachuteSingle
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+				}
+				MODULE
+				{
+					name = ModuleParachute
+					isEnabled = True
+					persistentState = SEMIDEPLOYED
+					deployAltitude = 500
+					minAirPressureToOpen = 0.01
+					staged = True
+					deployAltitude_UIFlight
+					{
+						controlEnabled = True
+						minValue = 50
+						maxValue = 5000
+						stepIncrement = 50
+					}
+					minAirPressureToOpen_UIFlight
+					{
+						controlEnabled = True
+						minValue = 0.01
+						maxValue = 0.5
+						stepIncrement = 0.01
+					}
+					EVENTS
+					{
+						Deploy
+						{
+							active = False
+							guiActive = True
+							guiIcon = Deploy Chute
+							guiName = Deploy Chute
+							category = Deploy Chute
+							guiActiveUnfocused = True
+							unfocusedRange = 4
+							externalToEVAOnly = True
+						}
+						CutParachute
+						{
+							active = True
+							guiActive = True
+							guiIcon = Cut Parachute
+							guiName = Cut Parachute
+							category = Cut Parachute
+							guiActiveUnfocused = True
+							unfocusedRange = 4
+							externalToEVAOnly = True
+						}
+						Repack
+						{
+							active = False
+							guiActive = False
+							guiIcon = Repack Chute
+							guiName = Repack Chute
+							category = Repack Chute
+							guiActiveUnfocused = True
+							unfocusedRange = 4
+							externalToEVAOnly = True
+						}
+					}
+					ACTIONS
+					{
+						DeployAction
+						{
+							actionGroup = None
+						}
+						CutAction
+						{
+							actionGroup = None
+						}
+					}
+				}
+				MODULE
+				{
+					name = ModuleTestSubject
+					isEnabled = True
+					EVENTS
+					{
+						RunTestEvent
+						{
+							active = False
+							guiActive = True
+							guiIcon = Run Test
+							guiName = Run Test
+							category = Run Test
+							guiActiveUnfocused = False
+							unfocusedRange = 2
+							externalToEVAOnly = True
+						}
+					}
+					ACTIONS
+					{
+					}
+				}
+			}
+			ACTIONGROUPS
+			{
+				Stage = False, 119.119999999994
+				Gear = True, 0
+				Light = False, 0
+				RCS = False, 0
+				SAS = False, 120.839999999993
+				Brakes = False, 0
+				Abort = False, 0
+				Custom01 = False, 0
+				Custom02 = False, 0
+				Custom03 = False, 0
+				Custom04 = False, 0
+				Custom05 = False, 0
+				Custom06 = False, 0
+				Custom07 = False, 0
+				Custom08 = False, 0
+				Custom09 = False, 0
+				Custom10 = False, 0
+			}
+			DISCOVERY
+			{
+				state = -1
+				lastObservedTime = 0
+				lifetime = Infinity
+				refTime = Infinity
+				size = 2
+			}
+			FLIGHTPLAN
+			{
+			}
+			CTRLSTATE
+			{
+				pitch = 0
+				yaw = 0
+				roll = 0
+				trimPitch = 0
+				trimYaw = 0
+				trimRoll = 0
+				mainThrottle = 0
+			}
+		}
+		VESSEL
+		{
+			pid = fcd310ccf32243299f20d19d10a9b142
+			name = Ast. SAL-574
+			type = SpaceObject
+			sit = ORBITING
+			landed = False
+			landedAt = 
+			splashed = False
+			met = 105.159999999996
+			lct = 105.159999999996
+			root = 0
+			lat = -0.0887558323197607
+			lon = 188.992796595303
+			alt = 14008359413.7921
+			hgt = -1
+			nrm = 0,1,0
+			rot = -0.03979009,-0.7076417,0.3164618,0.6304854
+			CoM = 0,0,0
+			stg = 0
+			prst = False
+			ref = 0
+			ctrl = False
+			ORBIT
+			{
+				SMA = 13924782766.0378
+				ECC = 0.0271213501339733
+				INC = 0.631455295454324
+				LPE = 31.3946310593347
+				LAN = 1.000640695681
+				MNA = 5.77491928618476
+				EPH = 4647168.36800781
+				REF = 0
+			}
+			PART
+			{
+				name = PotatoRoid
+				uid = 119548635
+				mid = 119548635
+				launchID = 0
+				parent = 0
+				position = 0,0,0
+				rotation = 0,0,0,1
+				mirror = 1,1,1
+				istg = 0
+				dstg = 0
+				sqor = 0
+				sidx = 0
+				attm = 0
+				srfN = None, -1
+				mass = 150
+				temp = -1
+				expt = 0.1
+				state = 1
+				connected = True
+				attached = True
+				flag = 
+				rTrf = 
+			}
+			ACTIONGROUPS
+			{
+			}
+			DISCOVERY
+			{
+				state = 1
+				lastObservedTime = 105.159999999996
+				lifetime = 1574812.90283203
+				refTime = 1728000
+				size = 3
+			}
+			FLIGHTPLAN
+			{
+			}
+			CTRLSTATE
+			{
+			}
+		}
+	}
+	ROSTER
+	{
+		KERBAL
+		{
+			name = Jebediah Kerman
+			type = Crew
+			brave = 0.5
+			dumb = 0.5
+			badS = True
+			state = Missing
+			ToD = 7252.68
+			idx = 0
+		}
+		KERBAL
+		{
+			name = Bill Kerman
+			type = Crew
+			brave = 0.5
+			dumb = 0.8
+			badS = False
+			state = Assigned
+			ToD = 0
+			idx = 0
+		}
+		KERBAL
+		{
+			name = Bob Kerman
+			type = Crew
+			brave = 0.3
+			dumb = 0.1
+			badS = False
+			state = Available
+			ToD = 0
+			idx = -1
+		}
+	}
+	MESSAGESYSTEM
+	{
+		flash = False
+		MESSAGE
+		{
+			title = Contract Complete
+			message = <b>Set altitude record of 5000m.</>~n~nAltitude record reached! Well Done!~n~n<b><#8BED8B>Completion Rewards:</></> <#B4D455>£2293.58   </><#E0D503>¡10.9   </>~n~n
+			color = 2
+			icon = 3
+			read = True
+		}
+	}
+}
