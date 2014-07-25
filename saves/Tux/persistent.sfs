@@ -1,6 +1,6 @@
 GAME
 {
-	version = 0.24.0
+	version = 0.24.2
 	Title = Tux (CAREER)
 	Description = No description available.
 	linkURL = 
@@ -9,7 +9,7 @@ GAME
 	Status = 1
 	scene = 5
 	flag = Squad/Flags/kerbal2
-	launchID = 5
+	launchID = 7
 	PARAMETERS
 	{
 		FLIGHT
@@ -195,7 +195,7 @@ GAME
 	{
 		name = ResearchAndDevelopment
 		scene = 7, 8, 5, 6, 9
-		sci = 40.72563
+		sci = 17.53119
 		Tech
 		{
 			id = start
@@ -248,6 +248,14 @@ GAME
 			part = radialLiquidEngine1-2
 			part = fuelTank.long
 		}
+		Tech
+		{
+			id = scienceTech
+			state = Available
+			part = batteryPack
+			part = science.module
+			part = mediumDishAntenna
+		}
 		Science
 		{
 			id = crewReport@KerbinSrfLandedLaunchPad
@@ -283,9 +291,9 @@ GAME
 			id = recovery@KerbinFlew
 			title = Recovery of a vessel that survived a flight.
 			dsc = 1
-			scv = 0.02777775
+			scv = 0.004629692
 			sbv = 5
-			sci = 5.833333
+			sci = 5.972222
 			cap = 6
 		}
 		Science
@@ -393,9 +401,9 @@ GAME
 			id = recovery@KerbinOrbited
 			title = Recovery of a vessel returned from Kerbin orbit
 			dsc = 1
-			scv = 0.1666667
+			scv = 0.02777775
 			sbv = 10
-			sci = 10
+			sci = 11.66667
 			cap = 12
 		}
 		Science
@@ -418,104 +426,34 @@ GAME
 			sci = 9
 			cap = 12
 		}
+		Science
+		{
+			id = mysteryGoo@KerbinFlyingLow
+			title = Mystery Goo™ Observation while flying at Kerbin
+			dsc = 1
+			scv = 0.2307692
+			sbv = 0.7
+			sci = 7
+			cap = 9.099999
+		}
+		Science
+		{
+			id = evaReport@KerbinInSpaceLowHighlands
+			title = EVA Report from space just above Kerbin's Highlands
+			dsc = 1
+			scv = 0
+			sbv = 1
+			sci = 8
+			cap = 8
+		}
 	}
 	SCENARIO
 	{
 		name = ContractSystem
 		scene = 7, 8, 5, 6, 9
-		update = 3700.56225707871
+		update = 5261.62315185952
 		CONTRACTS
 		{
-			CONTRACT
-			{
-				guid = 2a0f8e9d-f3e3-4dfc-81aa-e051aa1211c5
-				type = PartTest
-				prestige = 0
-				seed = -83509724
-				state = Offered
-				agent = Research & Development Department
-				deadlineType = Floating
-				expiryType = Floating
-				values = 25620,9201600,75,160,160,4,4,3,25897.373951416,0,0,0
-				part = liquidEngine3
-				dest = 1
-				sit = LANDED
-				exp = True
-				PARAM
-				{
-					name = PartTest
-					id = runTest
-					state = Incomplete
-					values = 0,0,0,0,0
-					part = liquidEngine3
-					notes = To perform the test, activate the part through the staging sequence when all test conditions are met.
-					PARAM
-					{
-						name = ReachDestination
-						id = testDestination
-						state = Incomplete
-						disableOnStateChange = False
-						values = 0,0,0,0,0
-						dest = 1
-						title = 
-					}
-					PARAM
-					{
-						name = ReachSituation
-						id = testSituation
-						state = Incomplete
-						disableOnStateChange = False
-						values = 0,0,0,0,0
-						sit = LANDED
-						title = 
-					}
-				}
-			}
-			CONTRACT
-			{
-				guid = 21a2f27d-846b-4afd-8e1a-7f211b69ecc9
-				type = PartTest
-				prestige = 0
-				seed = -882470634
-				state = Offered
-				agent = Research & Development Department
-				deadlineType = Floating
-				expiryType = Floating
-				values = 31320,9201600,95,210,210,6,4,3,31702.913951416,0,0,0
-				part = liquidEngine2
-				dest = 1
-				sit = LANDED
-				exp = True
-				PARAM
-				{
-					name = PartTest
-					id = runTest
-					state = Incomplete
-					values = 0,0,0,0,0
-					part = liquidEngine2
-					notes = To perform the test, activate the part through the staging sequence when all test conditions are met.
-					PARAM
-					{
-						name = ReachDestination
-						id = testDestination
-						state = Incomplete
-						disableOnStateChange = False
-						values = 0,0,0,0,0
-						dest = 1
-						title = 
-					}
-					PARAM
-					{
-						name = ReachSituation
-						id = testSituation
-						state = Incomplete
-						disableOnStateChange = False
-						values = 0,0,0,0,0
-						sit = LANDED
-						title = 
-					}
-				}
-			}
 			CONTRACT
 			{
 				guid = c9e952d5-cacc-44e2-a643-4972b5e9a63a
@@ -650,6 +588,51 @@ GAME
 						maxSpd = 720
 						minSpd = 320
 						useSpdLimit = True
+						title = 
+					}
+				}
+			}
+			CONTRACT
+			{
+				guid = 7a49006c-76e5-443a-93a2-d10a9b61e974
+				type = PartTest
+				prestige = 0
+				seed = 2131282991
+				state = Offered
+				agent = Rockomax Conglomerate
+				deadlineType = Floating
+				expiryType = Floating
+				values = 20228.0356113899,8228571.72775267,166.384608760613,458.59755707012,454.229966754914,27,4.096533,3,25480.4787632492,0,0,0
+				part = liquidEngine2-2
+				dest = 1
+				sit = LANDED
+				exp = True
+				PARAM
+				{
+					name = PartTest
+					id = runTest
+					state = Incomplete
+					values = 0,0,0,0,0
+					part = liquidEngine2-2
+					notes = To perform the test, activate the part through the staging sequence when all test conditions are met.
+					PARAM
+					{
+						name = ReachDestination
+						id = testDestination
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						dest = 1
+						title = 
+					}
+					PARAM
+					{
+						name = ReachSituation
+						id = testSituation
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						sit = LANDED
 						title = 
 					}
 				}
@@ -987,6 +970,75 @@ GAME
 			}
 			CONTRACT
 			{
+				guid = a8f7566b-8828-44bf-bab6-0d66e8237d92
+				type = PartTest
+				prestige = 1
+				seed = 1074546075
+				state = Offered
+				agent = O.M.B. Demolition Enterprises
+				deadlineType = Floating
+				expiryType = Floating
+				values = 56400,9201600,1047,3784.00008201599,3784.00008201599,17,54.54545,45,60143.4222570787,0,0,0
+				part = radialDecoupler2
+				dest = 1
+				sit = FLYING
+				exp = True
+				PARAM
+				{
+					name = PartTest
+					id = runTest
+					state = Incomplete
+					values = 0,0,0,0,0
+					part = radialDecoupler2
+					notes = To perform the test, activate the part through the staging sequence when all test conditions are met.
+					PARAM
+					{
+						name = ReachDestination
+						id = testDestination
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						dest = 1
+						title = 
+					}
+					PARAM
+					{
+						name = ReachSituation
+						id = testSituation
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						sit = FLYING
+						title = 
+					}
+					PARAM
+					{
+						name = ReachAltitudeEnvelope
+						id = testAltitudeEnvelope
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						maxAlt = 11600
+						minAlt = 8500
+						useAltLimit = True
+						title = 
+					}
+					PARAM
+					{
+						name = ReachSpeedEnvelope
+						id = testSpeedEnvelope
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						maxSpd = 340
+						minSpd = 140
+						useSpdLimit = True
+						title = 
+					}
+				}
+			}
+			CONTRACT
+			{
 				guid = d03d6355-c5fe-4135-904b-ea39bc961dd1
 				type = ExploreBody
 				prestige = 2
@@ -1089,6 +1141,51 @@ GAME
 					}
 				}
 			}
+			CONTRACT
+			{
+				guid = 079793bd-56a9-429c-bb72-67248a36ecb9
+				type = PartTest
+				prestige = 2
+				seed = 1410426963
+				state = Offered
+				agent = C7 Aerospace Division
+				deadlineType = Floating
+				expiryType = Floating
+				values = 49620,9201600,825,5280,5280,41,66,50,54881.6231518595,0,0,0
+				part = SmallGearBay
+				dest = 1
+				sit = ESCAPING
+				exp = True
+				PARAM
+				{
+					name = PartTest
+					id = runTest
+					state = Incomplete
+					values = 0,0,0,0,0
+					part = SmallGearBay
+					notes = To perform the test, use the [Run Test] option in the part's context menu when all test conditions are met.
+					PARAM
+					{
+						name = ReachDestination
+						id = testDestination
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						dest = 1
+						title = 
+					}
+					PARAM
+					{
+						name = ReachSituation
+						id = testSituation
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						sit = ESCAPING
+						title = 
+					}
+				}
+			}
 			CONTRACT_FINISHED
 			{
 				guid = d8a7dcdc-d507-4f61-92ce-34c6e7f316bc
@@ -1126,6 +1223,29 @@ GAME
 					state = Complete
 					values = 0,0,0,0,0
 					body = 1
+				}
+			}
+			CONTRACT_FINISHED
+			{
+				guid = 15ce58f1-108f-4b0a-b246-75d4f4e191a9
+				type = CollectScience
+				prestige = 0
+				seed = 2012926638
+				state = Completed
+				agent = Kerlington Model Rockets and Paper Products Inc
+				deadlineType = Floating
+				expiryType = Floating
+				values = 21600,46008000,5000,30000,5000,1,150,75,25317.6622570787,3744.94225707867,46011744.9422571,0
+				body = 1
+				location = Space
+				PARAM
+				{
+					name = CollectScience
+					enabled = False
+					state = Complete
+					values = 0,0,0,0,0
+					body = 1
+					location = Space
 				}
 			}
 			CONTRACT_FINISHED
@@ -1196,13 +1316,60 @@ GAME
 					}
 				}
 			}
+			CONTRACT_FINISHED
+			{
+				guid = 2a0f8e9d-f3e3-4dfc-81aa-e051aa1211c5
+				type = PartTest
+				prestige = 0
+				seed = -83509724
+				state = Completed
+				agent = Research & Development Department
+				deadlineType = Floating
+				expiryType = Floating
+				values = 25620,9201600,75,160,160,4,4,3,25897.373951416,3708.7422570787,9205308.74225708,3717.66225707869
+				part = liquidEngine3
+				dest = 1
+				sit = LANDED
+				exp = False
+				PARAM
+				{
+					name = PartTest
+					id = runTest
+					enabled = False
+					state = Complete
+					values = 0,0,0,0,0
+					part = liquidEngine3
+					notes = To perform the test, activate the part through the staging sequence when all test conditions are met.
+					tested = 3378573743
+					PARAM
+					{
+						name = ReachDestination
+						id = testDestination
+						state = Complete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						dest = 1
+						title = 
+					}
+					PARAM
+					{
+						name = ReachSituation
+						id = testSituation
+						state = Complete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						sit = LANDED
+						title = 
+					}
+				}
+			}
 		}
 	}
 	SCENARIO
 	{
 		name = Funding
 		scene = 7, 8, 5, 6, 9
-		funds = 112171.918238879
+		funds = 137783.019801976
 	}
 	SCENARIO
 	{
@@ -1213,12 +1380,12 @@ GAME
 	{
 		name = Reputation
 		scene = 7, 8, 5, 6, 9
-		rep = 349.609
+		rep = 523.2455
 	}
 	FLIGHTSTATE
 	{
-		version = 0.24.0
-		UT = 3707.1222570787
+		version = 0.24.2
+		UT = 5264.50315185958
 		activeVessel = 0
 		VESSEL
 		{
@@ -1278,6 +1445,7 @@ GAME
 				attached = True
 				flag = 
 				rTrf = 
+				modCost = 0
 			}
 			ACTIONGROUPS
 			{
@@ -1355,6 +1523,7 @@ GAME
 				attached = True
 				flag = 
 				rTrf = 
+				modCost = 0
 			}
 			ACTIONGROUPS
 			{
@@ -1432,6 +1601,7 @@ GAME
 				attached = True
 				flag = 
 				rTrf = 
+				modCost = 0
 			}
 			ACTIONGROUPS
 			{
@@ -1509,6 +1679,7 @@ GAME
 				attached = True
 				flag = 
 				rTrf = 
+				modCost = 0
 			}
 			ACTIONGROUPS
 			{
@@ -1586,6 +1757,7 @@ GAME
 				attached = True
 				flag = 
 				rTrf = 
+				modCost = 0
 			}
 			ACTIONGROUPS
 			{
@@ -1663,6 +1835,7 @@ GAME
 				attached = True
 				flag = 
 				rTrf = 
+				modCost = 0
 			}
 			ACTIONGROUPS
 			{
@@ -1740,6 +1913,7 @@ GAME
 				attached = True
 				flag = 
 				rTrf = 
+				modCost = 0
 			}
 			ACTIONGROUPS
 			{
@@ -1931,6 +2105,22 @@ GAME
 	MESSAGESYSTEM
 	{
 		flash = False
+		MESSAGE
+		{
+			title = Contract Complete
+			message = <b>Science data from space around Kerbin.</>~n~nWe've just received experimental data from space around Kerbin! Good work.~n~n<b><#8BED8B>Completion Rewards:</></> <#B4D455>£30000.00   </><#6DCFF6>©1.0   </><#E0D503>¡150   </>~n~n
+			color = 2
+			icon = 3
+			read = True
+		}
+		MESSAGE
+		{
+			title = Contract Complete
+			message = <b>Test LV-909 Liquid Fuel Engine landed at Kerbin.</>~n~nTest Complete! We got some good data here. Thanks!~n~n<b><#8BED8B>Completion Rewards:</></> <#B4D455>£160.00   </><#6DCFF6>©4.0   </><#E0D503>¡4   </>~n~n
+			color = 2
+			icon = 3
+			read = True
+		}
 		MESSAGE
 		{
 			title = Contract Complete
