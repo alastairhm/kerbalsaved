@@ -1,14 +1,15 @@
 GAME
 {
-	version = 0.23.5
+	version = 0.24.0
 	Title = Sandbox (SANDBOX)
 	Description = No description available.
 	linkURL = 
 	linkCaption = 
-	Mode = 0
+	Mode = SANDBOX
 	Status = 1
 	scene = 5
 	flag = Squad/Flags/default
+	launchID = 1
 	PARAMETERS
 	{
 		FLIGHT
@@ -67,7 +68,7 @@ GAME
 	{
 		name = ScenarioDiscoverableObjects
 		scene = 7, 8, 5
-		 = 1894863076
+		 = 0
 		sizeCurve
 		{
 			key = 0 0 1.5 1.5
@@ -91,7 +92,7 @@ GAME
 				completed = 889.505210570942
 				crew
 				{
-					crews = 1
+					crews = Bill Kerman
 				}
 			}
 			ReachedSpace
@@ -104,7 +105,7 @@ GAME
 				}
 				crew
 				{
-					crews = 1
+					crews = Bill Kerman
 				}
 			}
 			Spacewalk
@@ -112,7 +113,7 @@ GAME
 				completed = 245609.811900892
 				crew
 				{
-					crews = 1
+					crews = Bill Kerman
 				}
 			}
 			RunwayLanding
@@ -149,7 +150,7 @@ GAME
 					}
 					crew
 					{
-						crews = 1
+						crews = Bill Kerman
 					}
 				}
 				Escape
@@ -166,7 +167,7 @@ GAME
 					}
 					crew
 					{
-						crews = 2
+						crews = Bob Kerman
 					}
 				}
 				Splashdown
@@ -191,20 +192,7 @@ GAME
 					}
 					crew
 					{
-						crews = 1
-					}
-				}
-				ReturnFromSurface
-				{
-					completed = 884.365210570946
-					vessel
-					{
-						name = Boomstick 1
-						flag = Squad/Flags/default
-					}
-					crew
-					{
-						crews = 1
+						crews = Bill Kerman
 					}
 				}
 			}
@@ -225,7 +213,7 @@ GAME
 					}
 					crew
 					{
-						crews = 2
+						crews = Bob Kerman
 					}
 				}
 				Escape
@@ -242,7 +230,7 @@ GAME
 					}
 					crew
 					{
-						crews = 0
+						crews = Jebediah Kerman
 					}
 				}
 				Rendezvous
@@ -258,7 +246,7 @@ GAME
 					completed = 290561.224825494
 					crew
 					{
-						crews = 0
+						crews = Jebediah Kerman
 					}
 				}
 				ReturnFromFlyBy
@@ -271,7 +259,7 @@ GAME
 					}
 					crew
 					{
-						crews = 2
+						crews = Bob Kerman
 					}
 				}
 				ReturnFromOrbit
@@ -284,7 +272,7 @@ GAME
 					}
 					crew
 					{
-						crews = 2
+						crews = Bob Kerman
 					}
 				}
 			}
@@ -311,11 +299,16 @@ GAME
 			}
 		}
 	}
+	SCENARIO
+	{
+		name = VesselRecovery
+		scene = 5, 7, 8, 6, 9
+	}
 	FLIGHTSTATE
 	{
-		version = 0.23.5
-		UT = 1453905.82831853
-		activeVessel = 0
+		version = 0.24.0
+		UT = 1453996.10831861
+		activeVessel = 27
 		VESSEL
 		{
 			pid = 025337a2d33e46cba97d2b974eea7c98
@@ -338,6 +331,7 @@ GAME
 			stg = 0
 			prst = False
 			ref = 0
+			ctrl = False
 			ORBIT
 			{
 				SMA = 14827985021.3147
@@ -354,6 +348,7 @@ GAME
 				name = PotatoRoid
 				uid = 559298752
 				mid = 559298752
+				launchID = 0
 				parent = 0
 				position = 0,0,0
 				rotation = 0,0,0,1
@@ -413,18 +408,19 @@ GAME
 			stg = 0
 			prst = False
 			ref = 0
+			ctrl = False
 			cPch = 0
 			cHdg = 0
 			cMod = -1
 			ORBIT
 			{
-				SMA = NaN
+				SMA = 18645666.2800666
 				ECC = 1
 				INC = NaN
-				LPE = 48.1696053260203
-				LAN = 259.228165473864
-				MNA = -8.40714670366795
-				EPH = 1453889.04831851
+				LPE = 125.570686909745
+				LAN = 280.08686905019
+				MNA = 3.14159265358979
+				EPH = 1453995.74831861
 				REF = 1
 			}
 			PART
@@ -432,6 +428,7 @@ GAME
 				name = MK1Fuselage
 				uid = 559371457
 				mid = 1703634202
+				launchID = 0
 				parent = 0
 				position = 0,0,0
 				rotation = 0,0,0,1
@@ -474,6 +471,7 @@ GAME
 				name = R8winglet
 				uid = 3363772578
 				mid = 1703634202
+				launchID = 0
 				parent = 0
 				position = -1.11758708953857E-07,-0.535158157348633,-1.14370357990265
 				rotation = 0,-0.7071071,0,0.7071071
@@ -589,18 +587,19 @@ GAME
 			stg = 0
 			prst = False
 			ref = 0
+			ctrl = False
 			cPch = 0
 			cHdg = 0
 			cMod = -1
 			ORBIT
 			{
-				SMA = 299999.936764909
+				SMA = NaN
 				ECC = 1
 				INC = NaN
-				LPE = 48.1694862329213
-				LAN = 259.228165473864
-				MNA = 3.14159265358979
-				EPH = 1453889.04831851
+				LPE = 125.57068703248
+				LAN = 280.08686905019
+				MNA = -8.40714670366795
+				EPH = 1453995.74831861
 				REF = 1
 			}
 			PART
@@ -608,6 +607,7 @@ GAME
 				name = parachuteRadial
 				uid = 3535492117
 				mid = 1703634202
+				launchID = 0
 				parent = 0
 				position = 0,0,0
 				rotation = 0,0,0,1
@@ -767,18 +767,19 @@ GAME
 			stg = 0
 			prst = False
 			ref = 0
+			ctrl = False
 			cPch = 0
 			cHdg = 0
 			cMod = -1
 			ORBIT
 			{
-				SMA = 299999.905909642
+				SMA = 0
 				ECC = 1
 				INC = NaN
-				LPE = 48.1694297077934
-				LAN = 259.228165473864
-				MNA = 3.14159265358979
-				EPH = 1453889.04831851
+				LPE = 125.570687053641
+				LAN = 280.08686905019
+				MNA = -8.40714670366795
+				EPH = 1453995.74831861
 				REF = 1
 			}
 			PART
@@ -786,6 +787,7 @@ GAME
 				name = RCSFuelTank
 				uid = 264101438
 				mid = 1703634202
+				launchID = 0
 				parent = 0
 				position = 0,0,0
 				rotation = 0,0,0,1
@@ -887,6 +889,7 @@ GAME
 			stg = 0
 			prst = False
 			ref = 0
+			ctrl = False
 			cPch = 0
 			cHdg = 0
 			cMod = -1
@@ -895,10 +898,10 @@ GAME
 				SMA = NaN
 				ECC = 1
 				INC = NaN
-				LPE = 48.1694655915421
-				LAN = 259.228165473864
+				LPE = 125.57068703248
+				LAN = 280.08686905019
 				MNA = -8.40714670366795
-				EPH = 1453889.04831851
+				EPH = 1453995.74831861
 				REF = 1
 			}
 			PART
@@ -906,6 +909,7 @@ GAME
 				name = parachuteRadial
 				uid = 1899130009
 				mid = 1703634202
+				launchID = 0
 				parent = 0
 				position = 0,0,0
 				rotation = 0,0,0,1
@@ -1065,6 +1069,7 @@ GAME
 			stg = 4
 			prst = False
 			ref = 0
+			ctrl = False
 			cPch = 0
 			cHdg = 0
 			cMod = -1
@@ -1084,6 +1089,7 @@ GAME
 				name = stackDecoupler
 				uid = 553014429
 				mid = 3733209030
+				launchID = 0
 				parent = 0
 				position = 0,0,0
 				rotation = 0,0,0,1
@@ -1143,6 +1149,7 @@ GAME
 				name = fuelTank.long
 				uid = 3872375889
 				mid = 3733209030
+				launchID = 0
 				parent = 0
 				position = 0,-2.00798988342285,0
 				rotation = 0,0,0,1
@@ -1195,6 +1202,7 @@ GAME
 				name = fuelTank.long
 				uid = 1206910020
 				mid = 3733209030
+				launchID = 0
 				parent = 1
 				position = 0,-5.77049922943115,0
 				rotation = 0,0,0,1
@@ -1247,6 +1255,7 @@ GAME
 				name = liquidEngine2
 				uid = 1582412006
 				mid = 3733209030
+				launchID = 0
 				parent = 2
 				position = 0,-8.55982685089111,0
 				rotation = 0,0,0,1
@@ -1436,6 +1445,7 @@ GAME
 				name = R8winglet
 				uid = 1378664173
 				mid = 3733209030
+				launchID = 0
 				parent = 2
 				position = 0.00978940725326538,-7.12856769561768,1.15957522392273
 				rotation = 6.050803E-09,0.7071071,6.050798E-09,0.7071065
@@ -1494,6 +1504,7 @@ GAME
 				name = R8winglet
 				uid = 3768697988
 				mid = 3733209030
+				launchID = 0
 				parent = 2
 				position = 0.999327182769775,-7.12856769561768,-0.588265597820282
 				rotation = 8.265546E-09,0.9659258,-2.214749E-09,-0.2588195
@@ -1552,6 +1563,7 @@ GAME
 				name = R8winglet
 				uid = 2842002352
 				mid = 3733209030
+				launchID = 0
 				parent = 2
 				position = -1.00911688804626,-7.12856769561768,-0.571309864521027
 				rotation = -2.214744E-09,-0.2588187,8.265554E-09,0.9659259
@@ -1669,6 +1681,7 @@ GAME
 			stg = 0
 			prst = False
 			ref = 0
+			ctrl = False
 			ORBIT
 			{
 				SMA = 15345593196.3518
@@ -1685,6 +1698,7 @@ GAME
 				name = PotatoRoid
 				uid = 1665591795
 				mid = 1665591795
+				launchID = 0
 				parent = 0
 				position = 0,0,0
 				rotation = 0,0,0,1
@@ -1744,6 +1758,7 @@ GAME
 			stg = 2
 			prst = False
 			ref = 0
+			ctrl = False
 			cPch = 
 			cHdg = 
 			cMod = 0
@@ -1763,6 +1778,7 @@ GAME
 				name = stackDecoupler
 				uid = 2558714336
 				mid = 3733209030
+				launchID = 0
 				parent = 0
 				position = 0,0,0
 				rotation = 0,0,0,1
@@ -1822,6 +1838,7 @@ GAME
 				name = advSasModule
 				uid = 1726356472
 				mid = 3733209030
+				launchID = 0
 				parent = 0
 				position = 0,-0.332019805908203,0
 				rotation = 0,0,0,1
@@ -1901,6 +1918,7 @@ GAME
 				name = fuelTank
 				uid = 3066051599
 				mid = 3733209030
+				launchID = 0
 				parent = 1
 				position = 0,-1.49674034118652,0
 				rotation = 0,0,0,1
@@ -1953,6 +1971,7 @@ GAME
 				name = liquidEngine3
 				uid = 3954246936
 				mid = 3733209030
+				launchID = 0
 				parent = 2
 				position = 0,-2.67986106872559,0
 				rotation = 0,0,0,1
@@ -2180,6 +2199,7 @@ GAME
 			stg = 0
 			prst = False
 			ref = 0
+			ctrl = False
 			cPch = 0
 			cHdg = 0
 			cMod = -1
@@ -2188,10 +2208,10 @@ GAME
 				SMA = NaN
 				ECC = 1
 				INC = NaN
-				LPE = 69.9578128407143
-				LAN = 259.228165473864
+				LPE = 91.2024406922464
+				LAN = 280.08686905019
 				MNA = -8.40714670366795
-				EPH = 1453889.04831851
+				EPH = 1453995.74831861
 				REF = 2
 			}
 			PART
@@ -2199,6 +2219,7 @@ GAME
 				name = landingLeg1
 				uid = 1241668497
 				mid = 3991027237
+				launchID = 0
 				parent = 0
 				position = 0,0,0
 				rotation = 0,0,0,1
@@ -2382,18 +2403,19 @@ GAME
 			stg = 0
 			prst = False
 			ref = 0
+			ctrl = False
 			cPch = 0
 			cHdg = 0
 			cMod = -1
 			ORBIT
 			{
-				SMA = NaN
+				SMA = 10237964.7215171
 				ECC = 1
 				INC = NaN
-				LPE = 69.9554015171554
-				LAN = 259.228165473864
-				MNA = -8.40714670366795
-				EPH = 1453889.04831851
+				LPE = 91.20247406227
+				LAN = 280.08686905019
+				MNA = 3.14159265358979
+				EPH = 1453995.74831861
 				REF = 2
 			}
 			PART
@@ -2401,6 +2423,7 @@ GAME
 				name = landingLeg1
 				uid = 1494271750
 				mid = 3991027237
+				launchID = 0
 				parent = 0
 				position = 0,0,0
 				rotation = 0,0,0,1
@@ -2584,6 +2607,7 @@ GAME
 			stg = 4
 			prst = False
 			ref = 0
+			ctrl = False
 			cPch = 0
 			cHdg = 0
 			cMod = -1
@@ -2603,6 +2627,7 @@ GAME
 				name = stackDecoupler
 				uid = 2052545865
 				mid = 3715751996
+				launchID = 0
 				parent = 0
 				position = 0,0,0
 				rotation = 0,0,0,1
@@ -2662,6 +2687,7 @@ GAME
 				name = fuelTank.long
 				uid = 3897676185
 				mid = 3715751996
+				launchID = 0
 				parent = 0
 				position = 0,-2.00799942016602,0
 				rotation = 0,0,0,1
@@ -2714,6 +2740,7 @@ GAME
 				name = fuelTank.long
 				uid = 2388672382
 				mid = 3715751996
+				launchID = 0
 				parent = 1
 				position = 0,-5.77050590515137,0
 				rotation = 0,0,0,1
@@ -2766,6 +2793,7 @@ GAME
 				name = liquidEngine2
 				uid = 1015017124
 				mid = 3715751996
+				launchID = 0
 				parent = 2
 				position = 0,-8.55983257293701,0
 				rotation = 0,0,0,1
@@ -2955,6 +2983,7 @@ GAME
 				name = R8winglet
 				uid = 3809813465
 				mid = 3715751996
+				launchID = 0
 				parent = 2
 				position = 0.00978900492191315,-7.12857341766357,1.15957021713257
 				rotation = 6.050803E-09,0.7071071,6.050798E-09,0.7071065
@@ -3013,6 +3042,7 @@ GAME
 				name = R8winglet
 				uid = 2360571284
 				mid = 3715751996
+				launchID = 0
 				parent = 2
 				position = 0.999327063560486,-7.12857341766357,-0.58827018737793
 				rotation = 8.265546E-09,0.9659258,-2.214749E-09,-0.2588195
@@ -3071,6 +3101,7 @@ GAME
 				name = R8winglet
 				uid = 3360409131
 				mid = 3715751996
+				launchID = 0
 				parent = 2
 				position = -1.00911688804626,-7.12857341766357,-0.571310102939606
 				rotation = -2.214744E-09,-0.2588187,8.265554E-09,0.9659259
@@ -3188,18 +3219,19 @@ GAME
 			stg = 0
 			prst = False
 			ref = 0
+			ctrl = False
 			cPch = 0
 			cHdg = 0
 			cMod = -1
 			ORBIT
 			{
-				SMA = NaN
+				SMA = 10280221.1088135
 				ECC = 1
 				INC = NaN
-				LPE = 140.818572783753
-				LAN = 259.228165473864
-				MNA = 0
-				EPH = 1453889.04831851
+				LPE = 90.2696517600491
+				LAN = 280.08686905019
+				MNA = 3.14159265358979
+				EPH = 1453995.74831861
 				REF = 2
 			}
 			PART
@@ -3207,6 +3239,7 @@ GAME
 				name = landingLeg1
 				uid = 824215652
 				mid = 3715751996
+				launchID = 0
 				parent = 0
 				position = 0,0,0
 				rotation = 0,0,0,1
@@ -3390,6 +3423,7 @@ GAME
 			stg = 4
 			prst = False
 			ref = 0
+			ctrl = False
 			cPch = 0
 			cHdg = 0
 			cMod = -1
@@ -3409,6 +3443,7 @@ GAME
 				name = stackDecoupler
 				uid = 2607106993
 				mid = 1753564155
+				launchID = 0
 				parent = 0
 				position = 0,0,0
 				rotation = 0,0,0,1
@@ -3468,6 +3503,7 @@ GAME
 				name = fuelTank.long
 				uid = 3291818009
 				mid = 1753564155
+				launchID = 0
 				parent = 0
 				position = 0,-2.00799942016602,0
 				rotation = 0,0,0,1
@@ -3520,6 +3556,7 @@ GAME
 				name = fuelTank.long
 				uid = 2016443951
 				mid = 1753564155
+				launchID = 0
 				parent = 1
 				position = 0,-5.77050590515137,0
 				rotation = 0,0,0,1
@@ -3572,6 +3609,7 @@ GAME
 				name = R8winglet
 				uid = 3011094692
 				mid = 1753564155
+				launchID = 0
 				parent = 2
 				position = 0.00978900492191315,-7.12857341766357,1.15957021713257
 				rotation = 6.050803E-09,0.7071071,6.050798E-09,0.7071065
@@ -3630,6 +3668,7 @@ GAME
 				name = R8winglet
 				uid = 230213624
 				mid = 1753564155
+				launchID = 0
 				parent = 2
 				position = 0.999327063560486,-7.12857341766357,-0.58827018737793
 				rotation = 8.265546E-09,0.9659258,-2.214749E-09,-0.2588195
@@ -3688,6 +3727,7 @@ GAME
 				name = R8winglet
 				uid = 1256990252
 				mid = 1753564155
+				launchID = 0
 				parent = 2
 				position = -1.00911688804626,-7.12857341766357,-0.571310102939606
 				rotation = -2.214744E-09,-0.2588187,8.265554E-09,0.9659259
@@ -3746,6 +3786,7 @@ GAME
 				name = fuelTank
 				uid = 4212766765
 				mid = 1753564155
+				launchID = 0
 				parent = 2
 				position = 0,-8.62369632720947,0
 				rotation = 0,0,0,1
@@ -3798,6 +3839,7 @@ GAME
 				name = liquidEngine2
 				uid = 3538300756
 				mid = 1753564155
+				launchID = 0
 				parent = 6
 				position = 0,-10.4380216598511,0
 				rotation = 0,0,0,1
@@ -4046,18 +4088,19 @@ GAME
 			stg = 0
 			prst = False
 			ref = 0
+			ctrl = False
 			cPch = 0
 			cHdg = 0
 			cMod = 0
 			ORBIT
 			{
-				SMA = 0
+				SMA = NaN
 				ECC = 1
 				INC = NaN
-				LPE = 81.3024453933715
-				LAN = 259.228165473864
+				LPE = 91.1509080161637
+				LAN = 280.08686905019
 				MNA = 0
-				EPH = 1453889.04831851
+				EPH = 1453995.74831861
 				REF = 2
 			}
 			PART
@@ -4065,6 +4108,7 @@ GAME
 				name = flag
 				uid = 785640036
 				mid = 1753564155
+				launchID = 0
 				parent = 0
 				position = 0,0,0
 				rotation = 0,0,0,1
@@ -4225,6 +4269,7 @@ GAME
 			stg = 4
 			prst = False
 			ref = 0
+			ctrl = False
 			cPch = 0
 			cHdg = 0
 			cMod = -1
@@ -4244,6 +4289,7 @@ GAME
 				name = stackDecoupler
 				uid = 803435029
 				mid = 1113157712
+				launchID = 0
 				parent = 0
 				position = 0,0,0
 				rotation = 0,0,0,1
@@ -4303,6 +4349,7 @@ GAME
 				name = largeAdapter
 				uid = 2414679062
 				mid = 1113157712
+				launchID = 0
 				parent = 0
 				position = 0,-0.882999420166016,0
 				rotation = 0,0,0,1
@@ -4335,6 +4382,7 @@ GAME
 				name = fuelTank1-2
 				uid = 3231589577
 				mid = 1113157712
+				launchID = 0
 				parent = 1
 				position = 0,-3.51299953460693,0
 				rotation = 0,0,0,1
@@ -4387,6 +4435,7 @@ GAME
 				name = fuelTank1-2
 				uid = 3081585567
 				mid = 1113157712
+				launchID = 0
 				parent = 2
 				position = 0,-7.26299953460693,0
 				rotation = 0,0,0,1
@@ -4439,6 +4488,7 @@ GAME
 				name = fuelTank1-2
 				uid = 2643180799
 				mid = 1113157712
+				launchID = 0
 				parent = 3
 				position = 0,-11.0130004882813,0
 				rotation = 0,0,0,1
@@ -4491,6 +4541,7 @@ GAME
 				name = liquidEngine1-2
 				uid = 4227571486
 				mid = 1113157712
+				launchID = 0
 				parent = 4
 				position = 0,-13.9533081054688,0
 				rotation = 0,0,0,1
@@ -4680,6 +4731,7 @@ GAME
 				name = R8winglet
 				uid = 1792722670
 				mid = 1113157712
+				launchID = 0
 				parent = 3
 				position = 0.875803768634796,-6.41837978363037,-1.51266312599182
 				rotation = -8.346982E-07,0.8660262,4.819116E-07,-0.4999987
@@ -4739,6 +4791,7 @@ GAME
 				name = R8winglet
 				uid = 91532225
 				mid = 1113157712
+				launchID = 0
 				parent = 3
 				position = -1.51266288757324,-6.41837978363037,-0.875803768634796
 				rotation = -2.494579E-07,0.2588206,9.309836E-07,-0.9659255
@@ -4798,6 +4851,7 @@ GAME
 				name = R8winglet
 				uid = 3342301799
 				mid = 1113157712
+				launchID = 0
 				parent = 3
 				position = -0.875803887844086,-6.41837978363037,1.51266384124756
 				rotation = 4.819116E-07,-0.4999987,8.346981E-07,-0.8660262
@@ -4857,6 +4911,7 @@ GAME
 				name = R8winglet
 				uid = 60807127
 				mid = 1113157712
+				launchID = 0
 				parent = 3
 				position = 1.51266312599182,-6.41837978363037,0.875803887844086
 				rotation = 9.309836E-07,-0.9659255,2.494579E-07,-0.2588206
@@ -4975,6 +5030,7 @@ GAME
 			stg = 4
 			prst = False
 			ref = 0
+			ctrl = False
 			cPch = 0
 			cHdg = 0
 			cMod = -1
@@ -4994,6 +5050,7 @@ GAME
 				name = stackDecoupler
 				uid = 942778419
 				mid = 1858055814
+				launchID = 0
 				parent = 0
 				position = 0,0,0
 				rotation = 0,0,0,1
@@ -5053,6 +5110,7 @@ GAME
 				name = largeAdapter
 				uid = 4015696002
 				mid = 1858055814
+				launchID = 0
 				parent = 0
 				position = 0,-0.882999420166016,0
 				rotation = 0,0,0,1
@@ -5085,6 +5143,7 @@ GAME
 				name = fuelTank1-2
 				uid = 3346295405
 				mid = 1858055814
+				launchID = 0
 				parent = 1
 				position = 0,-3.51299953460693,0
 				rotation = 0,0,0,1
@@ -5137,6 +5196,7 @@ GAME
 				name = fuelTank1-2
 				uid = 426582104
 				mid = 1858055814
+				launchID = 0
 				parent = 2
 				position = 0,-7.26299953460693,0
 				rotation = 0,0,0,1
@@ -5189,6 +5249,7 @@ GAME
 				name = fuelTank1-2
 				uid = 2376854728
 				mid = 1858055814
+				launchID = 0
 				parent = 3
 				position = 0,-11.0130004882813,0
 				rotation = 0,0,0,1
@@ -5241,6 +5302,7 @@ GAME
 				name = fuelTank1-2
 				uid = 2735774369
 				mid = 1858055814
+				launchID = 0
 				parent = 4
 				position = 0,-14.7630004882813,0
 				rotation = 0,0,0,1
@@ -5293,6 +5355,7 @@ GAME
 				name = liquidEngine1-2
 				uid = 2984972303
 				mid = 1858055814
+				launchID = 0
 				parent = 5
 				position = 0,-17.7033081054688,0
 				rotation = 0,0,0,1
@@ -5541,6 +5604,7 @@ GAME
 			stg = 4
 			prst = False
 			ref = 0
+			ctrl = False
 			cPch = 0
 			cHdg = 0
 			cMod = -1
@@ -5560,6 +5624,7 @@ GAME
 				name = stackDecoupler
 				uid = 1785555522
 				mid = 2259368339
+				launchID = 0
 				parent = 0
 				position = 0,0,0
 				rotation = 0,0,0,1
@@ -5619,6 +5684,7 @@ GAME
 				name = fuelTank.long
 				uid = 933194296
 				mid = 2259368339
+				launchID = 0
 				parent = 0
 				position = 0,-2.00799465179443,0
 				rotation = 0,0,0,1
@@ -5671,6 +5737,7 @@ GAME
 				name = fuelTank.long
 				uid = 3859540947
 				mid = 2259368339
+				launchID = 0
 				parent = 1
 				position = 0,-5.77050495147705,0
 				rotation = 0,0,0,1
@@ -5723,6 +5790,7 @@ GAME
 				name = liquidEngine2
 				uid = 673118612
 				mid = 2259368339
+				launchID = 0
 				parent = 2
 				position = 0,-8.5598316192627,0
 				rotation = 0,0,0,1
@@ -5912,6 +5980,7 @@ GAME
 				name = R8winglet
 				uid = 699606814
 				mid = 2259368339
+				launchID = 0
 				parent = 2
 				position = 0.00978904962539673,-7.12857246398926,1.15956997871399
 				rotation = 6.050803E-09,0.7071071,6.050798E-09,0.7071065
@@ -5970,6 +6039,7 @@ GAME
 				name = R8winglet
 				uid = 634912844
 				mid = 2259368339
+				launchID = 0
 				parent = 2
 				position = 0.999327003955841,-7.12857246398926,-0.588270127773285
 				rotation = 8.265546E-09,0.9659258,-2.214749E-09,-0.2588195
@@ -6028,6 +6098,7 @@ GAME
 				name = R8winglet
 				uid = 1533457085
 				mid = 2259368339
+				launchID = 0
 				parent = 2
 				position = -1.00911688804626,-7.12857246398926,-0.571310043334961
 				rotation = -2.214744E-09,-0.2588187,8.265554E-09,0.9659259
@@ -6145,6 +6216,7 @@ GAME
 			stg = 0
 			prst = False
 			ref = 0
+			ctrl = False
 			ORBIT
 			{
 				SMA = 13945964505.5265
@@ -6161,6 +6233,7 @@ GAME
 				name = PotatoRoid
 				uid = 191652446
 				mid = 191652446
+				launchID = 0
 				parent = 0
 				position = 0,0,0
 				rotation = 0,0,0,1
@@ -6220,6 +6293,7 @@ GAME
 			stg = 0
 			prst = False
 			ref = 0
+			ctrl = False
 			ORBIT
 			{
 				SMA = 14358113634.5689
@@ -6236,6 +6310,7 @@ GAME
 				name = PotatoRoid
 				uid = 995580308
 				mid = 995580308
+				launchID = 0
 				parent = 0
 				position = 0,0,0
 				rotation = 0,0,0,1
@@ -6295,18 +6370,19 @@ GAME
 			stg = 0
 			prst = False
 			ref = 0
+			ctrl = False
 			cPch = 0
 			cHdg = 0
 			cMod = -1
 			ORBIT
 			{
-				SMA = 0
+				SMA = NaN
 				ECC = 1
 				INC = NaN
-				LPE = 79.4717422377416
-				LAN = 259.228165473864
+				LPE = 91.1630609981989
+				LAN = 280.08686905019
 				MNA = -8.40714670366795
-				EPH = 1453889.04831851
+				EPH = 1453995.74831861
 				REF = 2
 			}
 			PART
@@ -6314,6 +6390,7 @@ GAME
 				name = landingLeg1
 				uid = 640556573
 				mid = 2259368339
+				launchID = 0
 				parent = 0
 				position = 0,0,0
 				rotation = 0,0,0,1
@@ -6497,6 +6574,7 @@ GAME
 			stg = 3
 			prst = False
 			ref = 0
+			ctrl = False
 			cPch = 0
 			cHdg = 0
 			cMod = 0
@@ -6516,6 +6594,7 @@ GAME
 				name = stackDecoupler
 				uid = 1637448509
 				mid = 2541355024
+				launchID = 0
 				parent = 0
 				position = 0,0,0
 				rotation = 0,0,0,1
@@ -6575,6 +6654,7 @@ GAME
 				name = fuelTank.long
 				uid = 3187646575
 				mid = 2541355024
+				launchID = 0
 				parent = 0
 				position = 0,-2.00799942016602,0
 				rotation = 0,0,0,1
@@ -6627,6 +6707,7 @@ GAME
 				name = fuelTank.long
 				uid = 1024609835
 				mid = 2541355024
+				launchID = 0
 				parent = 1
 				position = 0,-5.77050495147705,0
 				rotation = 0,0,0,1
@@ -6679,6 +6760,7 @@ GAME
 				name = R8winglet
 				uid = 3680809496
 				mid = 2541355024
+				launchID = 0
 				parent = 2
 				position = 0.00978900492191315,-7.12857341766357,1.15957021713257
 				rotation = 6.050803E-09,0.7071071,6.050798E-09,0.7071065
@@ -6737,6 +6819,7 @@ GAME
 				name = R8winglet
 				uid = 1116781861
 				mid = 2541355024
+				launchID = 0
 				parent = 2
 				position = 0.999327063560486,-7.12857341766357,-0.588270246982574
 				rotation = 8.265546E-09,0.9659258,-2.214749E-09,-0.2588195
@@ -6795,6 +6878,7 @@ GAME
 				name = R8winglet
 				uid = 2593430325
 				mid = 2541355024
+				launchID = 0
 				parent = 2
 				position = -1.00911700725555,-7.12857341766357,-0.571310102939606
 				rotation = -2.214744E-09,-0.2588187,8.265554E-09,0.9659259
@@ -6853,6 +6937,7 @@ GAME
 				name = fuelTank
 				uid = 339301274
 				mid = 2541355024
+				launchID = 0
 				parent = 2
 				position = 0,-8.62369632720947,0
 				rotation = 0,0,0,1
@@ -6905,6 +6990,7 @@ GAME
 				name = liquidEngine2
 				uid = 1527448030
 				mid = 2541355024
+				launchID = 0
 				parent = 6
 				position = 0,-10.4380216598511,0
 				rotation = 0,0,0,1
@@ -7153,6 +7239,7 @@ GAME
 			stg = 3
 			prst = False
 			ref = 3032454022
+			ctrl = False
 			cPch = 
 			cHdg = 
 			cMod = 0
@@ -7172,6 +7259,7 @@ GAME
 				name = engineLargeSkipper
 				uid = 984744092
 				mid = 2920961783
+				launchID = 0
 				parent = 0
 				position = 0,0,0
 				rotation = 0,0,0,1
@@ -7361,6 +7449,7 @@ GAME
 				name = fuelTank1-2
 				uid = 1284267507
 				mid = 2920961783
+				launchID = 0
 				parent = 0
 				position = -6.98932694831456E-07,1.87500214576721,2.81558300230245E-06
 				rotation = 0,0,0,1
@@ -7413,6 +7502,7 @@ GAME
 				name = stackSeparatorBig
 				uid = 1138986460
 				mid = 2920961783
+				launchID = 0
 				parent = 1
 				position = -3.27155987633887E-07,3.65001153945923,2.38056600210257E-06
 				rotation = 0,0,0,1
@@ -7472,6 +7562,7 @@ GAME
 				name = fuelTank3-2
 				uid = 940750628
 				mid = 2920961783
+				launchID = 0
 				parent = 2
 				position = -2.80073072644882E-06,7.30000066757202,-6.35850483376998E-06
 				rotation = 0,0,0,1
@@ -7524,6 +7615,7 @@ GAME
 				name = asasmodule1-2
 				uid = 1490802452
 				mid = 2920961783
+				launchID = 0
 				parent = 3
 				position = -1.74881824932527E-06,11.3000020980835,4.24558584199985E-06
 				rotation = 0,0,0,1
@@ -7603,6 +7695,7 @@ GAME
 				name = probeStackSmall
 				uid = 3032454022
 				mid = 2920961783
+				launchID = 0
 				parent = 4
 				position = 1.0610062872729E-06,11.6499938964844,-3.71940745935717E-06
 				rotation = 0,0,0,1
@@ -7755,6 +7848,7 @@ GAME
 				name = mumech.MJ2.AR202
 				uid = 853561020
 				mid = 2920961783
+				launchID = 0
 				parent = 3
 				position = -1.20740509033203,5.1754994392395,-0.0309571567922831
 				rotation = 0,0,0,1
@@ -8197,6 +8291,7 @@ GAME
 				name = dockingPort2
 				uid = 368563519
 				mid = 2920961783
+				launchID = 0
 				parent = 3
 				position = -0.0979124680161476,7.41952228546143,1.20740711688995
 				rotation = 0.7071069,-8.089699E-09,2.586353E-08,0.7071069
@@ -8348,6 +8443,7 @@ GAME
 				name = dockingPort2
 				uid = 4027686747
 				mid = 2920961783
+				launchID = 0
 				parent = 3
 				position = 1.20740830898285,7.41951990127563,0.0979107692837715
 				rotation = 0.5000001,0.5000002,-0.5000002,0.5
@@ -8493,6 +8589,7 @@ GAME
 				name = dockingPort2
 				uid = 3014691255
 				mid = 2920961783
+				launchID = 0
 				parent = 3
 				position = 0.0979032143950462,7.41952610015869,-1.20740830898285
 				rotation = 8.089699E-09,0.7071069,-0.7071069,2.586353E-08
@@ -8638,6 +8735,7 @@ GAME
 				name = solarPanels3
 				uid = 58737307
 				mid = 2920961783
+				launchID = 0
 				parent = 3
 				position = -1.20741081237793,10.7136716842651,-0.184914469718933
 				rotation = 0,0,0,1
@@ -8720,6 +8818,7 @@ GAME
 				name = solarPanels3
 				uid = 431601446
 				mid = 2920961783
+				launchID = 0
 				parent = 3
 				position = -0.184914767742157,10.7136640548706,1.20740437507629
 				rotation = 8.495326E-09,0.7071069,-1.215076E-08,0.7071069
@@ -8802,6 +8901,7 @@ GAME
 				name = solarPanels3
 				uid = 4147346530
 				mid = 2920961783
+				launchID = 0
 				parent = 3
 				position = 1.20740640163422,10.7136669158936,0.184911534190178
 				rotation = 6.729218E-09,1,6.730914E-09,-4.663867E-08
@@ -8884,6 +8984,7 @@ GAME
 				name = solarPanels3
 				uid = 3152664410
 				mid = 2920961783
+				launchID = 0
 				parent = 3
 				position = 0.184910044074059,10.7136745452881,-1.20740711688995
 				rotation = 1.215076E-08,0.7071069,8.495326E-09,-0.7071069
@@ -8966,6 +9067,7 @@ GAME
 				name = batteryPack
 				uid = 3928026193
 				mid = 2920961783
+				launchID = 0
 				parent = 3
 				position = 0.821849822998047,7.36119222640991,0.919694602489471
 				rotation = -3.090269E-08,0.9659257,-1.422365E-07,-0.2588208
@@ -9009,6 +9111,7 @@ GAME
 				name = batteryPack
 				uid = 3506530560
 				mid = 2920961783
+				launchID = 0
 				parent = 3
 				position = 0.919691443443298,7.36119031906128,-0.821861743927002
 				rotation = -9.197599E-08,0.4999987,-7.449091E-08,-0.8660265
@@ -9052,6 +9155,7 @@ GAME
 				name = batteryPack
 				uid = 3437628263
 				mid = 2920961783
+				launchID = 0
 				parent = 3
 				position = -0.821852743625641,7.36118412017822,-0.919703781604767
 				rotation = -1.323057E-07,-0.2588208,5.708342E-08,-0.9659257
@@ -9095,6 +9199,7 @@ GAME
 				name = batteryPack
 				uid = 1375564524
 				mid = 2920961783
+				launchID = 0
 				parent = 3
 				position = -0.91969507932663,7.3611855506897,0.821852803230286
 				rotation = -4.547222E-08,-0.8660265,1.453011E-07,-0.4999987
@@ -9138,6 +9243,7 @@ GAME
 				name = spotLight2
 				uid = 3883857344
 				mid = 2920961783
+				launchID = 0
 				parent = 3
 				position = 0.955477237701416,10.5348920822144,1.1534548997879
 				rotation = -3.090269E-08,0.9659257,-1.422365E-07,-0.2588208
@@ -9243,6 +9349,7 @@ GAME
 				name = spotLight2
 				uid = 2193801618
 				mid = 2920961783
+				launchID = 0
 				parent = 3
 				position = 1.15345442295074,10.53489112854,-0.955480933189392
 				rotation = -9.197599E-08,0.4999987,-7.449091E-08,-0.8660265
@@ -9348,6 +9455,7 @@ GAME
 				name = spotLight2
 				uid = 3792462988
 				mid = 2920961783
+				launchID = 0
 				parent = 3
 				position = -0.955473780632019,10.5348968505859,-1.15344750881195
 				rotation = -1.323057E-07,-0.2588208,5.708342E-08,-0.9659257
@@ -9453,6 +9561,7 @@ GAME
 				name = spotLight2
 				uid = 1984886493
 				mid = 2920961783
+				launchID = 0
 				parent = 3
 				position = -1.15345418453217,10.534893989563,0.955473721027374
 				rotation = -4.547222E-08,-0.8660265,1.453011E-07,-0.4999987
@@ -9558,6 +9667,7 @@ GAME
 				name = dockingPort2
 				uid = 1139659035
 				mid = 2920961783
+				launchID = 0
 				parent = 3
 				position = -1.20740675926209,7.41951704025269,-0.0979122966527939
 				rotation = 0.5000001,-0.5000001,0.5000001,0.5000001
@@ -9703,6 +9813,7 @@ GAME
 				name = dockingPort2
 				uid = 3550677875
 				mid = 1458563354
+				launchID = 0
 				parent = 7
 				position = -0.0978987812995911,7.41954278945923,1.76915836334229
 				rotation = -0.7018408,-0.08613669,0.08613672,0.7018409
@@ -9851,6 +9962,7 @@ GAME
 				name = fuelTank3-2
 				uid = 4007976166
 				mid = 1458563354
+				launchID = 0
 				parent = 23
 				position = -0.0979278460144997,7.41954469680786,5.51910352706909
 				rotation = -0.08613669,0.7018408,0.7018409,-0.08613672
@@ -9903,6 +10015,7 @@ GAME
 				name = mumech.MJ2.AR202
 				uid = 3111396226
 				mid = 1458563354
+				launchID = 0
 				parent = 24
 				position = 1.08113431930542,7.68147659301758,3.39461493492126
 				rotation = -0.08613669,0.7018408,0.7018409,-0.08613672
@@ -10028,6 +10141,7 @@ GAME
 				name = dockingPort2
 				uid = 1328097300
 				mid = 1458563354
+				launchID = 0
 				parent = 24
 				position = 1.0973893404007,7.61649703979492,5.63870334625244
 				rotation = 0.6157041,0.7879776,1.800384E-08,-5.013484E-08
@@ -10173,6 +10287,7 @@ GAME
 				name = dockingPort2
 				uid = 3413806398
 				mid = 1458563354
+				launchID = 0
 				parent = 24
 				position = -0.294879883527756,8.61478614807129,5.63863754272461
 				rotation = -0.1218157,0.9925528,5.878849E-08,-2.116996E-08
@@ -10318,6 +10433,7 @@ GAME
 				name = dockingPort2
 				uid = 1943686382
 				mid = 1458563354
+				launchID = 0
 				parent = 24
 				position = -1.29315638542175,7.22258281707764,5.63866472244263
 				rotation = -0.7879777,0.615704,5.324604E-08,1.449042E-08
@@ -10463,6 +10579,7 @@ GAME
 				name = dockingPort2
 				uid = 613634375
 				mid = 1458563354
+				launchID = 0
 				parent = 24
 				position = 0.0990415215492249,6.22429800033569,5.63863182067871
 				rotation = -0.9925528,-0.1218157,2.116996E-08,5.878849E-08
@@ -10608,6 +10725,7 @@ GAME
 				name = solarPanels3
 				uid = 2478441341
 				mid = 1458563354
+				launchID = 0
 				parent = 24
 				position = 1.11835885047913,7.53209257125854,8.93279075622559
 				rotation = -0.08613669,0.7018408,0.7018409,-0.08613672
@@ -10690,6 +10808,7 @@ GAME
 				name = solarPanels3
 				uid = 3571599518
 				mid = 1458563354
+				launchID = 0
 				parent = 24
 				position = -0.210424348711967,8.63583183288574,8.93285465240479
 				rotation = -0.5571842,0.4353685,0.4353686,-0.5571842
@@ -10772,6 +10891,7 @@ GAME
 				name = solarPanels3
 				uid = 3999401364
 				mid = 1458563354
+				launchID = 0
 				parent = 24
 				position = -1.31418681144714,7.30699157714844,8.93282032012939
 				rotation = -0.7018409,-0.08613674,-0.08613669,-0.7018408
@@ -10854,6 +10974,7 @@ GAME
 				name = solarPanels3
 				uid = 1380199849
 				mid = 1458563354
+				launchID = 0
 				parent = 24
 				position = 0.0146681545302272,6.20324850082397,8.93285465240479
 				rotation = -0.4353686,-0.5571842,-0.5571842,-0.4353685
@@ -10936,6 +11057,7 @@ GAME
 				name = batteryPack
 				uid = 1021965286
 				mid = 1458563354
+				launchID = 0
 				parent = 24
 				position = -1.11779153347015,8.11320972442627,5.58029317855835
 				rotation = -0.6556321,-0.2648526,-0.2648526,-0.6556318
@@ -10979,6 +11101,7 @@ GAME
 				name = batteryPack
 				uid = 928161296
 				mid = 1458563354
+				launchID = 0
 				parent = 24
 				position = -0.791555225849152,6.39967203140259,5.58032989501953
 				rotation = -0.2763229,-0.6508809,-0.6508808,-0.2763227
@@ -11022,6 +11145,7 @@ GAME
 				name = batteryPack
 				uid = 1987786900
 				mid = 1458563354
+				launchID = 0
 				parent = 24
 				position = 0.921982526779175,6.72587490081787,5.58035850524902
 				rotation = 0.2648526,-0.655632,-0.6556319,0.2648525
@@ -11065,6 +11189,7 @@ GAME
 				name = batteryPack
 				uid = 1669821330
 				mid = 1458563354
+				launchID = 0
 				parent = 24
 				position = 0.595746457576752,8.43941307067871,5.58032178878784
 				rotation = 0.650881,-0.2763228,-0.2763228,0.6508808
@@ -11108,6 +11233,7 @@ GAME
 				name = spotLight2
 				uid = 1723407933
 				mid = 1458563354
+				launchID = 0
 				parent = 24
 				position = -1.30395805835724,8.30770778656006,8.75401496887207
 				rotation = -0.6556321,-0.2648526,-0.2648526,-0.6556318
@@ -11213,6 +11339,7 @@ GAME
 				name = spotLight2
 				uid = 2553947213
 				mid = 1458563354
+				launchID = 0
 				parent = 24
 				position = -0.986037254333496,6.21349763870239,8.75409030914307
 				rotation = -0.2763229,-0.6508809,-0.6508808,-0.2763227
@@ -11318,6 +11445,7 @@ GAME
 				name = spotLight2
 				uid = 2453114187
 				mid = 1458563354
+				launchID = 0
 				parent = 24
 				position = 1.10816824436188,6.53137397766113,8.75408744812012
 				rotation = 0.2648526,-0.655632,-0.6556319,0.2648525
@@ -11423,6 +11551,7 @@ GAME
 				name = spotLight2
 				uid = 526357414
 				mid = 1458563354
+				launchID = 0
 				parent = 24
 				position = 0.79024738073349,8.62558364868164,8.75401210784912
 				rotation = 0.650881,-0.2763228,-0.2763228,0.6508808
@@ -11528,6 +11657,7 @@ GAME
 				name = RCSBlock
 				uid = 4215836439
 				mid = 1458563354
+				launchID = 0
 				parent = 24
 				position = 0.167658761143684,6.18314504623413,8.01134014129639
 				rotation = -0.4353687,-0.5571842,-0.5571844,-0.4353685
@@ -11599,6 +11729,7 @@ GAME
 				name = RCSBlock
 				uid = 3013732695
 				mid = 1458563354
+				launchID = 0
 				parent = 24
 				position = 1.13848030567169,7.6851053237915,8.01130485534668
 				rotation = 0.08613659,-0.7018408,-0.7018409,0.08613682
@@ -11670,6 +11801,7 @@ GAME
 				name = RCSBlock
 				uid = 3158249774
 				mid = 1458563354
+				launchID = 0
 				parent = 24
 				position = -0.363442838191986,8.65594291687012,8.01132869720459
 				rotation = 0.5571843,-0.4353687,-0.4353685,0.5571843
@@ -11741,6 +11873,7 @@ GAME
 				name = RCSBlock
 				uid = 4075120530
 				mid = 1458563354
+				launchID = 0
 				parent = 24
 				position = -1.33426451683044,7.15398216247559,8.0113639831543
 				rotation = 0.7018409,0.08613663,0.0861368,0.7018408
@@ -11812,6 +11945,7 @@ GAME
 				name = RCSBlock
 				uid = 878722301
 				mid = 1458563354
+				launchID = 0
 				parent = 24
 				position = 0.217995345592499,6.19569492340088,2.7801296710968
 				rotation = -0.4353687,-0.5571842,-0.5571844,-0.4353685
@@ -11883,6 +12017,7 @@ GAME
 				name = RCSBlock
 				uid = 218167265
 				mid = 1458563354
+				launchID = 0
 				parent = 24
 				position = 1.12594592571259,7.73543310165405,2.78010511398315
 				rotation = 0.08613659,-0.7018408,-0.7018409,0.08613682
@@ -11954,6 +12089,7 @@ GAME
 				name = RCSBlock
 				uid = 1665668913
 				mid = 1458563354
+				launchID = 0
 				parent = 24
 				position = -0.413787007331848,8.64338684082031,2.78013396263123
 				rotation = 0.5571843,-0.4353687,-0.4353685,0.5571843
@@ -12025,6 +12161,7 @@ GAME
 				name = RCSBlock
 				uid = 2224366662
 				mid = 1458563354
+				launchID = 0
 				parent = 24
 				position = -1.32173800468445,7.1036491394043,2.78015875816345
 				rotation = 0.7018409,0.08613663,0.0861368,0.7018408
@@ -12096,6 +12233,7 @@ GAME
 				name = asasmodule1-2
 				uid = 2322354977
 				mid = 1458563354
+				launchID = 0
 				parent = 24
 				position = -0.0979356244206429,7.41955614089966,9.51911926269531
 				rotation = -0.08613669,0.7018408,0.7018409,-0.08613672
@@ -12175,6 +12313,7 @@ GAME
 				name = RCSTank1-2
 				uid = 1936266470
 				mid = 1458563354
+				launchID = 0
 				parent = 50
 				position = -0.0978763625025749,7.41953802108765,10.2691812515259
 				rotation = -0.08613669,0.7018408,0.7018409,-0.08613672
@@ -12217,6 +12356,7 @@ GAME
 				name = probeStackLarge
 				uid = 3334454016
 				mid = 1458563354
+				launchID = 0
 				parent = 51
 				position = -0.0979142561554909,7.41955184936523,10.9591312408447
 				rotation = -0.08613669,0.7018408,0.7018409,-0.08613672
@@ -12369,6 +12509,7 @@ GAME
 				name = dockingPort2
 				uid = 2240487045
 				mid = 1458563354
+				launchID = 0
 				parent = 52
 				position = -0.0978863164782524,7.4195442199707,11.1491641998291
 				rotation = -0.7018408,-0.08613669,0.08613672,0.7018409
@@ -12570,6 +12711,7 @@ GAME
 			stg = 1
 			prst = False
 			ref = 2350302645
+			ctrl = False
 			cPch = 0
 			cHdg = 0
 			cMod = 0
@@ -12589,6 +12731,7 @@ GAME
 				name = probeStackLarge
 				uid = 2350302645
 				mid = 1392299356
+				launchID = 0
 				parent = 0
 				position = 0,0,0
 				rotation = 0,0,0,1
@@ -12741,6 +12884,7 @@ GAME
 				name = fuelTank3-2
 				uid = 1235701373
 				mid = 1392299356
+				launchID = 0
 				parent = 0
 				position = 0,-3.9399995803833,0
 				rotation = 0,0,0,1
@@ -12793,6 +12937,7 @@ GAME
 				name = dockingPort2
 				uid = 2931201891
 				mid = 1392299356
+				launchID = 0
 				parent = 1
 				position = -1.20740735530853,-3.84078979492188,-0.0278784409165382
 				rotation = 0.5,-0.5,0.5,0.5
@@ -12937,6 +13082,7 @@ GAME
 				name = dockingPort2
 				uid = 440259454
 				mid = 1392299356
+				launchID = 0
 				parent = 1
 				position = 0.579560279846191,-3.84078979492188,1.05958366394043
 				rotation = 0.6830127,0.1830127,-0.1830127,0.6830127
@@ -13081,6 +13227,7 @@ GAME
 				name = dockingPort2
 				uid = 3561886300
 				mid = 1392299356
+				launchID = 0
 				parent = 1
 				position = 0.627847015857697,-3.84078979492188,-1.03170621395111
 				rotation = 0.1830127,0.6830127,-0.6830127,0.1830127
@@ -13225,6 +13372,7 @@ GAME
 				name = ksp.r.largeBatteryPack
 				uid = 4104782843
 				mid = 1392299356
+				launchID = 0
 				parent = 1
 				position = -0.924835443496704,-2.20065021514893,-0.812952041625977
 				rotation = 6.559019E-08,-0.4999987,-3.786838E-08,-0.8660262
@@ -13270,6 +13418,7 @@ GAME
 				name = ksp.r.largeBatteryPack
 				uid = 1509423498
 				mid = 1392299356
+				launchID = 0
 				parent = 1
 				position = -1.16645443439484,-2.20065021514893,0.394454687833786
 				rotation = 3.786857E-08,-0.8660247,-6.559007E-08,-0.5000013
@@ -13315,6 +13464,7 @@ GAME
 				name = ksp.r.largeBatteryPack
 				uid = 1985377822
 				mid = 1392299356
+				launchID = 0
 				parent = 1
 				position = -0.241619408130646,-2.20065021514893,1.2074066400528
 				rotation = 1.082482E-13,-1,-7.573696E-08,-1.41582E-06
@@ -13360,6 +13510,7 @@ GAME
 				name = ksp.r.largeBatteryPack
 				uid = 877701162
 				mid = 1392299356
+				launchID = 0
 				parent = 1
 				position = 0.924835085868835,-2.20065021514893,0.812952041625977
 				rotation = -3.786839E-08,-0.8660262,-6.559019E-08,0.4999988
@@ -13405,6 +13556,7 @@ GAME
 				name = ksp.r.largeBatteryPack
 				uid = 2590225705
 				mid = 1392299356
+				launchID = 0
 				parent = 1
 				position = 1.16645455360413,-2.20065021514893,-0.394454687833786
 				rotation = -6.559008E-08,-0.5000013,-3.786857E-08,0.8660247
@@ -13450,6 +13602,7 @@ GAME
 				name = ksp.r.largeBatteryPack
 				uid = 3260675805
 				mid = 1392299356
+				launchID = 0
 				parent = 1
 				position = 0.241619795560837,-2.20065021514893,-1.20740735530853
 				rotation = -7.573696E-08,-1.523051E-06,-1.163695E-13,1
@@ -13495,6 +13648,7 @@ GAME
 				name = solarPanels5
 				uid = 549669205
 				mid = 1392299356
+				launchID = 0
 				parent = 1
 				position = -1.20740735530853,-0.552419662475586,-0.00440270453691483
 				rotation = 0,-0.7071068,0,0.7071068
@@ -13579,6 +13733,7 @@ GAME
 				name = solarPanels5
 				uid = 772414340
 				mid = 1392299356
+				launchID = 0
 				parent = 1
 				position = -0.607516527175903,-0.552419662475586,1.04344367980957
 				rotation = 0,-0.258819,0,0.9659259
@@ -13663,6 +13818,7 @@ GAME
 				name = solarPanels5
 				uid = 1023707446
 				mid = 1392299356
+				launchID = 0
 				parent = 1
 				position = 0.599890887737274,-0.552419662475586,1.04784667491913
 				rotation = 0,0.2588191,0,0.9659259
@@ -13747,6 +13903,7 @@ GAME
 				name = solarPanels5
 				uid = 3111326628
 				mid = 1392299356
+				launchID = 0
 				parent = 1
 				position = 1.20740759372711,-0.552419662475586,0.00440260022878647
 				rotation = 0,0.7071068,0,0.7071068
@@ -13831,6 +13988,7 @@ GAME
 				name = solarPanels5
 				uid = 4101840599
 				mid = 1392299356
+				launchID = 0
 				parent = 1
 				position = 0.607516527175903,-0.552419662475586,-1.04344415664673
 				rotation = 0,0.9659259,0,0.258819
@@ -13915,6 +14073,7 @@ GAME
 				name = solarPanels5
 				uid = 1576167636
 				mid = 1392299356
+				launchID = 0
 				parent = 1
 				position = -0.59989070892334,-0.552419662475586,-1.04784691333771
 				rotation = 0,0.9659259,0,-0.258819
@@ -13999,6 +14158,7 @@ GAME
 				name = dockingPort2
 				uid = 3723621328
 				mid = 1392299356
+				launchID = 0
 				parent = 1
 				position = 0,-7.69000244140625,0
 				rotation = 0,0,1,0
@@ -14147,6 +14307,7 @@ GAME
 				name = rcsTankRadialLong
 				uid = 2108275173
 				mid = 1392299356
+				launchID = 0
 				parent = 1
 				position = 0.740052103996277,-6.08026027679443,-0.508005201816559
 				rotation = 6.559019E-08,0.4999987,3.786838E-08,-0.8660262
@@ -14192,6 +14353,7 @@ GAME
 				name = rcsTankRadialLong
 				uid = 1621069312
 				mid = 1392299356
+				launchID = 0
 				parent = 1
 				position = -0.0699193030595779,-6.08026027679443,-0.894906520843506
 				rotation = 7.573696E-08,-1.471432E-06,-1.1246E-13,-1
@@ -14237,6 +14399,7 @@ GAME
 				name = rcsTankRadialLong
 				uid = 2706893003
 				mid = 1392299356
+				launchID = 0
 				parent = 1
 				position = -0.809971511363983,-6.08026027679443,-0.386901289224625
 				rotation = 6.559007E-08,-0.5000013,-3.786858E-08,-0.8660247
@@ -14282,6 +14445,7 @@ GAME
 				name = rcsTankRadialLong
 				uid = 4027267304
 				mid = 1392299356
+				launchID = 0
 				parent = 1
 				position = -0.740051984786987,-6.08026027679443,0.508005142211914
 				rotation = 3.786838E-08,-0.8660262,-6.559019E-08,-0.4999987
@@ -14327,6 +14491,7 @@ GAME
 				name = rcsTankRadialLong
 				uid = 2867405730
 				mid = 1392299356
+				launchID = 0
 				parent = 1
 				position = 0.0699193701148033,-6.08026027679443,0.894906640052795
 				rotation = -1.163695E-13,-1,-7.573696E-08,1.523051E-06
@@ -14372,6 +14537,7 @@ GAME
 				name = rcsTankRadialLong
 				uid = 4281273669
 				mid = 1392299356
+				launchID = 0
 				parent = 1
 				position = 0.809971392154694,-6.08026027679443,0.386901497840881
 				rotation = -3.786857E-08,-0.8660247,-6.559008E-08,0.5000013
@@ -14417,6 +14583,7 @@ GAME
 				name = RCSBlock
 				uid = 1474889077
 				mid = 1392299356
+				launchID = 0
 				parent = 1
 				position = -0.755704522132874,-3.73698997497559,-1.02314460277557
 				rotation = 6.558967E-08,0.4999995,-1.136048E-07,-0.8660257
@@ -14487,6 +14654,7 @@ GAME
 				name = RCSBlock
 				uid = 1661123379
 				mid = 1392299356
+				launchID = 0
 				parent = 1
 				position = -0.508216917514801,-3.73698997497559,1.16603171825409
 				rotation = -6.558982E-08,-0.5000007,-1.136047E-07,-0.8660251
@@ -14557,6 +14725,7 @@ GAME
 				name = RCSBlock
 				uid = 780253609
 				mid = 1392299356
+				launchID = 0
 				parent = 1
 				position = 1.26392161846161,-3.73698997497559,-0.142887085676193
 				rotation = -1.311795E-07,-1,9.174574E-14,6.910125E-07
@@ -14627,6 +14796,7 @@ GAME
 				name = dockingPort2
 				uid = 3717130330
 				mid = 1392299356
+				launchID = 0
 				parent = 0
 				position = 0,0.190000534057617,0
 				rotation = 0,0,0,1
@@ -14769,6 +14939,7 @@ GAME
 				name = mumech.MJ2.AR202
 				uid = 3505636039
 				mid = 1392299356
+				launchID = 0
 				parent = 0
 				position = 0.884096324443817,0.170999526977539,0.0713607966899872
 				rotation = -0.5000001,0.4999999,-0.5000001,0.4999999
@@ -15211,6 +15382,7 @@ GAME
 				name = dockingPort2
 				uid = 1691783507
 				mid = 1100263819
+				launchID = 0
 				parent = 17
 				position = 0.000124956088257022,-8.25170230865479,3.78884360543452E-05
 				rotation = -0.0001860508,0.6814773,0.0001236474,0.7318393
@@ -15359,6 +15531,7 @@ GAME
 				name = stationHub
 				uid = 2693346397
 				mid = 1100263819
+				launchID = 0
 				parent = 29
 				position = 0.000520682602655143,-9.16386699676514,0.000127460007206537
 				rotation = 0.0001236474,-0.7318393,0.0001860508,0.6814773
@@ -15395,6 +15568,7 @@ GAME
 				name = dockingPort2
 				uid = 100991851
 				mid = 1100263819
+				launchID = 0
 				parent = 30
 				position = 0.0654450133442879,-9.1639289855957,-0.909712493419647
 				rotation = 0.5174011,0.5175759,-0.4820088,-0.4817456
@@ -15537,6 +15711,7 @@ GAME
 				name = dockingPort2
 				uid = 1917957417
 				mid = 1100263819
+				launchID = 0
 				parent = 30
 				position = 0.910360217094421,-9.16345119476318,0.0650550872087479
 				rotation = -0.517357,-0.4819646,0.4817898,-0.5176201
@@ -15679,6 +15854,7 @@ GAME
 				name = dockingPort2
 				uid = 609550274
 				mid = 1100263819
+				launchID = 0
 				parent = 30
 				position = -0.0644022673368454,-9.16378879547119,0.909974277019501
 				rotation = -0.5175759,0.5174011,0.4817456,-0.4820088
@@ -15821,6 +15997,7 @@ GAME
 				name = dockingPort2
 				uid = 738743996
 				mid = 1100263819
+				launchID = 0
 				parent = 30
 				position = -0.90931761264801,-9.16426658630371,-0.0647932216525078
 				rotation = -0.5176201,0.4817898,0.4819646,0.517357
@@ -15963,6 +16140,7 @@ GAME
 				name = dockingPort2
 				uid = 1046744731
 				mid = 1100263819
+				launchID = 0
 				parent = 30
 				position = 0.000916751974727958,-10.0760164260864,0.000224458868615329
 				rotation = 0.6814773,0.0001860508,0.7318393,-0.0001236474
@@ -16164,6 +16342,7 @@ GAME
 			stg = 0
 			prst = False
 			ref = 0
+			ctrl = False
 			cPch = 0
 			cHdg = 0
 			cMod = -1
@@ -16183,6 +16362,7 @@ GAME
 				name = dockingPort2
 				uid = 273210440
 				mid = 1392299356
+				launchID = 0
 				parent = 0
 				position = 0,0,0
 				rotation = 0,0,0,1
@@ -16325,6 +16505,7 @@ GAME
 				name = fuelTank4-2
 				uid = 2375060647
 				mid = 1392299356
+				launchID = 0
 				parent = 0
 				position = 0,-0.46875,0
 				rotation = 0,0,0,1
@@ -16377,6 +16558,7 @@ GAME
 				name = strutConnector
 				uid = 3608909728
 				mid = 1392299356
+				launchID = 0
 				parent = 1
 				position = -0.967568397521973,-0.198460578918457,-0.738934755325317
 				rotation = 1.960228E-08,0.2588205,-7.315626E-08,-0.9659255
@@ -16412,6 +16594,7 @@ GAME
 				name = strutConnector
 				uid = 1917321680
 				mid = 1392299356
+				launchID = 0
 				parent = 1
 				position = -1.12372040748596,-0.198460578918457,0.468471676111221
 				rotation = -1.960206E-08,-0.2588176,-7.315631E-08,-0.9659262
@@ -16447,6 +16630,7 @@ GAME
 				name = strutConnector
 				uid = 4218627610
 				mid = 1392299356
+				launchID = 0
 				parent = 1
 				position = -0.156151711940765,-0.198460578918457,1.2074066400528
 				rotation = -5.355404E-08,-0.7071058,-5.355419E-08,-0.7071078
@@ -16482,6 +16666,7 @@ GAME
 				name = strutConnector
 				uid = 3687547241
 				mid = 1392299356
+				launchID = 0
 				parent = 1
 				position = 0.967568576335907,-0.198460578918457,0.738934755325317
 				rotation = -7.315626E-08,-0.9659255,-1.960227E-08,-0.2588204
@@ -16517,6 +16702,7 @@ GAME
 				name = strutConnector
 				uid = 2262144322
 				mid = 1392299356
+				launchID = 0
 				parent = 1
 				position = 1.12372064590454,-0.198460578918457,-0.468471795320511
 				rotation = -7.315631E-08,-0.9659262,1.960206E-08,0.2588177
@@ -16552,6 +16738,7 @@ GAME
 				name = strutConnector
 				uid = 1505895296
 				mid = 1392299356
+				launchID = 0
 				parent = 1
 				position = 0.156152114272118,-0.198460578918457,-1.20740735530853
 				rotation = -5.355419E-08,-0.7071078,5.355403E-08,0.7071058
@@ -16587,6 +16774,7 @@ GAME
 				name = liquidEngine1-2
 				uid = 2975445255
 				mid = 1392299356
+				launchID = 0
 				parent = 1
 				position = 0,-2.00280857086182,0
 				rotation = 0,0,0,1
@@ -16835,6 +17023,7 @@ GAME
 			stg = 1
 			prst = False
 			ref = 750904958
+			ctrl = False
 			cPch = 
 			cHdg = 
 			cMod = 0
@@ -16854,6 +17043,7 @@ GAME
 				name = probeCoreOcto
 				uid = 750904958
 				mid = 2129846766
+				launchID = 0
 				parent = 0
 				position = 0,0,0
 				rotation = 0,0,0,1
@@ -17006,6 +17196,7 @@ GAME
 				name = xenonTank
 				uid = 3038387665
 				mid = 2129846766
+				launchID = 0
 				parent = 0
 				position = 0,-0.327549934387207,0
 				rotation = 0,0,0,1
@@ -17048,6 +17239,7 @@ GAME
 				name = ionEngine
 				uid = 3747293059
 				mid = 2129846766
+				launchID = 0
 				parent = 1
 				position = 0,-0.681570053100586,0
 				rotation = 0,0,0,1
@@ -17150,6 +17342,7 @@ GAME
 				name = rtg
 				uid = 3941796263
 				mid = 2129846766
+				launchID = 0
 				parent = 0
 				position = 0.670524120330811,0.0452299118041992,-1.04308128356934E-07
 				rotation = -0.4999999,-0.5000001,0.5000001,-0.4999999
@@ -17230,6 +17423,7 @@ GAME
 				name = rtg
 				uid = 1058004524
 				mid = 2129846766
+				launchID = 0
 				parent = 0
 				position = -0.6705242395401,0.0452299118041992,0
 				rotation = -0.5,0.5,-0.5,-0.5
@@ -17310,6 +17504,7 @@ GAME
 				name = commDish
 				uid = 1876893355
 				mid = 2129846766
+				launchID = 0
 				parent = 0
 				position = 0,0.187079429626465,0
 				rotation = -1.542682E-08,0,0,1
@@ -17404,6 +17599,7 @@ GAME
 				name = sensorAccelerometer
 				uid = 818509179
 				mid = 2129846766
+				launchID = 0
 				parent = 0
 				position = -0.236604601144791,0.0214195251464844,-0.248983800411224
 				rotation = 9.895462E-08,-0.3826834,-4.098834E-08,-0.9238796
@@ -17537,6 +17733,7 @@ GAME
 				name = sensorThermometer
 				uid = 2043224481
 				mid = 2129846766
+				launchID = 0
 				parent = 0
 				position = 0.244405135512352,-0.00693988800048828,0.24118272960186
 				rotation = 4.098834E-08,-0.9238794,9.895451E-08,0.3826838
@@ -17670,6 +17867,7 @@ GAME
 				name = batteryPack
 				uid = 2794378228
 				mid = 2129846766
+				launchID = 0
 				parent = 0
 				position = 0,0.00664997100830078,-0.343556791543961
 				rotation = 0,-4.371139E-08,0,-1
@@ -17711,6 +17909,7 @@ GAME
 				name = batteryPack
 				uid = 3266347975
 				mid = 2129846766
+				launchID = 0
 				parent = 0
 				position = 0,0.00664997100830078,0.343556791543961
 				rotation = 0,1,0,0
@@ -17811,6 +18010,7 @@ GAME
 			stg = 2
 			prst = False
 			ref = 3262701600
+			ctrl = False
 			cPch = 
 			cHdg = 
 			cMod = 0
@@ -17830,6 +18030,7 @@ GAME
 				name = stackDecouplerMini
 				uid = 710847583
 				mid = 2129846766
+				launchID = 0
 				parent = 0
 				position = 0,0,0
 				rotation = 0,0,0,1
@@ -17889,6 +18090,7 @@ GAME
 				name = fuelTank.long
 				uid = 3205773172
 				mid = 2129846766
+				launchID = 0
 				parent = 0
 				position = 0,-1.9509105682373,0
 				rotation = 0,0,0,1
@@ -17941,6 +18143,7 @@ GAME
 				name = fuelTank.long
 				uid = 387861486
 				mid = 2129846766
+				launchID = 0
 				parent = 1
 				position = 0,-5.71341848373413,0
 				rotation = 0,0,0,1
@@ -17993,6 +18196,7 @@ GAME
 				name = liquidEngine2
 				uid = 2824167519
 				mid = 2129846766
+				launchID = 0
 				parent = 2
 				position = 0,-8.50274562835693,0
 				rotation = 0,0,0,1
@@ -18182,6 +18386,7 @@ GAME
 				name = R8winglet
 				uid = 2542585483
 				mid = 2129846766
+				launchID = 0
 				parent = 2
 				position = 0.00978901982307434,-7.07148551940918,1.15956914424896
 				rotation = 6.050803E-09,0.7071071,6.050798E-09,0.7071065
@@ -18240,6 +18445,7 @@ GAME
 				name = R8winglet
 				uid = 2008642957
 				mid = 2129846766
+				launchID = 0
 				parent = 2
 				position = 0.999327063560486,-7.07148551940918,-0.58827018737793
 				rotation = 8.265546E-09,0.9659258,-2.214749E-09,-0.2588195
@@ -18298,6 +18504,7 @@ GAME
 				name = R8winglet
 				uid = 2377646881
 				mid = 2129846766
+				launchID = 0
 				parent = 2
 				position = -1.00911724567413,-7.07148551940918,-0.57131016254425
 				rotation = -2.214744E-09,-0.2588187,8.265554E-09,0.9659259
@@ -18356,6 +18563,7 @@ GAME
 				name = mumech.MJ2.AR202
 				uid = 3262701600
 				mid = 2129846766
+				launchID = 0
 				parent = 1
 				position = 0.0525235086679459,-0.492650032043457,-0.61907434463501
 				rotation = 1.210161E-08,0.7071065,-1.210162E-08,-0.7071071
@@ -18857,6 +19065,7 @@ GAME
 			stg = 0
 			prst = False
 			ref = 2614425822
+			ctrl = False
 			cPch = 
 			cHdg = 0
 			cMod = 0
@@ -18876,6 +19085,7 @@ GAME
 				name = probeStackLarge
 				uid = 2614425822
 				mid = 1114451285
+				launchID = 0
 				parent = 0
 				position = 0,0,0
 				rotation = 0,0,0,1
@@ -19028,6 +19238,7 @@ GAME
 				name = fuelTank3-2
 				uid = 2780014601
 				mid = 1114451285
+				launchID = 0
 				parent = 0
 				position = 0,-3.9399995803833,0
 				rotation = 0,0,0,1
@@ -19080,6 +19291,7 @@ GAME
 				name = dockingPort2
 				uid = 2093054931
 				mid = 1114451285
+				launchID = 0
 				parent = 1
 				position = -1.20740735530853,-3.84078979492188,-0.0278784409165382
 				rotation = 0.5,-0.5,0.5,0.5
@@ -19224,6 +19436,7 @@ GAME
 				name = dockingPort2
 				uid = 728431747
 				mid = 1114451285
+				launchID = 0
 				parent = 1
 				position = 0.579560279846191,-3.84078979492188,1.05958366394043
 				rotation = 0.6830127,0.1830127,-0.1830127,0.6830127
@@ -19368,6 +19581,7 @@ GAME
 				name = dockingPort2
 				uid = 1910873222
 				mid = 1114451285
+				launchID = 0
 				parent = 1
 				position = 0.627847015857697,-3.84078979492188,-1.03170621395111
 				rotation = 0.1830127,0.6830127,-0.6830127,0.1830127
@@ -19512,6 +19726,7 @@ GAME
 				name = ksp.r.largeBatteryPack
 				uid = 3586040839
 				mid = 1114451285
+				launchID = 0
 				parent = 1
 				position = -0.924835443496704,-2.20065021514893,-0.812952041625977
 				rotation = 6.559019E-08,-0.4999987,-3.786838E-08,-0.8660262
@@ -19557,6 +19772,7 @@ GAME
 				name = ksp.r.largeBatteryPack
 				uid = 4158369149
 				mid = 1114451285
+				launchID = 0
 				parent = 1
 				position = -1.16645443439484,-2.20065021514893,0.394454687833786
 				rotation = 3.786857E-08,-0.8660247,-6.559007E-08,-0.5000013
@@ -19602,6 +19818,7 @@ GAME
 				name = ksp.r.largeBatteryPack
 				uid = 2566785031
 				mid = 1114451285
+				launchID = 0
 				parent = 1
 				position = -0.241619408130646,-2.20065021514893,1.2074066400528
 				rotation = 1.082482E-13,-1,-7.573696E-08,-1.41582E-06
@@ -19647,6 +19864,7 @@ GAME
 				name = ksp.r.largeBatteryPack
 				uid = 1512893900
 				mid = 1114451285
+				launchID = 0
 				parent = 1
 				position = 0.924835085868835,-2.20065021514893,0.812952041625977
 				rotation = -3.786839E-08,-0.8660262,-6.559019E-08,0.4999988
@@ -19692,6 +19910,7 @@ GAME
 				name = ksp.r.largeBatteryPack
 				uid = 2258544015
 				mid = 1114451285
+				launchID = 0
 				parent = 1
 				position = 1.16645455360413,-2.20065021514893,-0.394454687833786
 				rotation = -6.559008E-08,-0.5000013,-3.786857E-08,0.8660247
@@ -19737,6 +19956,7 @@ GAME
 				name = ksp.r.largeBatteryPack
 				uid = 888234883
 				mid = 1114451285
+				launchID = 0
 				parent = 1
 				position = 0.241619795560837,-2.20065021514893,-1.20740735530853
 				rotation = -7.573696E-08,-1.523051E-06,-1.163695E-13,1
@@ -19782,6 +20002,7 @@ GAME
 				name = solarPanels5
 				uid = 251895209
 				mid = 1114451285
+				launchID = 0
 				parent = 1
 				position = -1.20740735530853,-0.552419662475586,-0.00440270453691483
 				rotation = 0,-0.7071068,0,0.7071068
@@ -19866,6 +20087,7 @@ GAME
 				name = solarPanels5
 				uid = 455457397
 				mid = 1114451285
+				launchID = 0
 				parent = 1
 				position = -0.607516527175903,-0.552419662475586,1.04344367980957
 				rotation = 0,-0.258819,0,0.9659259
@@ -19950,6 +20172,7 @@ GAME
 				name = solarPanels5
 				uid = 3653458924
 				mid = 1114451285
+				launchID = 0
 				parent = 1
 				position = 0.599890887737274,-0.552419662475586,1.04784667491913
 				rotation = 0,0.2588191,0,0.9659259
@@ -20034,6 +20257,7 @@ GAME
 				name = solarPanels5
 				uid = 1534312899
 				mid = 1114451285
+				launchID = 0
 				parent = 1
 				position = 1.20740759372711,-0.552419662475586,0.00440260022878647
 				rotation = 0,0.7071068,0,0.7071068
@@ -20118,6 +20342,7 @@ GAME
 				name = solarPanels5
 				uid = 395904279
 				mid = 1114451285
+				launchID = 0
 				parent = 1
 				position = 0.607516527175903,-0.552419662475586,-1.04344415664673
 				rotation = 0,0.9659259,0,0.258819
@@ -20202,6 +20427,7 @@ GAME
 				name = solarPanels5
 				uid = 263026890
 				mid = 1114451285
+				launchID = 0
 				parent = 1
 				position = -0.59989070892334,-0.552419662475586,-1.04784691333771
 				rotation = 0,0.9659259,0,-0.258819
@@ -20286,6 +20512,7 @@ GAME
 				name = dockingPort2
 				uid = 2786063163
 				mid = 1114451285
+				launchID = 0
 				parent = 1
 				position = 0,-7.69000244140625,0
 				rotation = 0,0,1,0
@@ -20428,6 +20655,7 @@ GAME
 				name = dockingPort2
 				uid = 1573281676
 				mid = 1114451285
+				launchID = 0
 				parent = 17
 				position = 0,-8.25577259063721,0
 				rotation = 0,0,0,1
@@ -20570,6 +20798,7 @@ GAME
 				name = fuelTank4-2
 				uid = 2151518900
 				mid = 1114451285
+				launchID = 0
 				parent = 18
 				position = 0,-8.72452259063721,0
 				rotation = 0,0,0,1
@@ -20628,6 +20857,7 @@ GAME
 				name = strutConnector
 				uid = 2027552621
 				mid = 1114451285
+				launchID = 0
 				parent = 19
 				position = -0.967568397521973,-8.45423316955566,-0.738934755325317
 				rotation = 1.960228E-08,0.2588205,-7.315626E-08,-0.9659255
@@ -20664,6 +20894,7 @@ GAME
 				name = strutConnector
 				uid = 3507185298
 				mid = 1114451285
+				launchID = 0
 				parent = 19
 				position = -1.12372040748596,-8.45423316955566,0.468471676111221
 				rotation = -1.960206E-08,-0.2588176,-7.315631E-08,-0.9659262
@@ -20700,6 +20931,7 @@ GAME
 				name = strutConnector
 				uid = 20469410
 				mid = 1114451285
+				launchID = 0
 				parent = 19
 				position = -0.156151711940765,-8.45423316955566,1.2074066400528
 				rotation = -5.355404E-08,-0.7071058,-5.355419E-08,-0.7071078
@@ -20736,6 +20968,7 @@ GAME
 				name = strutConnector
 				uid = 3814743021
 				mid = 1114451285
+				launchID = 0
 				parent = 19
 				position = 0.967568576335907,-8.45423316955566,0.738934755325317
 				rotation = -7.315626E-08,-0.9659255,-1.960227E-08,-0.2588204
@@ -20772,6 +21005,7 @@ GAME
 				name = strutConnector
 				uid = 3235777752
 				mid = 1114451285
+				launchID = 0
 				parent = 19
 				position = 1.12372064590454,-8.45423316955566,-0.468471795320511
 				rotation = -7.315631E-08,-0.9659262,1.960206E-08,0.2588177
@@ -20808,6 +21042,7 @@ GAME
 				name = strutConnector
 				uid = 4144051355
 				mid = 1114451285
+				launchID = 0
 				parent = 19
 				position = 0.156152114272118,-8.45423316955566,-1.20740735530853
 				rotation = -5.355419E-08,-0.7071078,5.355403E-08,0.7071058
@@ -20844,6 +21079,7 @@ GAME
 				name = liquidEngine1-2
 				uid = 3187387477
 				mid = 1114451285
+				launchID = 0
 				parent = 19
 				position = 0,-10.258581161499,0
 				rotation = 0,0,0,1
@@ -21033,6 +21269,7 @@ GAME
 				name = rcsTankRadialLong
 				uid = 4108827603
 				mid = 1114451285
+				launchID = 0
 				parent = 1
 				position = 0.740052103996277,-6.08026027679443,-0.508005201816559
 				rotation = 6.559019E-08,0.4999987,3.786838E-08,-0.8660262
@@ -21078,6 +21315,7 @@ GAME
 				name = rcsTankRadialLong
 				uid = 3938991567
 				mid = 1114451285
+				launchID = 0
 				parent = 1
 				position = -0.0699193030595779,-6.08026027679443,-0.894906520843506
 				rotation = 7.573696E-08,-1.471432E-06,-1.1246E-13,-1
@@ -21123,6 +21361,7 @@ GAME
 				name = rcsTankRadialLong
 				uid = 1107696469
 				mid = 1114451285
+				launchID = 0
 				parent = 1
 				position = -0.809971511363983,-6.08026027679443,-0.386901289224625
 				rotation = 6.559007E-08,-0.5000013,-3.786858E-08,-0.8660247
@@ -21168,6 +21407,7 @@ GAME
 				name = rcsTankRadialLong
 				uid = 740333357
 				mid = 1114451285
+				launchID = 0
 				parent = 1
 				position = -0.740051984786987,-6.08026027679443,0.508005142211914
 				rotation = 3.786838E-08,-0.8660262,-6.559019E-08,-0.4999987
@@ -21213,6 +21453,7 @@ GAME
 				name = rcsTankRadialLong
 				uid = 1520868675
 				mid = 1114451285
+				launchID = 0
 				parent = 1
 				position = 0.0699193701148033,-6.08026027679443,0.894906640052795
 				rotation = -1.163695E-13,-1,-7.573696E-08,1.523051E-06
@@ -21258,6 +21499,7 @@ GAME
 				name = rcsTankRadialLong
 				uid = 2891219828
 				mid = 1114451285
+				launchID = 0
 				parent = 1
 				position = 0.809971392154694,-6.08026027679443,0.386901497840881
 				rotation = -3.786857E-08,-0.8660247,-6.559008E-08,0.5000013
@@ -21303,6 +21545,7 @@ GAME
 				name = RCSBlock
 				uid = 4291424101
 				mid = 1114451285
+				launchID = 0
 				parent = 1
 				position = -0.755704522132874,-3.73698997497559,-1.02314460277557
 				rotation = 6.558967E-08,0.4999995,-1.136048E-07,-0.8660257
@@ -21373,6 +21616,7 @@ GAME
 				name = RCSBlock
 				uid = 2453543390
 				mid = 1114451285
+				launchID = 0
 				parent = 1
 				position = -0.508216917514801,-3.73698997497559,1.16603171825409
 				rotation = -6.558982E-08,-0.5000007,-1.136047E-07,-0.8660251
@@ -21443,6 +21687,7 @@ GAME
 				name = RCSBlock
 				uid = 4207972106
 				mid = 1114451285
+				launchID = 0
 				parent = 1
 				position = 1.26392161846161,-3.73698997497559,-0.142887085676193
 				rotation = -1.311795E-07,-1,9.174574E-14,6.910125E-07
@@ -21513,6 +21758,7 @@ GAME
 				name = dockingPort2
 				uid = 731826413
 				mid = 1114451285
+				launchID = 0
 				parent = 0
 				position = 0,0.190000534057617,0
 				rotation = 0,0,0,1
@@ -21655,6 +21901,7 @@ GAME
 				name = mumech.MJ2.AR202
 				uid = 2903126991
 				mid = 1114451285
+				launchID = 0
 				parent = 0
 				position = 0.884096324443817,0.170999526977539,0.0713607966899872
 				rotation = -0.5000001,0.4999999,-0.5000001,0.4999999
@@ -22148,31 +22395,32 @@ GAME
 			landed = False
 			landedAt = 
 			splashed = False
-			met = 409483.48816332
+			met = 438676.71563725
 			lct = 1015319.39268136
 			root = 0
-			lat = 53.0161351099837
-			lon = -53.8190572863434
-			alt = 97769.7331830752
+			lat = 15.9772831009712
+			lon = 67.5189081155892
+			alt = 97832.0420399086
 			hgt = -1
-			nrm = 0.5688782,0.8098401,0.1433055
-			rot = -0.4278226,-0.8299909,-0.07331742,-0.3502965
-			CoM = -0.003704685,-1.042897,0.02742648
+			nrm = -0.3967468,0.78298,-0.4790976
+			rot = -0.4272198,-0.8313919,-0.06974632,-0.348434
+			CoM = -0.003704162,-1.042897,0.02742982
 			stg = 1
 			prst = False
 			ref = 4269032642
-			cPch = 
-			cHdg = 
+			ctrl = True
+			cPch = 0.2
+			cHdg = 0.3
 			cMod = 0
 			ORBIT
 			{
-				SMA = 157857.021489302
-				ECC = 0.000685283623996151
-				INC = 71.0540421875367
-				LPE = 86.7857392305321
-				LAN = 119.560206706384
-				MNA = 0.322345242310782
-				EPH = 1255556.12660808
+				SMA = 157863.05707183
+				ECC = 0.000705649382815865
+				INC = 71.0538259621269
+				LPE = 89.7712436875145
+				LAN = 119.560496179668
+				MNA = 1.27789091543979
+				EPH = 1453995.72831861
 				REF = 3
 			}
 			PART
@@ -22180,6 +22428,7 @@ GAME
 				name = mk1pod
 				uid = 4269032642
 				mid = 1856562423
+				launchID = 0
 				parent = 0
 				position = 0,0,0
 				rotation = 0,0,0,1
@@ -22488,6 +22737,7 @@ GAME
 				name = stackDecoupler
 				uid = 3414176321
 				mid = 1856562423
+				launchID = 0
 				parent = 0
 				position = 0,-0.470081329345703,0
 				rotation = 0,0,0,1
@@ -22541,12 +22791,35 @@ GAME
 						}
 					}
 				}
+				MODULE
+				{
+					name = ModuleTestSubject
+					isEnabled = True
+					EVENTS
+					{
+						RunTestEvent
+						{
+							active = False
+							guiActive = True
+							guiIcon = Run Test
+							guiName = Run Test
+							category = Run Test
+							guiActiveUnfocused = False
+							unfocusedRange = 2
+							externalToEVAOnly = True
+						}
+					}
+					ACTIONS
+					{
+					}
+				}
 			}
 			PART
 			{
 				name = advSasModule
 				uid = 3075142263
 				mid = 1856562423
+				launchID = 0
 				parent = 1
 				position = 0,-0.802101135253906,0
 				rotation = 0,0,0,1
@@ -22626,6 +22899,7 @@ GAME
 				name = RCSFuelTank
 				uid = 1940645978
 				mid = 1856562423
+				launchID = 0
 				parent = 2
 				position = 0,-1.28643035888672,0
 				rotation = 0,0,0,1
@@ -22668,6 +22942,7 @@ GAME
 				name = RCSBlock
 				uid = 821224447
 				mid = 1856562423
+				launchID = 0
 				parent = 3
 				position = -0.66058486700058,-1.32867050170898,-0.00280475243926048
 				rotation = 0,0,0,1
@@ -22741,6 +23016,7 @@ GAME
 				name = RCSBlock
 				uid = 1393672864
 				mid = 1856562423
+				launchID = 0
 				parent = 3
 				position = -0.332721412181854,-1.32867050170898,0.570680916309357
 				rotation = 0,0.5,0,0.8660254
@@ -22814,6 +23090,7 @@ GAME
 				name = RCSBlock
 				uid = 3634797772
 				mid = 1856562423
+				launchID = 0
 				parent = 3
 				position = 0.327863603830338,-1.32867050170898,0.573485791683197
 				rotation = 0,0.8660254,0,0.5
@@ -22887,6 +23164,7 @@ GAME
 				name = RCSBlock
 				uid = 2333490169
 				mid = 1856562423
+				launchID = 0
 				parent = 3
 				position = 0.660584986209869,-1.32867050170898,0.00280468910932541
 				rotation = 0,1,0,-4.371139E-08
@@ -22960,6 +23238,7 @@ GAME
 				name = RCSBlock
 				uid = 2135325151
 				mid = 1856562423
+				launchID = 0
 				parent = 3
 				position = 0.332721412181854,-1.32867050170898,-0.570681214332581
 				rotation = 0,0.8660254,0,-0.5000001
@@ -23033,6 +23312,7 @@ GAME
 				name = RCSBlock
 				uid = 282686892
 				mid = 1856562423
+				launchID = 0
 				parent = 3
 				position = -0.327863395214081,-1.32867050170898,-0.573485910892487
 				rotation = 0,0.5000001,0,-0.8660254
@@ -23106,6 +23386,7 @@ GAME
 				name = fuelTank
 				uid = 2631187167
 				mid = 1856562423
+				launchID = 0
 				parent = 3
 				position = 0,-2.53742027282715,0
 				rotation = 0,0,0,1
@@ -23158,6 +23439,7 @@ GAME
 				name = liquidEngine3
 				uid = 506130254
 				mid = 1856562423
+				launchID = 0
 				parent = 10
 				position = 0,-3.72054004669189,0
 				rotation = 0,0,0,1
@@ -23320,12 +23602,35 @@ GAME
 						}
 					}
 				}
+				MODULE
+				{
+					name = ModuleTestSubject
+					isEnabled = True
+					EVENTS
+					{
+						RunTestEvent
+						{
+							active = False
+							guiActive = True
+							guiIcon = Run Test
+							guiName = Run Test
+							category = Run Test
+							guiActiveUnfocused = False
+							unfocusedRange = 2
+							externalToEVAOnly = True
+						}
+					}
+					ACTIONS
+					{
+					}
+				}
 			}
 			PART
 			{
 				name = solarPanels5
 				uid = 912417101
 				mid = 1856562423
+				launchID = 0
 				parent = 10
 				position = -0.527857601642609,-1.91127014160156,0.323872208595276
 				rotation = -7.410694E-09,-0.5,-4.278566E-09,0.8660254
@@ -23412,6 +23717,7 @@ GAME
 				name = solarPanels5
 				uid = 4010812562
 				mid = 1856562423
+				launchID = 0
 				parent = 10
 				position = -0.144239410758018,-1.91127014160156,0.602263987064362
 				rotation = -8.483926E-09,-0.1305262,-1.11693E-09,0.9914449
@@ -23498,6 +23804,7 @@ GAME
 				name = solarPanels5
 				uid = 1837599530
 				mid = 1856562423
+				launchID = 0
 				parent = 10
 				position = 0.323872089385986,-1.91127014160156,0.527857482433319
 				rotation = -8.265556E-09,0.258819,2.214749E-09,0.9659259
@@ -23584,6 +23891,7 @@ GAME
 				name = solarPanels5
 				uid = 1469263833
 				mid = 1856562423
+				launchID = 0
 				parent = 10
 				position = 0.602263808250427,-1.91127014160156,0.144239395856857
 				rotation = -6.78883E-09,0.6087614,5.209252E-09,0.7933534
@@ -23670,6 +23978,7 @@ GAME
 				name = solarPanels5
 				uid = 580708984
 				mid = 1856562423
+				launchID = 0
 				parent = 10
 				position = 0.527857601642609,-1.91127014160156,-0.323872089385986
 				rotation = -4.278566E-09,0.8660254,7.410694E-09,0.5
@@ -23756,6 +24065,7 @@ GAME
 				name = solarPanels5
 				uid = 690804548
 				mid = 1856562423
+				launchID = 0
 				parent = 10
 				position = 0.144239395856857,-1.91127014160156,-0.602263808250427
 				rotation = -1.116929E-09,0.9914449,8.483925E-09,0.1305261
@@ -23842,6 +24152,7 @@ GAME
 				name = solarPanels5
 				uid = 544309387
 				mid = 1856562423
+				launchID = 0
 				parent = 10
 				position = -0.323872089385986,-1.91127014160156,-0.527857422828674
 				rotation = 2.214749E-09,0.9659259,8.265556E-09,-0.258819
@@ -23928,6 +24239,7 @@ GAME
 				name = solarPanels5
 				uid = 3062449978
 				mid = 1856562423
+				launchID = 0
 				parent = 10
 				position = -0.602263867855072,-1.91127014160156,-0.144239202141762
 				rotation = 5.209253E-09,0.7933533,6.788829E-09,-0.6087615
@@ -24014,6 +24326,7 @@ GAME
 				name = dockingPort2
 				uid = 3349395077
 				mid = 1856562423
+				launchID = 0
 				parent = 10
 				position = 0.0232006385922432,-2.83760070800781,-0.619074165821075
 				rotation = -2.214685E-07,0.7071068,-0.7071068,-2.214685E-07
@@ -24157,6 +24470,7 @@ GAME
 				name = dockingPort2
 				uid = 3423214588
 				mid = 1856562423
+				launchID = 0
 				parent = 10
 				position = -0.0232006013393402,-2.83760070800781,0.61907422542572
 				rotation = -0.7071068,-2.523771E-07,2.523771E-07,-0.7071068
@@ -24300,6 +24614,7 @@ GAME
 				name = mumech.MJ2.AR202
 				uid = 1657433823
 				mid = 1856562423
+				launchID = 0
 				parent = 2
 				position = 0.501490473747253,-0.759990692138672,0.339531004428864
 				rotation = -7.315603E-08,0.9659257,-1.960214E-08,0.2588196
@@ -24570,6 +24885,7 @@ GAME
 						MechJebModuleDockingAutopilot
 						{
 							forceRol = False
+							overrideSafeDistance = False
 							unlockParts = 
 							unlockTechs = 
 							rol
@@ -24674,7 +24990,7 @@ GAME
 							markUT = 1424802.66084468
 							deltaVExpended = 0
 							dragLosses = 0
-							gravityLosses = 6.67579846437289E-06
+							gravityLosses = 0.00225815223855065
 							steeringLosses = 0
 							markLatitude = 5.30237624990198
 							markLongitude = -5.38256853543076
@@ -24744,6 +25060,7 @@ GAME
 				name = mumech.MJ2.AR202
 				uid = 3774648761
 				mid = 1856562423
+				launchID = 0
 				parent = 0
 				position = -0.547230064868927,-0.117080688476563,-0.00105778127908707
 				rotation = -5.268356E-08,3.371748E-07,-0.1820218,0.9832945
@@ -24871,6 +25188,7 @@ GAME
 				name = mk1pod
 				uid = 2611789143
 				mid = 1856562423
+				launchID = 0
 				parent = 0
 				position = 0,1.28474998474121,0
 				rotation = 0,0,-1,0
@@ -25179,6 +25497,7 @@ GAME
 				name = dockingPort2
 				uid = 2132809401
 				mid = 1856562423
+				launchID = 0
 				parent = 24
 				position = 0,1.68978881835938,0
 				rotation = 0,0,0,1
@@ -25347,6 +25666,11 @@ GAME
 			FLIGHTPLAN
 			{
 			}
+			TARGET
+			{
+				type = CelestialBody
+				tgtId = Mun
+			}
 			CTRLSTATE
 			{
 				pitch = 0
@@ -25380,6 +25704,7 @@ GAME
 			stg = 0
 			prst = False
 			ref = 0
+			ctrl = False
 			ORBIT
 			{
 				SMA = 13851382562.5414
@@ -25396,6 +25721,7 @@ GAME
 				name = PotatoRoid
 				uid = 1580185785
 				mid = 1580185785
+				launchID = 0
 				parent = 0
 				position = 0,0,0
 				rotation = 0,0,0,1
@@ -25455,6 +25781,7 @@ GAME
 			stg = 0
 			prst = False
 			ref = 0
+			ctrl = False
 			ORBIT
 			{
 				SMA = 13897370019.758
@@ -25471,6 +25798,7 @@ GAME
 				name = PotatoRoid
 				uid = 311542078
 				mid = 311542078
+				launchID = 0
 				parent = 0
 				position = 0,0,0
 				rotation = 0,0,0,1
@@ -25530,6 +25858,7 @@ GAME
 			stg = 0
 			prst = False
 			ref = 0
+			ctrl = False
 			ORBIT
 			{
 				SMA = 14244486149.2879
@@ -25546,6 +25875,7 @@ GAME
 				name = PotatoRoid
 				uid = 1894863076
 				mid = 1894863076
+				launchID = 0
 				parent = 0
 				position = 0,0,0
 				rotation = 0,0,0,1
@@ -25605,6 +25935,7 @@ GAME
 			stg = 3
 			prst = False
 			ref = 0
+			ctrl = False
 			cPch = 0
 			cHdg = 0
 			cMod = -1
@@ -25624,6 +25955,7 @@ GAME
 				name = stackDecoupler
 				uid = 1258996974
 				mid = 1856562423
+				launchID = 0
 				parent = 0
 				position = 0,0,0
 				rotation = 0,0,0,1
@@ -25683,6 +26015,7 @@ GAME
 				name = fuelTank.long
 				uid = 3672678802
 				mid = 1856562423
+				launchID = 0
 				parent = 0
 				position = 0,-2.00800037384033,0
 				rotation = 0,0,0,1
@@ -25735,6 +26068,7 @@ GAME
 				name = fuelTank.long
 				uid = 474224976
 				mid = 1856562423
+				launchID = 0
 				parent = 1
 				position = 0,-5.77050304412842,0
 				rotation = 0,0,0,1
@@ -25787,6 +26121,7 @@ GAME
 				name = R8winglet
 				uid = 4223690797
 				mid = 1856562423
+				launchID = 0
 				parent = 2
 				position = 0.00978899002075195,-7.12857151031494,1.15957069396973
 				rotation = 6.050803E-09,0.7071071,6.050798E-09,0.7071065
@@ -25845,6 +26180,7 @@ GAME
 				name = R8winglet
 				uid = 2620943850
 				mid = 1856562423
+				launchID = 0
 				parent = 2
 				position = 0.999327123165131,-7.12857151031494,-0.588270306587219
 				rotation = 8.265546E-09,0.9659258,-2.214749E-09,-0.2588195
@@ -25903,6 +26239,7 @@ GAME
 				name = R8winglet
 				uid = 2577501980
 				mid = 1856562423
+				launchID = 0
 				parent = 2
 				position = -1.00911724567413,-7.12857151031494,-0.571310102939606
 				rotation = -2.214744E-09,-0.2588187,8.265554E-09,0.9659259
@@ -25961,6 +26298,7 @@ GAME
 				name = fuelTank
 				uid = 924136002
 				mid = 1856562423
+				launchID = 0
 				parent = 2
 				position = 0,-8.62369441986084,0
 				rotation = 0,0,0,1
@@ -26013,6 +26351,7 @@ GAME
 				name = liquidEngine2
 				uid = 601668126
 				mid = 1856562423
+				launchID = 0
 				parent = 6
 				position = 0,-10.4380197525024,0
 				rotation = 0,0,0,1
@@ -26261,6 +26600,7 @@ GAME
 			stg = 0
 			prst = False
 			ref = 0
+			ctrl = False
 			cPch = 0
 			cHdg = 0
 			cMod = -1
@@ -26280,6 +26620,7 @@ GAME
 				name = dockingPort2
 				uid = 2450864066
 				mid = 1026293684
+				launchID = 0
 				parent = 0
 				position = 0,0,0
 				rotation = 0,0,0,1
@@ -26422,6 +26763,7 @@ GAME
 				name = fuelTank4-2
 				uid = 23836522
 				mid = 1026293684
+				launchID = 0
 				parent = 0
 				position = 0,-0.46875,0
 				rotation = 0,0,0,1
@@ -26474,6 +26816,7 @@ GAME
 				name = strutConnector
 				uid = 1826379209
 				mid = 1026293684
+				launchID = 0
 				parent = 1
 				position = -0.967568397521973,-0.198460578918457,-0.738934755325317
 				rotation = 1.960228E-08,0.2588205,-7.315626E-08,-0.9659255
@@ -26509,6 +26852,7 @@ GAME
 				name = strutConnector
 				uid = 4224470799
 				mid = 1026293684
+				launchID = 0
 				parent = 1
 				position = -1.12372040748596,-0.198460578918457,0.468471676111221
 				rotation = -1.960206E-08,-0.2588176,-7.315631E-08,-0.9659262
@@ -26544,6 +26888,7 @@ GAME
 				name = strutConnector
 				uid = 3572928495
 				mid = 1026293684
+				launchID = 0
 				parent = 1
 				position = -0.156151711940765,-0.198460578918457,1.2074066400528
 				rotation = -5.355404E-08,-0.7071058,-5.355419E-08,-0.7071078
@@ -26579,6 +26924,7 @@ GAME
 				name = strutConnector
 				uid = 3229451759
 				mid = 1026293684
+				launchID = 0
 				parent = 1
 				position = 0.967568576335907,-0.198460578918457,0.738934755325317
 				rotation = -7.315626E-08,-0.9659255,-1.960227E-08,-0.2588204
@@ -26614,6 +26960,7 @@ GAME
 				name = strutConnector
 				uid = 2749495535
 				mid = 1026293684
+				launchID = 0
 				parent = 1
 				position = 1.12372064590454,-0.198460578918457,-0.468471795320511
 				rotation = -7.315631E-08,-0.9659262,1.960206E-08,0.2588177
@@ -26649,6 +26996,7 @@ GAME
 				name = strutConnector
 				uid = 522508599
 				mid = 1026293684
+				launchID = 0
 				parent = 1
 				position = 0.156152114272118,-0.198460578918457,-1.20740735530853
 				rotation = -5.355419E-08,-0.7071078,5.355403E-08,0.7071058
@@ -26684,6 +27032,7 @@ GAME
 				name = liquidEngine1-2
 				uid = 830689086
 				mid = 1026293684
+				launchID = 0
 				parent = 1
 				position = 0,-2.00280857086182,0
 				rotation = 0,0,0,1
@@ -26932,6 +27281,7 @@ GAME
 			stg = 3
 			prst = False
 			ref = 175392093
+			ctrl = False
 			cPch = 
 			cHdg = 
 			cMod = 0
@@ -26951,6 +27301,7 @@ GAME
 				name = probeStackLarge
 				uid = 1179453933
 				mid = 2295821187
+				launchID = 0
 				parent = 0
 				position = 0,0,0
 				rotation = 0,0,0,1
@@ -27105,6 +27456,7 @@ GAME
 				name = dockingPort2
 				uid = 3637466081
 				mid = 2295821187
+				launchID = 0
 				parent = 0
 				position = 0,0.189998626708984,0
 				rotation = 0,0,0,1
@@ -27247,6 +27599,7 @@ GAME
 				name = mumech.MJ2.AR202
 				uid = 695746934
 				mid = 2295821187
+				launchID = 0
 				parent = 0
 				position = 0.884096264839172,0.170999526977539,0.0713608041405678
 				rotation = -0.5000001,0.4999999,-0.5000001,0.4999999
@@ -27374,6 +27727,7 @@ GAME
 				name = asasmodule1-2
 				uid = 2530685133
 				mid = 2295821187
+				launchID = 0
 				parent = 0
 				position = 0,-0.440000534057617,0
 				rotation = 0,0,0,1
@@ -27453,6 +27807,7 @@ GAME
 				name = fuelTank3-2
 				uid = 933560241
 				mid = 2295821187
+				launchID = 0
 				parent = 3
 				position = 0,-4.44000053405762,0
 				rotation = 0,0,0,1
@@ -27505,6 +27860,7 @@ GAME
 				name = dockingPort2
 				uid = 1565440918
 				mid = 2295821187
+				launchID = 0
 				parent = 4
 				position = -1.20740783214569,-4.34079074859619,-0.0278784707188606
 				rotation = 0.5,-0.5,0.5,0.5
@@ -27655,6 +28011,7 @@ GAME
 				name = dockingPort2
 				uid = 2625963084
 				mid = 2295821187
+				launchID = 0
 				parent = 4
 				position = 0.579560279846191,-4.34079074859619,1.05958354473114
 				rotation = 0.6830127,0.1830127,-0.1830127,0.6830127
@@ -27805,6 +28162,7 @@ GAME
 				name = dockingPort2
 				uid = 3008596854
 				mid = 2295821187
+				launchID = 0
 				parent = 4
 				position = 0.627846956253052,-4.34079074859619,-1.03170621395111
 				rotation = 0.1830127,0.6830127,-0.6830127,0.1830127
@@ -27949,6 +28307,7 @@ GAME
 				name = ksp.r.largeBatteryPack
 				uid = 2467914297
 				mid = 2295821187
+				launchID = 0
 				parent = 4
 				position = -0.924835443496704,-2.70065021514893,-0.812951982021332
 				rotation = 6.559019E-08,-0.4999987,-3.786838E-08,-0.8660262
@@ -27994,6 +28353,7 @@ GAME
 				name = ksp.r.largeBatteryPack
 				uid = 2974698333
 				mid = 2295821187
+				launchID = 0
 				parent = 4
 				position = -1.16645479202271,-2.70065021514893,0.394454717636108
 				rotation = 3.786857E-08,-0.8660247,-6.559007E-08,-0.5000013
@@ -28039,6 +28399,7 @@ GAME
 				name = ksp.r.largeBatteryPack
 				uid = 596272794
 				mid = 2295821187
+				launchID = 0
 				parent = 4
 				position = -0.241619408130646,-2.70065021514893,1.20740652084351
 				rotation = 1.082482E-13,-1,-7.573696E-08,-1.41582E-06
@@ -28084,6 +28445,7 @@ GAME
 				name = ksp.r.largeBatteryPack
 				uid = 494629131
 				mid = 2295821187
+				launchID = 0
 				parent = 4
 				position = 0.924835085868835,-2.70065021514893,0.812951982021332
 				rotation = -3.786839E-08,-0.8660262,-6.559019E-08,0.4999988
@@ -28129,6 +28491,7 @@ GAME
 				name = ksp.r.largeBatteryPack
 				uid = 4181939297
 				mid = 2295821187
+				launchID = 0
 				parent = 4
 				position = 1.16645419597626,-2.70065021514893,-0.394454687833786
 				rotation = -6.559008E-08,-0.5000013,-3.786857E-08,0.8660247
@@ -28174,6 +28537,7 @@ GAME
 				name = ksp.r.largeBatteryPack
 				uid = 2273810060
 				mid = 2295821187
+				launchID = 0
 				parent = 4
 				position = 0.241619780659676,-2.70065021514893,-1.20740747451782
 				rotation = -7.573696E-08,-1.523051E-06,-1.163695E-13,1
@@ -28219,6 +28583,7 @@ GAME
 				name = dockingPort2
 				uid = 2296759140
 				mid = 2295821187
+				launchID = 0
 				parent = 4
 				position = 0,-8.1900110244751,0
 				rotation = 0,0,1,0
@@ -28361,6 +28726,7 @@ GAME
 				name = radialRCSTank
 				uid = 3966609158
 				mid = 2295821187
+				launchID = 0
 				parent = 4
 				position = 1.23332417011261,-1.10884094238281,-0.718635022640228
 				rotation = -0.3535525,0.3535526,0.612373,-0.6123729
@@ -28406,6 +28772,7 @@ GAME
 				name = radialRCSTank
 				uid = 2376675499
 				mid = 2295821187
+				launchID = 0
 				parent = 4
 				position = -0.00569403916597366,-1.10884094238281,-1.42740750312805
 				rotation = 1.090196E-06,-9.829649E-07,0.7071068,-0.7071068
@@ -28451,6 +28818,7 @@ GAME
 				name = radialRCSTank
 				uid = 2960900173
 				mid = 2295821187
+				launchID = 0
 				parent = 4
 				position = -1.23901784420013,-1.10884094238281,-0.708772480487823
 				rotation = 0.3535544,-0.3535543,0.6123719,-0.612372
@@ -28496,6 +28864,7 @@ GAME
 				name = radialRCSTank
 				uid = 3586171265
 				mid = 2295821187
+				launchID = 0
 				parent = 4
 				position = -1.23332381248474,-1.10884094238281,0.718635082244873
 				rotation = 0.6123731,-0.6123729,0.3535524,-0.3535525
@@ -28541,6 +28910,7 @@ GAME
 				name = radialRCSTank
 				uid = 850499509
 				mid = 2295821187
+				launchID = 0
 				parent = 4
 				position = 0.00569411739706993,-1.10884094238281,1.42740750312805
 				rotation = 0.7071068,-0.7071068,-1.126696E-06,1.019465E-06
@@ -28586,6 +28956,7 @@ GAME
 				name = radialRCSTank
 				uid = 1261513975
 				mid = 2295821187
+				launchID = 0
 				parent = 4
 				position = 1.239018201828,-1.10884094238281,0.708772778511047
 				rotation = 0.6123719,-0.612372,-0.3535543,0.3535542
@@ -28631,6 +29002,7 @@ GAME
 				name = RCSBlock
 				uid = 672117778
 				mid = 2295821187
+				launchID = 0
 				parent = 4
 				position = 1.09114611148834,-6.42366027832031,-0.637923419475555
 				rotation = 7.315626E-08,0.9659255,-1.960228E-08,-0.2588205
@@ -28704,6 +29076,7 @@ GAME
 				name = RCSBlock
 				uid = 121492234
 				mid = 2295821187
+				launchID = 0
 				parent = 4
 				position = -0.00688482820987701,-6.42366027832031,-1.26392245292664
 				rotation = 5.355404E-08,0.7071058,-5.35542E-08,-0.7071078
@@ -28777,6 +29150,7 @@ GAME
 				name = RCSBlock
 				uid = 3406650800
 				mid = 2295821187
+				launchID = 0
 				parent = 4
 				position = -1.09803080558777,-6.42366027832031,-0.625998377799988
 				rotation = 1.960206E-08,0.2588176,-7.315632E-08,-0.9659263
@@ -28850,6 +29224,7 @@ GAME
 				name = RCSBlock
 				uid = 2303768444
 				mid = 2295821187
+				launchID = 0
 				parent = 4
 				position = -1.09114587306976,-6.42366027832031,0.6379234790802
 				rotation = -1.960228E-08,-0.2588205,-7.315626E-08,-0.9659255
@@ -28923,6 +29298,7 @@ GAME
 				name = RCSBlock
 				uid = 1936261878
 				mid = 2295821187
+				launchID = 0
 				parent = 4
 				position = 0.00688489899039268,-6.42366027832031,1.26392149925232
 				rotation = -5.355419E-08,-0.7071078,-5.355403E-08,-0.7071058
@@ -28996,6 +29372,7 @@ GAME
 				name = RCSBlock
 				uid = 2291413864
 				mid = 2295821187
+				launchID = 0
 				parent = 4
 				position = 1.09803116321564,-6.42366027832031,0.625998616218567
 				rotation = -7.315631E-08,-0.9659262,-1.960206E-08,-0.2588177
@@ -29069,6 +29446,7 @@ GAME
 				name = solarPanels5
 				uid = 3843636839
 				mid = 2295821187
+				launchID = 0
 				parent = 3
 				position = 0.253348469734192,-0.441431045532227,-1.20740747451782
 				rotation = 0,1,-1.514731E-07,0
@@ -29155,6 +29533,7 @@ GAME
 				name = solarPanels5
 				uid = 3496603140
 				mid = 2295821187
+				launchID = 0
 				parent = 3
 				position = -0.674621820449829,-0.441431045532227,-1.03291046619415
 				rotation = -5.796626E-08,0.9238796,-1.39943E-07,-0.3826835
@@ -29241,6 +29620,7 @@ GAME
 				name = solarPanels5
 				uid = 147092292
 				mid = 2295821187
+				launchID = 0
 				parent = 3
 				position = -1.20740783214569,-0.441431045532227,-0.253348588943481
 				rotation = -1.071077E-07,0.7071068,-1.071077E-07,-0.7071068
@@ -29327,6 +29707,7 @@ GAME
 				name = solarPanels5
 				uid = 2549291515
 				mid = 2295821187
+				launchID = 0
 				parent = 3
 				position = -1.03291082382202,-0.441431045532227,0.67462158203125
 				rotation = -1.39943E-07,0.3826835,-5.796626E-08,-0.9238796
@@ -29413,6 +29794,7 @@ GAME
 				name = solarPanels5
 				uid = 1699396797
 				mid = 2295821187
+				launchID = 0
 				parent = 3
 				position = -0.25334832072258,-0.441431045532227,1.20740759372711
 				rotation = -1.514731E-07,-4.371139E-08,6.621102E-15,-1
@@ -29499,6 +29881,7 @@ GAME
 				name = solarPanels5
 				uid = 1125017363
 				mid = 2295821187
+				launchID = 0
 				parent = 3
 				position = 0.674621820449829,-0.441431045532227,1.03291058540344
 				rotation = -1.399429E-07,-0.3826835,5.796628E-08,-0.9238795
@@ -29585,6 +29968,7 @@ GAME
 				name = solarPanels5
 				uid = 2567051291
 				mid = 2295821187
+				launchID = 0
 				parent = 3
 				position = 1.20740711688995,-0.441431045532227,0.253348290920258
 				rotation = -1.071077E-07,-0.7071068,1.071077E-07,-0.7071068
@@ -29671,6 +30055,7 @@ GAME
 				name = solarPanels5
 				uid = 4176919720
 				mid = 2295821187
+				launchID = 0
 				parent = 3
 				position = 1.03291034698486,-0.441431045532227,-0.674621999263763
 				rotation = -5.796624E-08,-0.9238796,1.39943E-07,-0.3826833
@@ -29757,6 +30142,7 @@ GAME
 				name = dockingPort2
 				uid = 3410339813
 				mid = 2937696114
+				launchID = 0
 				parent = 5
 				position = -1.76905977725983,-4.34116220474243,-0.0282507855445147
 				rotation = -0.6335546,-0.6339633,0.3129829,-0.3142308
@@ -29905,6 +30291,7 @@ GAME
 				name = Mark1-2Pod
 				uid = 175392093
 				mid = 2937696114
+				launchID = 0
 				parent = 35
 				position = -2.96221208572388,-4.3426661491394,-0.0298342350870371
 				rotation = -0.6335546,-0.6339633,0.3129829,-0.3142308
@@ -30213,6 +30600,7 @@ GAME
 				name = mumech.MJ2.AR202
 				uid = 1578867276
 				mid = 2937696114
+				launchID = 0
 				parent = 36
 				position = -2.85461902618408,-3.51177620887756,0.523952066898346
 				rotation = 0.1774789,0.266456,-0.7887018,0.5248353
@@ -30340,6 +30728,7 @@ GAME
 				name = RCSTank1-2
 				uid = 2101014235
 				mid = 2937696114
+				launchID = 0
 				parent = 36
 				position = -3.94144558906555,-4.34383964538574,-0.0311377421021461
 				rotation = -0.6335546,-0.6339633,0.3129829,-0.3142308
@@ -30382,6 +30771,7 @@ GAME
 				name = decoupler1-2
 				uid = 504141949
 				mid = 2937696114
+				launchID = 0
 				parent = 38
 				position = -4.89235353469849,-4.34506273269653,-0.032394465059042
 				rotation = -0.6335546,-0.6339633,0.3129829,-0.3142308
@@ -30441,6 +30831,7 @@ GAME
 				name = fuelTank2-2
 				uid = 869688287
 				mid = 2937696114
+				launchID = 0
 				parent = 39
 				position = -6.19527721405029,-4.34692287445068,-0.034125342965126
 				rotation = -0.6335546,-0.6339633,0.3129829,-0.3142308
@@ -30493,6 +30884,7 @@ GAME
 				name = liquidEngine2-2
 				uid = 3189925396
 				mid = 2937696114
+				launchID = 0
 				parent = 40
 				position = -7.85973167419434,-4.34899568557739,-0.036326952278614
 				rotation = -0.6335546,-0.6339633,0.3129829,-0.3142308
@@ -30682,6 +31074,7 @@ GAME
 				name = telescopicLadderBay
 				uid = 1826196914
 				mid = 2937696114
+				launchID = 0
 				parent = 40
 				position = -6.14738893508911,-5.54480504989624,-0.188452988862991
 				rotation = 0.7051658,0.7061438,0.04572628,-0.04484985
@@ -30760,6 +31153,7 @@ GAME
 				name = ksp.r.largeBatteryPack
 				uid = 2776169357
 				mid = 2937696114
+				launchID = 0
 				parent = 40
 				position = -5.89944124221802,-5.07797002792358,0.926878809928894
 				rotation = -0.669303,-0.6704745,-0.2266784,0.226085
@@ -30801,6 +31195,7 @@ GAME
 				name = ksp.r.largeBatteryPack
 				uid = 1624099898
 				mid = 2937696114
+				launchID = 0
 				parent = 40
 				position = -5.89880657196045,-3.61492085456848,-0.994331479072571
 				rotation = 0.2266784,0.226085,-0.669303,0.6704745
@@ -30842,6 +31237,7 @@ GAME
 				name = solarPanels5
 				uid = 2352897868
 				mid = 2937696114
+				launchID = 0
 				parent = 40
 				position = -6.62735795974731,-5.07562065124512,0.928490459918976
 				rotation = -0.2266784,-0.226085,0.669303,-0.6704745
@@ -30922,6 +31318,7 @@ GAME
 				name = solarPanels5
 				uid = 896131105
 				mid = 2937696114
+				launchID = 0
 				parent = 40
 				position = -6.6266827583313,-3.61940050125122,-0.997872531414032
 				rotation = -0.669303,-0.6704745,-0.2266784,0.226085
@@ -31002,6 +31399,7 @@ GAME
 				name = solarPanels3
 				uid = 2467695578
 				mid = 2937696114
+				launchID = 0
 				parent = 40
 				position = -5.65550088882446,-3.12991881370544,-0.0253684483468533
 				rotation = 0.04572502,0.04484873,-0.7051665,0.7061431
@@ -31084,6 +31482,7 @@ GAME
 				name = solarPanels3
 				uid = 3690213777
 				mid = 2937696114
+				launchID = 0
 				parent = 40
 				position = -5.65546464920044,-4.35415554046631,1.18295288085938
 				rotation = 0.5309595,0.5310324,-0.4662955,0.4676058
@@ -31166,6 +31565,7 @@ GAME
 				name = solarPanels3
 				uid = 1528711351
 				mid = 2937696114
+				launchID = 0
 				parent = 40
 				position = -5.65227794647217,-5.56252384185791,-0.0414400286972523
 				rotation = 0.7051652,0.7061445,0.04572517,-0.04484863
@@ -31248,6 +31648,7 @@ GAME
 				name = solarPanels3
 				uid = 3588074645
 				mid = 2937696114
+				launchID = 0
 				parent = 40
 				position = -5.65230989456177,-4.33804273605347,-1.2497570514679
 				rotation = 0.4662946,0.4676068,0.5309606,-0.5310314
@@ -31330,6 +31731,7 @@ GAME
 				name = RCSBlock
 				uid = 3161758133
 				mid = 2937696114
+				launchID = 0
 				parent = 38
 				position = -3.92722010612488,-3.05837178230286,-0.23229643702507
 				rotation = -0.1383412,-0.1394409,-0.6929728,0.6936908
@@ -31401,6 +31803,7 @@ GAME
 				name = RCSBlock
 				uid = 1329453624
 				mid = 2937696114
+				launchID = 0
 				parent = 38
 				position = -3.92784571647644,-4.14267110824585,1.25451910495758
 				rotation = 0.3921839,0.3919138,-0.5878277,0.589113
@@ -31472,6 +31875,7 @@ GAME
 				name = RCSBlock
 				uid = 887243572
 				mid = 2937696114
+				launchID = 0
 				parent = 38
 				position = -3.92442107200623,-5.62965679168701,0.170075491070747
 				rotation = 0.6929728,0.6936906,-0.1383412,0.1394409
@@ -31543,6 +31947,7 @@ GAME
 				name = RCSBlock
 				uid = 2333487747
 				mid = 2937696114
+				launchID = 0
 				parent = 38
 				position = -3.92391276359558,-4.54511117935181,-1.31674456596375
 				rotation = 0.5878278,0.5891129,0.3921838,-0.3919139
@@ -31614,6 +32019,7 @@ GAME
 				name = parachuteRadial
 				uid = 3951532892
 				mid = 2937696114
+				launchID = 0
 				parent = 38
 				position = -3.97239446640015,-5.04844570159912,0.950071632862091
 				rotation = -0.669303,-0.6704745,-0.2266784,0.226085
@@ -31715,6 +32121,7 @@ GAME
 				name = parachuteRadial
 				uid = 1810569156
 				mid = 2937696114
+				launchID = 0
 				parent = 38
 				position = -3.97167253494263,-3.63953614234924,-1.01241862773895
 				rotation = 0.2266784,0.226085,-0.669303,0.6704745
@@ -31816,6 +32223,7 @@ GAME
 				name = spotLight2
 				uid = 2283377188
 				mid = 2937696114
+				launchID = 0
 				parent = 38
 				position = -4.0121808052063,-3.08360958099365,0.751035153865814
 				rotation = 0.6335545,0.6339633,-0.3129827,0.3142309
@@ -31919,6 +32327,7 @@ GAME
 				name = spotLight2
 				uid = 3813774861
 				mid = 2937696114
+				launchID = 0
 				parent = 38
 				position = -4.00685882568359,-5.60465717315674,-0.81348329782486
 				rotation = 0.3129829,0.3142307,0.6335546,-0.6339632
@@ -32022,6 +32431,7 @@ GAME
 				name = dockingPort2
 				uid = 4103303638
 				mid = 1977793760
+				launchID = 0
 				parent = 6
 				position = 0.860632240772247,-4.3407940864563,1.54602992534637
 				rotation = -0.1936756,0.6857897,-0.6800684,-0.1723061
@@ -32172,6 +32582,7 @@ GAME
 				name = fuelTank3-2
 				uid = 780599109
 				mid = 1977793760
+				launchID = 0
 				parent = 59
 				position = 1.44286441802979,-4.44085311889648,2.60405278205872
 				rotation = -0.01354854,0.9998778,0.007818625,-7.353505E-07
@@ -32224,6 +32635,7 @@ GAME
 				name = dockingPort2
 				uid = 2858436189
 				mid = 1977793760
+				launchID = 0
 				parent = 60
 				position = 2.64711666107178,-4.30937147140503,2.63373708724976
 				rotation = 0.4970735,0.5106229,-0.4892557,0.5028034
@@ -32368,6 +32780,7 @@ GAME
 				name = dockingPort2
 				uid = 842913040
 				mid = 1977793760
+				launchID = 0
 				parent = 60
 				position = 0.812822580337524,-4.3748517036438,3.63705229759216
 				rotation = -0.6907491,0.1751669,-0.1908127,-0.6751096
@@ -32512,6 +32925,7 @@ GAME
 				name = ksp.r.largeBatteryPack
 				uid = 4271787152
 				mid = 1977793760
+				launchID = 0
 				parent = 60
 				position = 2.32053852081299,-2.69002866744995,3.44429349899292
 				rotation = 0.01564265,-0.8659199,3.041396E-06,0.4999382
@@ -32557,6 +32971,7 @@ GAME
 				name = ksp.r.largeBatteryPack
 				uid = 822784022
 				mid = 1977793760
+				launchID = 0
 				parent = 60
 				position = 2.56183314323425,-2.66462588310242,2.23708415031433
 				rotation = 0.01354537,-0.4999396,0.007823992,0.8659193
@@ -32602,6 +33017,7 @@ GAME
 				name = ksp.r.largeBatteryPack
 				uid = 1043852607
 				mid = 1977793760
+				launchID = 0
 				parent = 60
 				position = 1.63699448108673,-2.67689752578735,1.42404305934906
 				rotation = 0.007818567,-6.854101E-07,0.01354853,0.9998778
@@ -32647,6 +33063,7 @@ GAME
 				name = ksp.r.largeBatteryPack
 				uid = 995706390
 				mid = 1977793760
+				launchID = 0
 				parent = 60
 				position = 0.471073597669601,-2.71470665931702,1.81820166110992
 				rotation = -3.20004E-06,0.4999383,0.01564274,0.86592
@@ -32692,6 +33109,7 @@ GAME
 				name = ksp.r.largeBatteryPack
 				uid = 2554286411
 				mid = 1977793760
+				launchID = 0
 				parent = 60
 				position = 0.229778990149498,-2.74010944366455,3.02541089057922
 				rotation = -0.007824115,0.8659192,0.01354549,0.4999396
@@ -32737,6 +33155,7 @@ GAME
 				name = ksp.r.largeBatteryPack
 				uid = 4269718520
 				mid = 1977793760
+				launchID = 0
 				parent = 60
 				position = 1.15461766719818,-2.72783780097961,3.83845210075378
 				rotation = -0.01354853,0.9998778,0.00781872,7.90408E-07
@@ -32782,6 +33201,7 @@ GAME
 				name = dockingPort2
 				uid = 1138684276
 				mid = 1977793760
+				launchID = 0
 				parent = 60
 				position = 1.54448664188385,-8.18901443481445,2.54542064666748
 				rotation = 0.9998778,0.01354854,-7.353505E-07,-0.007818625
@@ -32924,6 +33344,7 @@ GAME
 				name = radialRCSTank
 				uid = 3932247533
 				mid = 1977793760
+				launchID = 0
 				parent = 60
 				position = 0.120024614036083,-1.15601968765259,3.37442135810852
 				rotation = 0.6178308,-0.6067658,0.3439308,-0.3630869
@@ -32969,6 +33390,7 @@ GAME
 				name = radialRCSTank
 				uid = 3556420265
 				mid = 1977793760
+				launchID = 0
 				parent = 60
 				position = 1.35863947868347,-1.13345539569855,4.08337306976318
 				rotation = 0.7166006,-0.69744,-0.005530195,-0.005527083
@@ -33014,6 +33436,7 @@ GAME
 				name = radialRCSTank
 				uid = 2553129578
 				mid = 1977793760
+				launchID = 0
 				parent = 60
 				position = 2.59139132499695,-1.08887255191803,3.36508107185364
 				rotation = 0.6233578,-0.6012357,-0.3535094,0.3535137
@@ -33059,6 +33482,7 @@ GAME
 				name = radialRCSTank
 				uid = 1075774390
 				mid = 1977793760
+				launchID = 0
 				parent = 60
 				position = 2.58533525466919,-1.06666147708893,1.93784964084625
 				rotation = 0.3630867,-0.3439308,-0.606766,0.6178307
@@ -33104,6 +33528,7 @@ GAME
 				name = radialRCSTank
 				uid = 1562330445
 				mid = 1977793760
+				launchID = 0
 				parent = 60
 				position = 1.34673964977264,-1.08916771411896,1.22890031337738
 				rotation = 0.005526945,0.005530133,-0.6974401,0.7166007
@@ -33149,6 +33574,7 @@ GAME
 				name = radialRCSTank
 				uid = 826882324
 				mid = 1977793760
+				launchID = 0
 				parent = 60
 				position = 0.113968513906002,-1.1338084936142,1.94718992710114
 				rotation = -0.3535138,0.3535092,-0.6012357,0.6233579
@@ -33194,6 +33620,7 @@ GAME
 				name = RCSBlock
 				uid = 30419617
 				mid = 1977793760
+				launchID = 0
 				parent = 60
 				position = 0.406145840883255,-6.46313333511353,3.21065020561218
 				rotation = -0.004045594,-0.2587896,-0.01511057,-0.9658072
@@ -33267,6 +33694,7 @@ GAME
 				name = RCSBlock
 				uid = 660544237
 				mid = 1977793760
+				launchID = 0
 				parent = 60
 				position = 1.50387191772461,-6.44313859939575,3.83680438995361
 				rotation = 0.004051631,-0.707022,-0.01510892,-0.7070189
@@ -33340,6 +33768,7 @@ GAME
 				name = RCSBlock
 				uid = 767116970
 				mid = 1977793760
+				launchID = 0
 				parent = 60
 				position = 2.59445428848267,-6.40357303619385,3.19919085502625
 				rotation = 0.01106322,-0.9658083,-0.01105883,-0.2587852
@@ -33413,6 +33842,7 @@ GAME
 				name = RCSBlock
 				uid = 32484083
 				mid = 1977793760
+				launchID = 0
 				parent = 60
 				position = 2.58731055259705,-6.38400220870972,1.93542122840881
 				rotation = 0.01511045,-0.9658071,-0.004045551,0.2587896
@@ -33486,6 +33916,7 @@ GAME
 				name = RCSBlock
 				uid = 1635019977
 				mid = 1977793760
+				launchID = 0
 				parent = 60
 				position = 1.48958456516266,-6.40399694442749,1.30926692485809
 				rotation = 0.01510879,-0.7070189,0.004051722,0.7070219
@@ -33559,6 +33990,7 @@ GAME
 				name = RCSBlock
 				uid = 1764660014
 				mid = 1977793760
+				launchID = 0
 				parent = 60
 				position = 0.399002134799957,-6.44356250762939,1.94688045978546
 				rotation = 0.01105881,-0.2587853,0.01106335,0.9658083
@@ -33632,6 +34064,7 @@ GAME
 				name = asasmodule1-2
 				uid = 3742691910
 				mid = 1977793760
+				launchID = 0
 				parent = 60
 				position = 1.33463191986084,-0.442835420370102,2.66659092903137
 				rotation = -0.01354854,0.9998778,0.007818625,-7.353505E-07
@@ -33711,6 +34144,7 @@ GAME
 				name = solarPanels5
 				uid = 452483648
 				mid = 1977793760
+				launchID = 0
 				parent = 82
 				position = 1.08168005943298,-0.470023602247238,3.87377429008484
 				rotation = -0.007818797,-7.394331E-07,-0.01354855,-0.9998778
@@ -33797,6 +34231,7 @@ GAME
 				name = solarPanels5
 				uid = 1667285872
 				mid = 1977793760
+				launchID = 0
 				parent = 82
 				position = 2.00916790962219,-0.442110359668732,3.69949817657471
 				rotation = -0.002038801,-0.3826374,-0.01550922,-0.9237663
@@ -33883,6 +34318,7 @@ GAME
 				name = solarPanels5
 				uid = 3213317816
 				mid = 1977793760
+				launchID = 0
 				parent = 82
 				position = 2.54159617424011,-0.41545632481575,2.9201443195343
 				rotation = 0.004051518,-0.7070208,-0.01510875,-0.7070198
@@ -33969,6 +34405,7 @@ GAME
 				name = solarPanels5
 				uid = 3885336516
 				mid = 1977793760
+				launchID = 0
 				parent = 82
 				position = 2.36688780784607,-0.405705988407135,1.99225068092346
 				rotation = 0.009525122,-0.9237669,-0.01240817,-0.382636
@@ -34055,6 +34492,7 @@ GAME
 				name = solarPanels5
 				uid = 2140128807
 				mid = 1977793760
+				launchID = 0
 				parent = 82
 				position = 1.58766460418701,-0.418504506349564,1.45936334133148
 				rotation = 0.01354854,-0.9998778,-0.007818462,7.830487E-07
@@ -34141,6 +34579,7 @@ GAME
 				name = solarPanels5
 				uid = 793981659
 				mid = 1977793760
+				launchID = 0
 				parent = 82
 				position = 0.659945130348206,-0.446341007947922,1.63364684581757
 				rotation = 0.01550933,-0.9237664,-0.002038507,0.3826374
@@ -34227,6 +34666,7 @@ GAME
 				name = solarPanels5
 				uid = 4239615097
 				mid = 1977793760
+				launchID = 0
 				parent = 82
 				position = 0.127516955137253,-0.472995042800903,2.41300058364868
 				rotation = 0.01510895,-0.7070198,0.004051728,0.7070208
@@ -34313,6 +34753,7 @@ GAME
 				name = solarPanels5
 				uid = 4262648606
 				mid = 1977793760
+				launchID = 0
 				parent = 82
 				position = 0.302205920219421,-0.482803225517273,3.34089207649231
 				rotation = 0.01240841,-0.3826358,0.009525231,0.9237669
@@ -34399,6 +34840,7 @@ GAME
 				name = probeStackLarge
 				uid = 1357209042
 				mid = 1977793760
+				launchID = 0
 				parent = 82
 				position = 1.32262682914734,-0.00302817369811237,2.6734733581543
 				rotation = -0.01354854,0.9998778,0.007818625,-7.353505E-07
@@ -34553,6 +34995,7 @@ GAME
 				name = dockingPort2
 				uid = 366721727
 				mid = 1977793760
+				launchID = 0
 				parent = 91
 				position = 1.31748259067535,0.186903148889542,2.67644476890564
 				rotation = -0.01354854,0.9998778,0.007818625,-7.353505E-07
@@ -34695,6 +35138,7 @@ GAME
 				name = mumech.MJ2.AR202
 				uid = 3695450832
 				mid = 1977793760
+				launchID = 0
 				parent = 91
 				position = 0.434164345264435,0.145037263631821,2.60460877418518
 				rotation = -0.5106222,0.4892548,0.4970744,-0.5028041
@@ -35198,6 +35642,7 @@ GAME
 			stg = 0
 			prst = False
 			ref = 0
+			ctrl = False
 			cPch = 0
 			cHdg = 0
 			cMod = -1
@@ -35217,6 +35662,7 @@ GAME
 				name = dockingPort2
 				uid = 1398214901
 				mid = 2295821187
+				launchID = 0
 				parent = 0
 				position = 0,0,0
 				rotation = 0,0,0,1
@@ -35359,6 +35805,7 @@ GAME
 				name = fuelTank4-2
 				uid = 60383370
 				mid = 2295821187
+				launchID = 0
 				parent = 0
 				position = 0,-0.46875,0
 				rotation = 0,0,0,1
@@ -35411,6 +35858,7 @@ GAME
 				name = strutConnector
 				uid = 932985999
 				mid = 2295821187
+				launchID = 0
 				parent = 1
 				position = -0.967568874359131,-0.198460578918457,-0.738934814929962
 				rotation = 1.960228E-08,0.2588205,-7.315626E-08,-0.9659255
@@ -35446,6 +35894,7 @@ GAME
 				name = strutConnector
 				uid = 922847671
 				mid = 2295821187
+				launchID = 0
 				parent = 1
 				position = -1.12372088432312,-0.198460578918457,0.468471586704254
 				rotation = -1.960206E-08,-0.2588176,-7.315631E-08,-0.9659262
@@ -35481,6 +35930,7 @@ GAME
 				name = strutConnector
 				uid = 1878096495
 				mid = 2295821187
+				launchID = 0
 				parent = 1
 				position = -0.156151726841927,-0.198460578918457,1.20740652084351
 				rotation = -5.355404E-08,-0.7071058,-5.355419E-08,-0.7071078
@@ -35516,6 +35966,7 @@ GAME
 				name = strutConnector
 				uid = 3094803880
 				mid = 2295821187
+				launchID = 0
 				parent = 1
 				position = 0.967568635940552,-0.198460578918457,0.738934814929962
 				rotation = -7.315626E-08,-0.9659255,-1.960227E-08,-0.2588204
@@ -35551,6 +36002,7 @@ GAME
 				name = strutConnector
 				uid = 990982802
 				mid = 2295821187
+				launchID = 0
 				parent = 1
 				position = 1.12372016906738,-0.198460578918457,-0.468471795320511
 				rotation = -7.315631E-08,-0.9659262,1.960206E-08,0.2588177
@@ -35586,6 +36038,7 @@ GAME
 				name = strutConnector
 				uid = 454835402
 				mid = 2295821187
+				launchID = 0
 				parent = 1
 				position = 0.156152129173279,-0.198460578918457,-1.20740747451782
 				rotation = -5.355419E-08,-0.7071078,5.355403E-08,0.7071058
@@ -35621,6 +36074,7 @@ GAME
 				name = liquidEngine1-2
 				uid = 895998281
 				mid = 2295821187
+				launchID = 0
 				parent = 1
 				position = 0,-2.0028076171875,0
 				rotation = 0,0,0,1
@@ -35869,6 +36323,7 @@ GAME
 			stg = 0
 			prst = False
 			ref = 3677799991
+			ctrl = False
 			cPch = 0
 			cHdg = 0
 			cMod = 0
@@ -35888,6 +36343,7 @@ GAME
 				name = probeCoreOcto2
 				uid = 3677799991
 				mid = 1494919663
+				launchID = 0
 				parent = 0
 				position = 0,0,0
 				rotation = 0,0,0,1
@@ -36040,6 +36496,7 @@ GAME
 				name = structuralPanel1
 				uid = 885508708
 				mid = 1494919663
+				launchID = 0
 				parent = 0
 				position = 0,0.0885591506958008,0
 				rotation = 0,0,0,1
@@ -36072,6 +36529,7 @@ GAME
 				name = commDish
 				uid = 3891884715
 				mid = 1494919663
+				launchID = 0
 				parent = 1
 				position = 0,0.116059303283691,0
 				rotation = 0,0,0,1
@@ -36166,6 +36624,7 @@ GAME
 				name = strutCube
 				uid = 3723554691
 				mid = 1494919663
+				launchID = 0
 				parent = 1
 				position = 0.389694601297379,-0.0563201904296875,0.389694809913635
 				rotation = -1,0,8.42937E-08,-1.192093E-07
@@ -36201,6 +36660,7 @@ GAME
 				name = strutCube
 				uid = 1281128953
 				mid = 1494919663
+				launchID = 0
 				parent = 3
 				position = 0.389694601297379,-0.313790321350098,0.389694809913635
 				rotation = 0,0,0,1
@@ -36236,6 +36696,7 @@ GAME
 				name = strutCube
 				uid = 2673367515
 				mid = 1494919663
+				launchID = 0
 				parent = 4
 				position = 0.389694601297379,-0.571260452270508,0.389694809913635
 				rotation = -2.943164E-15,0.7071068,-2.943166E-15,0.7071068
@@ -36271,6 +36732,7 @@ GAME
 				name = strutCube
 				uid = 1157422010
 				mid = 1494919663
+				launchID = 0
 				parent = 5
 				position = 0.389694601297379,-0.828730583190918,0.389694809913635
 				rotation = 4.162264E-15,0.7071068,4.162261E-15,0.7071068
@@ -36306,6 +36768,7 @@ GAME
 				name = strutCube
 				uid = 666202280
 				mid = 1494919663
+				launchID = 0
 				parent = 1
 				position = 0.389694690704346,-0.0563201904296875,-0.389694601297379
 				rotation = -0.7071067,-8.429371E-08,0.7071069,-8.42937E-08
@@ -36341,6 +36804,7 @@ GAME
 				name = strutCube
 				uid = 892355529
 				mid = 1494919663
+				launchID = 0
 				parent = 7
 				position = 0.389694780111313,-0.313790321350098,-0.389694601297379
 				rotation = 2.943164E-15,0.7071068,-2.943165E-15,0.7071068
@@ -36376,6 +36840,7 @@ GAME
 				name = strutCube
 				uid = 3538852624
 				mid = 1494919663
+				launchID = 0
 				parent = 8
 				position = 0.389694780111313,-0.571260452270508,-0.389694601297379
 				rotation = 0,1,-1.694066E-21,-8.429371E-08
@@ -36411,6 +36876,7 @@ GAME
 				name = strutCube
 				uid = 1069396251
 				mid = 1494919663
+				launchID = 0
 				parent = 9
 				position = 0.389694780111313,-0.828730583190918,-0.389694601297379
 				rotation = 0,1,-1.694066E-21,-8.429371E-08
@@ -36446,6 +36912,7 @@ GAME
 				name = strutCube
 				uid = 2346951755
 				mid = 1494919663
+				launchID = 0
 				parent = 1
 				position = -0.389694601297379,-0.0563201904296875,-0.389694601297379
 				rotation = 8.42937E-08,-1.192093E-07,1,0
@@ -36481,6 +36948,7 @@ GAME
 				name = strutCube
 				uid = 3376076908
 				mid = 1494919663
+				launchID = 0
 				parent = 11
 				position = -0.389694601297379,-0.313790321350098,-0.389694690704346
 				rotation = 0,1,0,0
@@ -36516,6 +36984,7 @@ GAME
 				name = strutCube
 				uid = 403271012
 				mid = 1494919663
+				launchID = 0
 				parent = 12
 				position = -0.389694601297379,-0.571260452270508,-0.389694690704346
 				rotation = -2.943166E-15,0.7071068,2.943164E-15,-0.7071068
@@ -36551,6 +37020,7 @@ GAME
 				name = strutCube
 				uid = 748861617
 				mid = 1494919663
+				launchID = 0
 				parent = 13
 				position = -0.389694601297379,-0.828730583190918,-0.389694690704346
 				rotation = 4.162261E-15,0.7071068,-4.162264E-15,-0.7071068
@@ -36586,6 +37056,7 @@ GAME
 				name = strutCube
 				uid = 3281644635
 				mid = 1494919663
+				launchID = 0
 				parent = 1
 				position = -0.389694720506668,-0.0563201904296875,0.389694601297379
 				rotation = -0.7071068,8.42937E-08,-0.7071068,-8.42937E-08
@@ -36621,6 +37092,7 @@ GAME
 				name = strutCube
 				uid = 2701790399
 				mid = 1494919663
+				launchID = 0
 				parent = 15
 				position = -0.389694720506668,-0.313790321350098,0.389694601297379
 				rotation = -1.004859E-14,-0.7071068,-1.004859E-14,0.7071068
@@ -36656,6 +37128,7 @@ GAME
 				name = strutCube
 				uid = 2732527968
 				mid = 1494919663
+				launchID = 0
 				parent = 16
 				position = -0.389694720506668,-0.571260452270508,0.389694601297379
 				rotation = -5.024296E-15,-8.42937E-08,-5.024296E-15,1
@@ -36691,6 +37164,7 @@ GAME
 				name = strutCube
 				uid = 1011893785
 				mid = 1494919663
+				launchID = 0
 				parent = 17
 				position = -0.389694720506668,-0.828730583190918,0.389694601297379
 				rotation = -5.024296E-15,-4.214685E-08,5.024296E-15,1
@@ -36726,6 +37200,7 @@ GAME
 				name = structuralPanel1
 				uid = 4223262831
 				mid = 1494919663
+				launchID = 0
 				parent = 1
 				position = -0.500483214855194,-0.406460762023926,0
 				rotation = -0.7071068,0.7071068,6.322028E-08,-6.322028E-08
@@ -36761,6 +37236,7 @@ GAME
 				name = solarPanels5
 				uid = 704280298
 				mid = 1494919663
+				launchID = 0
 				parent = 19
 				position = -0.517670691013336,-0.143160820007324,0.352189987897873
 				rotation = 0.7071068,0,-0.7071068,6.53613E-18
@@ -36843,6 +37319,7 @@ GAME
 				name = solarPanels5
 				uid = 3097338925
 				mid = 1494919663
+				launchID = 0
 				parent = 19
 				position = -0.517671287059784,-0.143290519714355,-0.0124265216290951
 				rotation = 0.7071068,0,-0.7071068,6.53613E-18
@@ -36925,6 +37402,7 @@ GAME
 				name = solarPanels5
 				uid = 2113181979
 				mid = 1494919663
+				launchID = 0
 				parent = 19
 				position = -0.517671287059784,-0.144640922546387,-0.377576768398285
 				rotation = 0.7071068,0,-0.7071068,6.53613E-18
@@ -37007,6 +37485,7 @@ GAME
 				name = solarPanels5
 				uid = 11658966
 				mid = 1494919663
+				launchID = 0
 				parent = 19
 				position = -0.5176722407341,-0.679940223693848,-0.0122643820941448
 				rotation = 0.7071068,0,-0.7071068,6.53613E-18
@@ -37089,6 +37568,7 @@ GAME
 				name = solarPanels5
 				uid = 38884600
 				mid = 1494919663
+				launchID = 0
 				parent = 19
 				position = -0.5176722407341,-0.68009090423584,0.361787885427475
 				rotation = 0.7071068,0,-0.7071068,6.53613E-18
@@ -37171,6 +37651,7 @@ GAME
 				name = solarPanels5
 				uid = 1002730203
 				mid = 1494919663
+				launchID = 0
 				parent = 19
 				position = -0.5176722407341,-0.679350852966309,-0.380612969398499
 				rotation = 0.7071068,0,-0.7071068,6.53613E-18
@@ -37253,6 +37734,7 @@ GAME
 				name = structuralPanel1
 				uid = 556817160
 				mid = 1494919663
+				launchID = 0
 				parent = 1
 				position = 0,-0.406460762023926,0.500483334064484
 				rotation = -0.4999999,0.4999999,0.5000001,-0.5000001
@@ -37288,6 +37770,7 @@ GAME
 				name = solarPanels5
 				uid = 476293482
 				mid = 1494919663
+				launchID = 0
 				parent = 26
 				position = 0.352188110351563,-0.143160820007324,0.517671525478363
 				rotation = 0,0,-1,0
@@ -37370,6 +37853,7 @@ GAME
 				name = solarPanels5
 				uid = 3939592116
 				mid = 1494919663
+				launchID = 0
 				parent = 26
 				position = -0.0124262515455484,-0.143290519714355,0.517671644687653
 				rotation = 0,0,-1,0
@@ -37452,6 +37936,7 @@ GAME
 				name = solarPanels5
 				uid = 642162896
 				mid = 1494919663
+				launchID = 0
 				parent = 26
 				position = -0.377574265003204,-0.144650459289551,0.517671585083008
 				rotation = 0,0,-1,0
@@ -37534,6 +38019,7 @@ GAME
 				name = solarPanels5
 				uid = 2292161434
 				mid = 1494919663
+				launchID = 0
 				parent = 26
 				position = -0.012264434248209,-0.679940223693848,0.517671644687653
 				rotation = -2.980233E-08,0,-1,0
@@ -37616,6 +38102,7 @@ GAME
 				name = solarPanels5
 				uid = 649444528
 				mid = 1494919663
+				launchID = 0
 				parent = 26
 				position = 0.361785680055618,-0.68009090423584,0.51767235994339
 				rotation = -2.980233E-08,0,-1,0
@@ -37698,6 +38185,7 @@ GAME
 				name = solarPanels5
 				uid = 1095171999
 				mid = 1494919663
+				launchID = 0
 				parent = 26
 				position = -0.380610823631287,-0.679350852966309,0.517671823501587
 				rotation = 0,0,-1,0
@@ -37780,6 +38268,7 @@ GAME
 				name = structuralPanel1
 				uid = 2543458440
 				mid = 1494919663
+				launchID = 0
 				parent = 1
 				position = 0.500483214855194,-0.406460762023926,0
 				rotation = 6.322028E-08,-6.322028E-08,0.7071068,-0.7071068
@@ -37815,6 +38304,7 @@ GAME
 				name = solarPanels5
 				uid = 1333122320
 				mid = 1494919663
+				launchID = 0
 				parent = 33
 				position = 0.517671465873718,-0.143160820007324,-0.352187901735306
 				rotation = -0.7071068,6.53613E-18,-0.7071068,0
@@ -37897,6 +38387,7 @@ GAME
 				name = solarPanels5
 				uid = 652684284
 				mid = 1494919663
+				launchID = 0
 				parent = 33
 				position = 0.517671704292297,-0.143290519714355,0.0124265104532242
 				rotation = -0.7071068,6.53613E-18,-0.7071068,0
@@ -37979,6 +38470,7 @@ GAME
 				name = solarPanels5
 				uid = 1388417179
 				mid = 1494919663
+				launchID = 0
 				parent = 33
 				position = 0.517671704292297,-0.144640922546387,0.377574592828751
 				rotation = -0.7071068,6.53613E-18,-0.7071068,0
@@ -38061,6 +38553,7 @@ GAME
 				name = solarPanels5
 				uid = 1748169196
 				mid = 1494919663
+				launchID = 0
 				parent = 33
 				position = 0.517671585083008,-0.679940223693848,0.0122643113136292
 				rotation = -0.7071068,6.53613E-18,-0.7071068,0
@@ -38143,6 +38636,7 @@ GAME
 				name = solarPanels5
 				uid = 482636454
 				mid = 1494919663
+				launchID = 0
 				parent = 33
 				position = 0.517671465873718,-0.68009090423584,-0.361785590648651
 				rotation = -0.7071068,6.53613E-18,-0.7071068,0
@@ -38225,6 +38719,7 @@ GAME
 				name = solarPanels5
 				uid = 385349648
 				mid = 1494919663
+				launchID = 0
 				parent = 33
 				position = 0.517671704292297,-0.679350852966309,0.380610913038254
 				rotation = -0.7071068,6.53613E-18,-0.7071068,0
@@ -38307,6 +38802,7 @@ GAME
 				name = structuralPanel1
 				uid = 1855866783
 				mid = 1494919663
+				launchID = 0
 				parent = 1
 				position = 0,-0.406460762023926,-0.500483274459839
 				rotation = -0.5000001,0.5000001,-0.4999999,0.4999999
@@ -38342,6 +38838,7 @@ GAME
 				name = solarPanels5
 				uid = 4277703557
 				mid = 1494919663
+				launchID = 0
 				parent = 40
 				position = -0.352187901735306,-0.143160820007324,-0.517671346664429
 				rotation = 1,0,2.980233E-08,0
@@ -38424,6 +38921,7 @@ GAME
 				name = solarPanels5
 				uid = 2108031922
 				mid = 1494919663
+				launchID = 0
 				parent = 40
 				position = 0.0124266296625137,-0.14330005645752,-0.517671704292297
 				rotation = 1,0,2.980233E-08,0
@@ -38506,6 +39004,7 @@ GAME
 				name = solarPanels5
 				uid = 532289652
 				mid = 1494919663
+				launchID = 0
 				parent = 40
 				position = 0.377574682235718,-0.144650459289551,-0.517671763896942
 				rotation = 1,0,2.980233E-08,0
@@ -38588,6 +39087,7 @@ GAME
 				name = solarPanels5
 				uid = 1831006502
 				mid = 1494919663
+				launchID = 0
 				parent = 40
 				position = 0.0122641660273075,-0.679940223693848,-0.517671585083008
 				rotation = 1,0,0,0
@@ -38670,6 +39170,7 @@ GAME
 				name = solarPanels5
 				uid = 2665789988
 				mid = 1494919663
+				launchID = 0
 				parent = 40
 				position = -0.36178594827652,-0.68009090423584,-0.517671465873718
 				rotation = 1,0,0,0
@@ -38752,6 +39253,7 @@ GAME
 				name = solarPanels5
 				uid = 1420827180
 				mid = 1494919663
+				launchID = 0
 				parent = 40
 				position = 0.380610764026642,-0.679350852966309,-0.5176722407341
 				rotation = 1,0,2.980233E-08,0
@@ -38834,6 +39336,7 @@ GAME
 				name = longAntenna
 				uid = 1390749549
 				mid = 1494919663
+				launchID = 0
 				parent = 1
 				position = 0.423133879899979,0.105749130249023,0.419438511133194
 				rotation = 0.6532815,0.2705982,-0.270598,0.6532816
@@ -38931,6 +39434,7 @@ GAME
 				name = longAntenna
 				uid = 2068323746
 				mid = 1494919663
+				launchID = 0
 				parent = 1
 				position = 0.419438481330872,0.105749130249023,-0.423133999109268
 				rotation = 0.2705981,0.6532816,-0.6532815,0.270598
@@ -39028,6 +39532,7 @@ GAME
 				name = longAntenna
 				uid = 4180944635
 				mid = 1494919663
+				launchID = 0
 				parent = 1
 				position = -0.423133999109268,0.105749130249023,-0.419438391923904
 				rotation = -0.270598,0.6532816,-0.6532815,-0.2705982
@@ -39125,6 +39630,7 @@ GAME
 				name = longAntenna
 				uid = 2550712860
 				mid = 1494919663
+				launchID = 0
 				parent = 1
 				position = -0.419438511133194,0.105749130249023,0.423133999109268
 				rotation = 0.6532815,-0.270598,0.2705981,0.6532816
@@ -39222,6 +39728,7 @@ GAME
 				name = mumech.MJ2.AR202
 				uid = 509361150
 				mid = 1494919663
+				launchID = 0
 				parent = 1
 				position = -0.298313796520233,0.105749130249023,0.0184616912156343
 				rotation = -0.5000001,0.4999999,-0.5000001,0.4999999
@@ -39664,6 +40171,7 @@ GAME
 				name = miniFuelTank
 				uid = 3527337528
 				mid = 1494919663
+				launchID = 0
 				parent = 0
 				position = 0,-0.235340118408203,0
 				rotation = 0,0,0,1
@@ -39716,6 +40224,7 @@ GAME
 				name = microEngine
 				uid = 2627897226
 				mid = 1494919663
+				launchID = 0
 				parent = 52
 				position = 0,-0.409610748291016,0
 				rotation = 0,0,0,1
@@ -39866,6 +40375,7 @@ GAME
 			stg = 2
 			prst = False
 			ref = 0
+			ctrl = False
 			cPch = 
 			cHdg = 
 			cMod = 0
@@ -39885,6 +40395,7 @@ GAME
 				name = stackDecouplerMini
 				uid = 893582966
 				mid = 1494919663
+				launchID = 0
 				parent = 0
 				position = 0,0,0
 				rotation = 0,0,0,1
@@ -39944,6 +40455,7 @@ GAME
 				name = probeCoreCube
 				uid = 3844965218
 				mid = 1494919663
+				launchID = 0
 				parent = 0
 				position = -3.09199094772339E-07,-0.360500335693359,6.55651092529297E-07
 				rotation = 0,0,0,1
@@ -40096,6 +40608,7 @@ GAME
 				name = toroidalFuelTank
 				uid = 3366936485
 				mid = 1494919663
+				launchID = 0
 				parent = 1
 				position = -8.30739736557007E-07,-0.69495964050293,1.31130218505859E-06
 				rotation = 0,0,0,1
@@ -40148,6 +40661,7 @@ GAME
 				name = fuelTankSmall
 				uid = 3153819992
 				mid = 1494919663
+				launchID = 0
 				parent = 2
 				position = -1.6726553440094E-06,-1.30006980895996,1.96695327758789E-06
 				rotation = 0,0,0,1
@@ -40200,6 +40714,7 @@ GAME
 				name = liquidEngine3
 				uid = 3616390790
 				mid = 1494919663
+				launchID = 0
 				parent = 3
 				position = -2.91317701339722E-06,-2.12595081329346,2.86102294921875E-06
 				rotation = 0,0,0,1
@@ -40368,6 +40883,7 @@ GAME
 				name = strutConnector
 				uid = 3031760338
 				mid = 1494919663
+				launchID = 0
 				parent = 3
 				position = -0.447944760322571,-0.845919609069824,0.447944849729538
 				rotation = -2.980233E-08,-0.3826835,-2.980232E-08,-0.9238798
@@ -40401,6 +40917,7 @@ GAME
 				name = strutConnector
 				uid = 1619907563
 				mid = 1494919663
+				launchID = 0
 				parent = 3
 				position = 0.44794374704361,-0.845919609069824,0.447946816682816
 				rotation = -4.470349E-08,-0.9238798,-1.490115E-08,-0.3826835
@@ -40434,6 +40951,7 @@ GAME
 				name = strutConnector
 				uid = 4152572270
 				mid = 1494919663
+				launchID = 0
 				parent = 3
 				position = 0.44794237613678,-0.845919609069824,-0.44794225692749
 				rotation = -2.980232E-08,-0.9238798,2.980233E-08,0.3826835
@@ -40467,6 +40985,7 @@ GAME
 				name = strutConnector
 				uid = 2050885280
 				mid = 1494919663
+				launchID = 0
 				parent = 3
 				position = -0.447946310043335,-0.845919609069824,-0.44794374704361
 				rotation = 1.490115E-08,0.3826835,-4.470349E-08,-0.9238798
@@ -40559,6 +41078,7 @@ GAME
 			stg = 0
 			prst = False
 			ref = 3485427938
+			ctrl = False
 			cPch = 0
 			cHdg = 0
 			cMod = 0
@@ -40578,6 +41098,7 @@ GAME
 				name = probeCoreOcto2
 				uid = 3485427938
 				mid = 1921903468
+				launchID = 0
 				parent = 0
 				position = 0,0,0
 				rotation = 0,0,0,1
@@ -40730,6 +41251,7 @@ GAME
 				name = structuralPanel1
 				uid = 1335945542
 				mid = 1921903468
+				launchID = 0
 				parent = 0
 				position = 0,0.0885591506958008,0
 				rotation = 0,0,0,1
@@ -40762,6 +41284,7 @@ GAME
 				name = commDish
 				uid = 224750049
 				mid = 1921903468
+				launchID = 0
 				parent = 1
 				position = 0,0.116059303283691,0
 				rotation = 0,0,0,1
@@ -40856,6 +41379,7 @@ GAME
 				name = strutCube
 				uid = 2080951347
 				mid = 1921903468
+				launchID = 0
 				parent = 1
 				position = 0.389694601297379,-0.0563201904296875,0.389694809913635
 				rotation = -1,0,8.42937E-08,-1.192093E-07
@@ -40891,6 +41415,7 @@ GAME
 				name = strutCube
 				uid = 176809456
 				mid = 1921903468
+				launchID = 0
 				parent = 3
 				position = 0.389694601297379,-0.313790321350098,0.389694809913635
 				rotation = 0,0,0,1
@@ -40926,6 +41451,7 @@ GAME
 				name = strutCube
 				uid = 3010557923
 				mid = 1921903468
+				launchID = 0
 				parent = 4
 				position = 0.389694601297379,-0.571260452270508,0.389694809913635
 				rotation = -2.943164E-15,0.7071068,-2.943166E-15,0.7071068
@@ -40961,6 +41487,7 @@ GAME
 				name = strutCube
 				uid = 1199291501
 				mid = 1921903468
+				launchID = 0
 				parent = 5
 				position = 0.389694601297379,-0.828730583190918,0.389694809913635
 				rotation = 4.162264E-15,0.7071068,4.162261E-15,0.7071068
@@ -40996,6 +41523,7 @@ GAME
 				name = strutCube
 				uid = 2051872655
 				mid = 1921903468
+				launchID = 0
 				parent = 1
 				position = 0.389694690704346,-0.0563201904296875,-0.389694601297379
 				rotation = -0.7071067,-8.429371E-08,0.7071069,-8.42937E-08
@@ -41031,6 +41559,7 @@ GAME
 				name = strutCube
 				uid = 4214289624
 				mid = 1921903468
+				launchID = 0
 				parent = 7
 				position = 0.389694780111313,-0.313790321350098,-0.389694601297379
 				rotation = 2.943164E-15,0.7071068,-2.943165E-15,0.7071068
@@ -41066,6 +41595,7 @@ GAME
 				name = strutCube
 				uid = 731062066
 				mid = 1921903468
+				launchID = 0
 				parent = 8
 				position = 0.389694780111313,-0.571260452270508,-0.389694601297379
 				rotation = 0,1,-1.694066E-21,-8.429371E-08
@@ -41101,6 +41631,7 @@ GAME
 				name = strutCube
 				uid = 2792996722
 				mid = 1921903468
+				launchID = 0
 				parent = 9
 				position = 0.389694780111313,-0.828730583190918,-0.389694601297379
 				rotation = 0,1,-1.694066E-21,-8.429371E-08
@@ -41136,6 +41667,7 @@ GAME
 				name = strutCube
 				uid = 2012499667
 				mid = 1921903468
+				launchID = 0
 				parent = 1
 				position = -0.389694601297379,-0.0563201904296875,-0.389694601297379
 				rotation = 8.42937E-08,-1.192093E-07,1,0
@@ -41171,6 +41703,7 @@ GAME
 				name = strutCube
 				uid = 1497405659
 				mid = 1921903468
+				launchID = 0
 				parent = 11
 				position = -0.389694601297379,-0.313790321350098,-0.389694690704346
 				rotation = 0,1,0,0
@@ -41206,6 +41739,7 @@ GAME
 				name = strutCube
 				uid = 591471349
 				mid = 1921903468
+				launchID = 0
 				parent = 12
 				position = -0.389694601297379,-0.571260452270508,-0.389694690704346
 				rotation = -2.943166E-15,0.7071068,2.943164E-15,-0.7071068
@@ -41241,6 +41775,7 @@ GAME
 				name = strutCube
 				uid = 3514185157
 				mid = 1921903468
+				launchID = 0
 				parent = 13
 				position = -0.389694601297379,-0.828730583190918,-0.389694690704346
 				rotation = 4.162261E-15,0.7071068,-4.162264E-15,-0.7071068
@@ -41276,6 +41811,7 @@ GAME
 				name = strutCube
 				uid = 223124798
 				mid = 1921903468
+				launchID = 0
 				parent = 1
 				position = -0.389694720506668,-0.0563201904296875,0.389694601297379
 				rotation = -0.7071068,8.42937E-08,-0.7071068,-8.42937E-08
@@ -41311,6 +41847,7 @@ GAME
 				name = strutCube
 				uid = 2249444960
 				mid = 1921903468
+				launchID = 0
 				parent = 15
 				position = -0.389694720506668,-0.313790321350098,0.389694601297379
 				rotation = -1.004859E-14,-0.7071068,-1.004859E-14,0.7071068
@@ -41346,6 +41883,7 @@ GAME
 				name = strutCube
 				uid = 2421496993
 				mid = 1921903468
+				launchID = 0
 				parent = 16
 				position = -0.389694720506668,-0.571260452270508,0.389694601297379
 				rotation = -5.024296E-15,-8.42937E-08,-5.024296E-15,1
@@ -41381,6 +41919,7 @@ GAME
 				name = strutCube
 				uid = 2431454342
 				mid = 1921903468
+				launchID = 0
 				parent = 17
 				position = -0.389694720506668,-0.828730583190918,0.389694601297379
 				rotation = -5.024296E-15,-4.214685E-08,5.024296E-15,1
@@ -41416,6 +41955,7 @@ GAME
 				name = structuralPanel1
 				uid = 327154252
 				mid = 1921903468
+				launchID = 0
 				parent = 1
 				position = -0.500483214855194,-0.406460762023926,0
 				rotation = -0.7071068,0.7071068,6.322028E-08,-6.322028E-08
@@ -41451,6 +41991,7 @@ GAME
 				name = solarPanels5
 				uid = 656341146
 				mid = 1921903468
+				launchID = 0
 				parent = 19
 				position = -0.517670691013336,-0.143160820007324,0.352189987897873
 				rotation = 0.7071068,0,-0.7071068,6.53613E-18
@@ -41533,6 +42074,7 @@ GAME
 				name = solarPanels5
 				uid = 929705147
 				mid = 1921903468
+				launchID = 0
 				parent = 19
 				position = -0.517671287059784,-0.143290519714355,-0.0124265216290951
 				rotation = 0.7071068,0,-0.7071068,6.53613E-18
@@ -41615,6 +42157,7 @@ GAME
 				name = solarPanels5
 				uid = 2367966383
 				mid = 1921903468
+				launchID = 0
 				parent = 19
 				position = -0.517671287059784,-0.144640922546387,-0.377576768398285
 				rotation = 0.7071068,0,-0.7071068,6.53613E-18
@@ -41697,6 +42240,7 @@ GAME
 				name = solarPanels5
 				uid = 3076391934
 				mid = 1921903468
+				launchID = 0
 				parent = 19
 				position = -0.5176722407341,-0.679940223693848,-0.0122643820941448
 				rotation = 0.7071068,0,-0.7071068,6.53613E-18
@@ -41779,6 +42323,7 @@ GAME
 				name = solarPanels5
 				uid = 573728237
 				mid = 1921903468
+				launchID = 0
 				parent = 19
 				position = -0.5176722407341,-0.68009090423584,0.361787885427475
 				rotation = 0.7071068,0,-0.7071068,6.53613E-18
@@ -41861,6 +42406,7 @@ GAME
 				name = solarPanels5
 				uid = 2770822510
 				mid = 1921903468
+				launchID = 0
 				parent = 19
 				position = -0.5176722407341,-0.679350852966309,-0.380612969398499
 				rotation = 0.7071068,0,-0.7071068,6.53613E-18
@@ -41943,6 +42489,7 @@ GAME
 				name = structuralPanel1
 				uid = 2139228482
 				mid = 1921903468
+				launchID = 0
 				parent = 1
 				position = 0,-0.406460762023926,0.500483334064484
 				rotation = -0.4999999,0.4999999,0.5000001,-0.5000001
@@ -41978,6 +42525,7 @@ GAME
 				name = solarPanels5
 				uid = 586526238
 				mid = 1921903468
+				launchID = 0
 				parent = 26
 				position = 0.352188110351563,-0.143160820007324,0.517671525478363
 				rotation = 0,0,-1,0
@@ -42060,6 +42608,7 @@ GAME
 				name = solarPanels5
 				uid = 346377608
 				mid = 1921903468
+				launchID = 0
 				parent = 26
 				position = -0.0124262515455484,-0.143290519714355,0.517671644687653
 				rotation = 0,0,-1,0
@@ -42142,6 +42691,7 @@ GAME
 				name = solarPanels5
 				uid = 1015647692
 				mid = 1921903468
+				launchID = 0
 				parent = 26
 				position = -0.377574265003204,-0.144650459289551,0.517671585083008
 				rotation = 0,0,-1,0
@@ -42224,6 +42774,7 @@ GAME
 				name = solarPanels5
 				uid = 2169818817
 				mid = 1921903468
+				launchID = 0
 				parent = 26
 				position = -0.012264434248209,-0.679940223693848,0.517671644687653
 				rotation = -2.980233E-08,0,-1,0
@@ -42306,6 +42857,7 @@ GAME
 				name = solarPanels5
 				uid = 2166399059
 				mid = 1921903468
+				launchID = 0
 				parent = 26
 				position = 0.361785680055618,-0.68009090423584,0.51767235994339
 				rotation = -2.980233E-08,0,-1,0
@@ -42388,6 +42940,7 @@ GAME
 				name = solarPanels5
 				uid = 1307293890
 				mid = 1921903468
+				launchID = 0
 				parent = 26
 				position = -0.380610823631287,-0.679350852966309,0.517671823501587
 				rotation = 0,0,-1,0
@@ -42470,6 +43023,7 @@ GAME
 				name = structuralPanel1
 				uid = 3215995365
 				mid = 1921903468
+				launchID = 0
 				parent = 1
 				position = 0.500483214855194,-0.406460762023926,0
 				rotation = 6.322028E-08,-6.322028E-08,0.7071068,-0.7071068
@@ -42505,6 +43059,7 @@ GAME
 				name = solarPanels5
 				uid = 1177571411
 				mid = 1921903468
+				launchID = 0
 				parent = 33
 				position = 0.517671465873718,-0.143160820007324,-0.352187901735306
 				rotation = -0.7071068,6.53613E-18,-0.7071068,0
@@ -42587,6 +43142,7 @@ GAME
 				name = solarPanels5
 				uid = 539010389
 				mid = 1921903468
+				launchID = 0
 				parent = 33
 				position = 0.517671704292297,-0.143290519714355,0.0124265104532242
 				rotation = -0.7071068,6.53613E-18,-0.7071068,0
@@ -42669,6 +43225,7 @@ GAME
 				name = solarPanels5
 				uid = 1795417226
 				mid = 1921903468
+				launchID = 0
 				parent = 33
 				position = 0.517671704292297,-0.144640922546387,0.377574592828751
 				rotation = -0.7071068,6.53613E-18,-0.7071068,0
@@ -42751,6 +43308,7 @@ GAME
 				name = solarPanels5
 				uid = 755853288
 				mid = 1921903468
+				launchID = 0
 				parent = 33
 				position = 0.517671585083008,-0.679940223693848,0.0122643113136292
 				rotation = -0.7071068,6.53613E-18,-0.7071068,0
@@ -42833,6 +43391,7 @@ GAME
 				name = solarPanels5
 				uid = 1181191849
 				mid = 1921903468
+				launchID = 0
 				parent = 33
 				position = 0.517671465873718,-0.68009090423584,-0.361785590648651
 				rotation = -0.7071068,6.53613E-18,-0.7071068,0
@@ -42915,6 +43474,7 @@ GAME
 				name = solarPanels5
 				uid = 4248370370
 				mid = 1921903468
+				launchID = 0
 				parent = 33
 				position = 0.517671704292297,-0.679350852966309,0.380610913038254
 				rotation = -0.7071068,6.53613E-18,-0.7071068,0
@@ -42997,6 +43557,7 @@ GAME
 				name = structuralPanel1
 				uid = 1010934747
 				mid = 1921903468
+				launchID = 0
 				parent = 1
 				position = 0,-0.406460762023926,-0.500483274459839
 				rotation = -0.5000001,0.5000001,-0.4999999,0.4999999
@@ -43032,6 +43593,7 @@ GAME
 				name = solarPanels5
 				uid = 4099911669
 				mid = 1921903468
+				launchID = 0
 				parent = 40
 				position = -0.352187901735306,-0.143160820007324,-0.517671346664429
 				rotation = 1,0,2.980233E-08,0
@@ -43114,6 +43676,7 @@ GAME
 				name = solarPanels5
 				uid = 1045134551
 				mid = 1921903468
+				launchID = 0
 				parent = 40
 				position = 0.0124266296625137,-0.14330005645752,-0.517671704292297
 				rotation = 1,0,2.980233E-08,0
@@ -43196,6 +43759,7 @@ GAME
 				name = solarPanels5
 				uid = 1553863836
 				mid = 1921903468
+				launchID = 0
 				parent = 40
 				position = 0.377574682235718,-0.144650459289551,-0.517671763896942
 				rotation = 1,0,2.980233E-08,0
@@ -43278,6 +43842,7 @@ GAME
 				name = solarPanels5
 				uid = 3806303607
 				mid = 1921903468
+				launchID = 0
 				parent = 40
 				position = 0.0122641660273075,-0.679940223693848,-0.517671585083008
 				rotation = 1,0,0,0
@@ -43360,6 +43925,7 @@ GAME
 				name = solarPanels5
 				uid = 451765820
 				mid = 1921903468
+				launchID = 0
 				parent = 40
 				position = -0.36178594827652,-0.68009090423584,-0.517671465873718
 				rotation = 1,0,0,0
@@ -43442,6 +44008,7 @@ GAME
 				name = solarPanels5
 				uid = 1287020734
 				mid = 1921903468
+				launchID = 0
 				parent = 40
 				position = 0.380610764026642,-0.679350852966309,-0.5176722407341
 				rotation = 1,0,2.980233E-08,0
@@ -43524,6 +44091,7 @@ GAME
 				name = longAntenna
 				uid = 993077796
 				mid = 1921903468
+				launchID = 0
 				parent = 1
 				position = 0.423133879899979,0.105749130249023,0.419438511133194
 				rotation = 0.6532815,0.2705982,-0.270598,0.6532816
@@ -43621,6 +44189,7 @@ GAME
 				name = longAntenna
 				uid = 2523608249
 				mid = 1921903468
+				launchID = 0
 				parent = 1
 				position = 0.419438481330872,0.105749130249023,-0.423133999109268
 				rotation = 0.2705981,0.6532816,-0.6532815,0.270598
@@ -43718,6 +44287,7 @@ GAME
 				name = longAntenna
 				uid = 3359111656
 				mid = 1921903468
+				launchID = 0
 				parent = 1
 				position = -0.423133999109268,0.105749130249023,-0.419438391923904
 				rotation = -0.270598,0.6532816,-0.6532815,-0.2705982
@@ -43815,6 +44385,7 @@ GAME
 				name = longAntenna
 				uid = 2663888014
 				mid = 1921903468
+				launchID = 0
 				parent = 1
 				position = -0.419438511133194,0.105749130249023,0.423133999109268
 				rotation = 0.6532815,-0.270598,0.2705981,0.6532816
@@ -43912,6 +44483,7 @@ GAME
 				name = batteryPack
 				uid = 1066554736
 				mid = 1921903468
+				launchID = 0
 				parent = 1
 				position = 0.245206087827683,0.105749130249023,-0.0241296403110027
 				rotation = 0,0.7071067,-0.7071069,0
@@ -43953,6 +44525,7 @@ GAME
 				name = batteryPack
 				uid = 3140184565
 				mid = 1921903468
+				launchID = 0
 				parent = 1
 				position = -0.245206102728844,0.105749130249023,0.0241296608000994
 				rotation = -0.7071069,-3.090862E-08,3.090863E-08,-0.7071067
@@ -43994,6 +44567,7 @@ GAME
 				name = mumech.MJ2.AR202
 				uid = 2219281385
 				mid = 1921903468
+				launchID = 0
 				parent = 1
 				position = 0.0249254815280437,0.105749130249023,-0.316024005413055
 				rotation = -0.5000001,0.4999999,-0.5000001,0.4999999
@@ -44436,6 +45010,7 @@ GAME
 				name = miniFuelTank
 				uid = 3631918356
 				mid = 1921903468
+				launchID = 0
 				parent = 0
 				position = 0,-0.235340118408203,0
 				rotation = 0,0,0,1
@@ -44488,6 +45063,7 @@ GAME
 				name = microEngine
 				uid = 3494632897
 				mid = 1921903468
+				launchID = 0
 				parent = 54
 				position = 0,-0.409610748291016,0
 				rotation = 0,0,0,1
@@ -44638,18 +45214,19 @@ GAME
 			stg = 0
 			prst = False
 			ref = 0
+			ctrl = False
 			cPch = 0
 			cHdg = 0
 			cMod = -1
 			ORBIT
 			{
-				SMA = 0
+				SMA = NaN
 				ECC = 1
 				INC = NaN
-				LPE = 100.185852441305
-				LAN = 259.228165473864
+				LPE = 127.278955882027
+				LAN = 280.08686905019
 				MNA = -8.40714670366795
-				EPH = 1453889.04831851
+				EPH = 1453995.74831861
 				REF = 1
 			}
 			PART
@@ -44657,6 +45234,7 @@ GAME
 				name = airScoop
 				uid = 2271999765
 				mid = 1059683416
+				launchID = 0
 				parent = 0
 				position = 0,0,0
 				rotation = 0,0,0,1
@@ -44794,18 +45372,19 @@ GAME
 			stg = 0
 			prst = False
 			ref = 0
+			ctrl = False
 			cPch = 0
 			cHdg = 0
 			cMod = -1
 			ORBIT
 			{
-				SMA = NaN
+				SMA = 18482856.1526621
 				ECC = 1
 				INC = NaN
-				LPE = 100.18692702881
-				LAN = 259.228165473864
-				MNA = 0
-				EPH = 1453889.04831851
+				LPE = 127.278964582047
+				LAN = 280.08686905019
+				MNA = 3.14159265358979
+				EPH = 1453995.74831861
 				REF = 1
 			}
 			PART
@@ -44813,6 +45392,7 @@ GAME
 				name = airScoop
 				uid = 14397017
 				mid = 1059683416
+				launchID = 0
 				parent = 0
 				position = 0,0,0
 				rotation = 0,0,0,1.000001
@@ -44950,6 +45530,7 @@ GAME
 			stg = 0
 			prst = False
 			ref = 0
+			ctrl = False
 			cPch = 0
 			cHdg = 0
 			cMod = -1
@@ -44958,10 +45539,10 @@ GAME
 				SMA = NaN
 				ECC = 1
 				INC = NaN
-				LPE = 100.209527375633
-				LAN = 259.228165473864
+				LPE = 127.279155898689
+				LAN = 280.08686905019
 				MNA = -8.40714670366795
-				EPH = 1453889.04831851
+				EPH = 1453995.74831861
 				REF = 1
 			}
 			PART
@@ -44969,6 +45550,7 @@ GAME
 				name = airScoop
 				uid = 3122734994
 				mid = 1059683416
+				launchID = 0
 				parent = 0
 				position = 0,0,0
 				rotation = 0,0,0,1
@@ -45106,18 +45688,19 @@ GAME
 			stg = 0
 			prst = False
 			ref = 0
+			ctrl = False
 			cPch = 0
 			cHdg = 0
 			cMod = -1
 			ORBIT
 			{
-				SMA = 0
+				SMA = 18482958.2777734
 				ECC = 1
 				INC = NaN
-				LPE = 100.209538578845
-				LAN = 259.228165473864
-				MNA = -8.40714670366795
-				EPH = 1453889.04831851
+				LPE = 127.27915214173
+				LAN = 280.08686905019
+				MNA = 3.14159265358979
+				EPH = 1453995.74831861
 				REF = 1
 			}
 			PART
@@ -45125,6 +45708,7 @@ GAME
 				name = airScoop
 				uid = 2153519045
 				mid = 1059683416
+				launchID = 0
 				parent = 0
 				position = 0,0,0
 				rotation = 0,0,0,1
@@ -45262,18 +45846,19 @@ GAME
 			stg = 0
 			prst = False
 			ref = 0
+			ctrl = False
 			cPch = 0
 			cHdg = 0
 			cMod = -1
 			ORBIT
 			{
-				SMA = 0
+				SMA = 18646252.2871891
 				ECC = 1
 				INC = NaN
-				LPE = 48.2538582435124
-				LAN = 259.228165473864
-				MNA = -8.40714670366795
-				EPH = 1453889.04831851
+				LPE = 125.570373797817
+				LAN = 280.08686905019
+				MNA = 3.14159265358979
+				EPH = 1453995.74831861
 				REF = 1
 			}
 			PART
@@ -45281,6 +45866,7 @@ GAME
 				name = MK1Fuselage
 				uid = 1308619966
 				mid = 360710544
+				launchID = 0
 				parent = 0
 				position = 0,0,0
 				rotation = 0,0,0,1
@@ -45323,6 +45909,7 @@ GAME
 				name = toroidalAerospike
 				uid = 3915977198
 				mid = 360710544
+				launchID = 0
 				parent = 0
 				position = 0,-0.943753242492676,1.12504153548798E-07
 				rotation = 0,0,0,1
@@ -45494,6 +46081,7 @@ GAME
 			stg = 0
 			prst = False
 			ref = 2034812109
+			ctrl = False
 			cPch = 
 			cHdg = 
 			cMod = 0
@@ -45513,6 +46101,7 @@ GAME
 				name = probeStackLarge
 				uid = 2034812109
 				mid = 2844628339
+				launchID = 0
 				parent = 0
 				position = 0,0,0
 				rotation = 0,0,0,1
@@ -45665,6 +46254,7 @@ GAME
 				name = dockingPort2
 				uid = 51818315
 				mid = 2844628339
+				launchID = 0
 				parent = 0
 				position = 0,0.189998626708984,0
 				rotation = 0,0,0,1
@@ -45807,6 +46397,7 @@ GAME
 				name = mumech.MJ2.AR202
 				uid = 371513553
 				mid = 2844628339
+				launchID = 0
 				parent = 0
 				position = 0.884096264839172,0.170999526977539,0.0713608041405678
 				rotation = -0.5000001,0.4999999,-0.5000001,0.4999999
@@ -46249,6 +46840,7 @@ GAME
 				name = asasmodule1-2
 				uid = 3833560671
 				mid = 2844628339
+				launchID = 0
 				parent = 0
 				position = 0,-0.440000534057617,0
 				rotation = 0,0,0,1
@@ -46328,6 +46920,7 @@ GAME
 				name = fuelTank3-2
 				uid = 2815245152
 				mid = 2844628339
+				launchID = 0
 				parent = 3
 				position = 0,-4.44000053405762,0
 				rotation = 0,0,0,1
@@ -46380,6 +46973,7 @@ GAME
 				name = dockingPort2
 				uid = 1950730733
 				mid = 2844628339
+				launchID = 0
 				parent = 4
 				position = -1.20740783214569,-4.34079074859619,-0.0278784707188606
 				rotation = 0.5,-0.5,0.5,0.5
@@ -46524,6 +47118,7 @@ GAME
 				name = dockingPort2
 				uid = 2850895502
 				mid = 2844628339
+				launchID = 0
 				parent = 4
 				position = 0.579560279846191,-4.34079074859619,1.05958354473114
 				rotation = 0.6830127,0.1830127,-0.1830127,0.6830127
@@ -46668,6 +47263,7 @@ GAME
 				name = dockingPort2
 				uid = 2477914515
 				mid = 2844628339
+				launchID = 0
 				parent = 4
 				position = 0.627846956253052,-4.34079074859619,-1.03170621395111
 				rotation = 0.1830127,0.6830127,-0.6830127,0.1830127
@@ -46812,6 +47408,7 @@ GAME
 				name = ksp.r.largeBatteryPack
 				uid = 1831559962
 				mid = 2844628339
+				launchID = 0
 				parent = 4
 				position = -0.924835443496704,-2.70065021514893,-0.812951982021332
 				rotation = 6.559019E-08,-0.4999987,-3.786838E-08,-0.8660262
@@ -46857,6 +47454,7 @@ GAME
 				name = ksp.r.largeBatteryPack
 				uid = 637684785
 				mid = 2844628339
+				launchID = 0
 				parent = 4
 				position = -1.16645479202271,-2.70065021514893,0.394454717636108
 				rotation = 3.786857E-08,-0.8660247,-6.559007E-08,-0.5000013
@@ -46902,6 +47500,7 @@ GAME
 				name = ksp.r.largeBatteryPack
 				uid = 1949777179
 				mid = 2844628339
+				launchID = 0
 				parent = 4
 				position = -0.241619408130646,-2.70065021514893,1.20740652084351
 				rotation = 1.082482E-13,-1,-7.573696E-08,-1.41582E-06
@@ -46947,6 +47546,7 @@ GAME
 				name = ksp.r.largeBatteryPack
 				uid = 3517457541
 				mid = 2844628339
+				launchID = 0
 				parent = 4
 				position = 0.924835085868835,-2.70065021514893,0.812951982021332
 				rotation = -3.786839E-08,-0.8660262,-6.559019E-08,0.4999988
@@ -46992,6 +47592,7 @@ GAME
 				name = ksp.r.largeBatteryPack
 				uid = 1948436652
 				mid = 2844628339
+				launchID = 0
 				parent = 4
 				position = 1.16645419597626,-2.70065021514893,-0.394454687833786
 				rotation = -6.559008E-08,-0.5000013,-3.786857E-08,0.8660247
@@ -47037,6 +47638,7 @@ GAME
 				name = ksp.r.largeBatteryPack
 				uid = 448399726
 				mid = 2844628339
+				launchID = 0
 				parent = 4
 				position = 0.241619780659676,-2.70065021514893,-1.20740747451782
 				rotation = -7.573696E-08,-1.523051E-06,-1.163695E-13,1
@@ -47082,6 +47684,7 @@ GAME
 				name = dockingPort2
 				uid = 2546608838
 				mid = 2844628339
+				launchID = 0
 				parent = 4
 				position = 0,-8.1900110244751,0
 				rotation = 0,0,1,0
@@ -47224,6 +47827,7 @@ GAME
 				name = radialRCSTank
 				uid = 1789382660
 				mid = 2844628339
+				launchID = 0
 				parent = 4
 				position = 1.23332417011261,-1.10884094238281,-0.718635022640228
 				rotation = -0.3535525,0.3535526,0.612373,-0.6123729
@@ -47269,6 +47873,7 @@ GAME
 				name = radialRCSTank
 				uid = 1008729279
 				mid = 2844628339
+				launchID = 0
 				parent = 4
 				position = -0.00569403916597366,-1.10884094238281,-1.42740750312805
 				rotation = 1.090196E-06,-9.829649E-07,0.7071068,-0.7071068
@@ -47314,6 +47919,7 @@ GAME
 				name = radialRCSTank
 				uid = 1850434938
 				mid = 2844628339
+				launchID = 0
 				parent = 4
 				position = -1.23901784420013,-1.10884094238281,-0.708772480487823
 				rotation = 0.3535544,-0.3535543,0.6123719,-0.612372
@@ -47359,6 +47965,7 @@ GAME
 				name = radialRCSTank
 				uid = 860827175
 				mid = 2844628339
+				launchID = 0
 				parent = 4
 				position = -1.23332381248474,-1.10884094238281,0.718635082244873
 				rotation = 0.6123731,-0.6123729,0.3535524,-0.3535525
@@ -47404,6 +48011,7 @@ GAME
 				name = radialRCSTank
 				uid = 4008311505
 				mid = 2844628339
+				launchID = 0
 				parent = 4
 				position = 0.00569411739706993,-1.10884094238281,1.42740750312805
 				rotation = 0.7071068,-0.7071068,-1.126696E-06,1.019465E-06
@@ -47449,6 +48057,7 @@ GAME
 				name = radialRCSTank
 				uid = 330930279
 				mid = 2844628339
+				launchID = 0
 				parent = 4
 				position = 1.239018201828,-1.10884094238281,0.708772778511047
 				rotation = 0.6123719,-0.612372,-0.3535543,0.3535542
@@ -47494,6 +48103,7 @@ GAME
 				name = RCSBlock
 				uid = 1946761297
 				mid = 2844628339
+				launchID = 0
 				parent = 4
 				position = 1.09114611148834,-6.42366027832031,-0.637923419475555
 				rotation = 7.315626E-08,0.9659255,-1.960228E-08,-0.2588205
@@ -47567,6 +48177,7 @@ GAME
 				name = RCSBlock
 				uid = 1849679574
 				mid = 2844628339
+				launchID = 0
 				parent = 4
 				position = -0.00688482820987701,-6.42366027832031,-1.26392245292664
 				rotation = 5.355404E-08,0.7071058,-5.35542E-08,-0.7071078
@@ -47640,6 +48251,7 @@ GAME
 				name = RCSBlock
 				uid = 4099536005
 				mid = 2844628339
+				launchID = 0
 				parent = 4
 				position = -1.09803080558777,-6.42366027832031,-0.625998377799988
 				rotation = 1.960206E-08,0.2588176,-7.315632E-08,-0.9659263
@@ -47713,6 +48325,7 @@ GAME
 				name = RCSBlock
 				uid = 2100120254
 				mid = 2844628339
+				launchID = 0
 				parent = 4
 				position = -1.09114587306976,-6.42366027832031,0.6379234790802
 				rotation = -1.960228E-08,-0.2588205,-7.315626E-08,-0.9659255
@@ -47786,6 +48399,7 @@ GAME
 				name = RCSBlock
 				uid = 1513178392
 				mid = 2844628339
+				launchID = 0
 				parent = 4
 				position = 0.00688489899039268,-6.42366027832031,1.26392149925232
 				rotation = -5.355419E-08,-0.7071078,-5.355403E-08,-0.7071058
@@ -47859,6 +48473,7 @@ GAME
 				name = RCSBlock
 				uid = 1740853094
 				mid = 2844628339
+				launchID = 0
 				parent = 4
 				position = 1.09803116321564,-6.42366027832031,0.625998616218567
 				rotation = -7.315631E-08,-0.9659262,-1.960206E-08,-0.2588177
@@ -47932,6 +48547,7 @@ GAME
 				name = solarPanels5
 				uid = 3259961760
 				mid = 2844628339
+				launchID = 0
 				parent = 3
 				position = 0.253348469734192,-0.441431045532227,-1.20740747451782
 				rotation = 0,1,-1.514731E-07,0
@@ -48018,6 +48634,7 @@ GAME
 				name = solarPanels5
 				uid = 737385022
 				mid = 2844628339
+				launchID = 0
 				parent = 3
 				position = -0.674621820449829,-0.441431045532227,-1.03291046619415
 				rotation = -5.796626E-08,0.9238796,-1.39943E-07,-0.3826835
@@ -48104,6 +48721,7 @@ GAME
 				name = solarPanels5
 				uid = 620292519
 				mid = 2844628339
+				launchID = 0
 				parent = 3
 				position = -1.20740783214569,-0.441431045532227,-0.253348588943481
 				rotation = -1.071077E-07,0.7071068,-1.071077E-07,-0.7071068
@@ -48190,6 +48808,7 @@ GAME
 				name = solarPanels5
 				uid = 1269785731
 				mid = 2844628339
+				launchID = 0
 				parent = 3
 				position = -1.03291082382202,-0.441431045532227,0.67462158203125
 				rotation = -1.39943E-07,0.3826835,-5.796626E-08,-0.9238796
@@ -48276,6 +48895,7 @@ GAME
 				name = solarPanels5
 				uid = 202922002
 				mid = 2844628339
+				launchID = 0
 				parent = 3
 				position = -0.25334832072258,-0.441431045532227,1.20740759372711
 				rotation = -1.514731E-07,-4.371139E-08,6.621102E-15,-1
@@ -48362,6 +48982,7 @@ GAME
 				name = solarPanels5
 				uid = 951487449
 				mid = 2844628339
+				launchID = 0
 				parent = 3
 				position = 0.674621820449829,-0.441431045532227,1.03291058540344
 				rotation = -1.399429E-07,-0.3826835,5.796628E-08,-0.9238795
@@ -48448,6 +49069,7 @@ GAME
 				name = solarPanels5
 				uid = 2223188902
 				mid = 2844628339
+				launchID = 0
 				parent = 3
 				position = 1.20740711688995,-0.441431045532227,0.253348290920258
 				rotation = -1.071077E-07,-0.7071068,1.071077E-07,-0.7071068
@@ -48534,6 +49156,7 @@ GAME
 				name = solarPanels5
 				uid = 3592251253
 				mid = 2844628339
+				launchID = 0
 				parent = 3
 				position = 1.03291034698486,-0.441431045532227,-0.674621999263763
 				rotation = -5.796624E-08,-0.9238796,1.39943E-07,-0.3826833
@@ -48679,6 +49302,7 @@ GAME
 			stg = 0
 			prst = False
 			ref = 0
+			ctrl = False
 			cPch = 0
 			cHdg = 0
 			cMod = 0
@@ -48698,6 +49322,7 @@ GAME
 				name = dockingPort2
 				uid = 3163550780
 				mid = 2844628339
+				launchID = 0
 				parent = 0
 				position = 0,0,0
 				rotation = 0,0,0,1
@@ -48840,6 +49465,7 @@ GAME
 				name = fuelTank4-2
 				uid = 3145676730
 				mid = 2844628339
+				launchID = 0
 				parent = 0
 				position = 0,-0.46875,0
 				rotation = 0,0,0,1
@@ -48892,6 +49518,7 @@ GAME
 				name = strutConnector
 				uid = 851345539
 				mid = 2844628339
+				launchID = 0
 				parent = 1
 				position = -0.967568874359131,-0.198460578918457,-0.738934814929962
 				rotation = 1.960228E-08,0.2588205,-7.315626E-08,-0.9659255
@@ -48927,6 +49554,7 @@ GAME
 				name = strutConnector
 				uid = 2348423498
 				mid = 2844628339
+				launchID = 0
 				parent = 1
 				position = -1.12372088432312,-0.198460578918457,0.468471586704254
 				rotation = -1.960206E-08,-0.2588176,-7.315631E-08,-0.9659262
@@ -48962,6 +49590,7 @@ GAME
 				name = strutConnector
 				uid = 2611694022
 				mid = 2844628339
+				launchID = 0
 				parent = 1
 				position = -0.156151726841927,-0.198460578918457,1.20740652084351
 				rotation = -5.355404E-08,-0.7071058,-5.355419E-08,-0.7071078
@@ -48997,6 +49626,7 @@ GAME
 				name = strutConnector
 				uid = 892421341
 				mid = 2844628339
+				launchID = 0
 				parent = 1
 				position = 0.967568635940552,-0.198460578918457,0.738934814929962
 				rotation = -7.315626E-08,-0.9659255,-1.960227E-08,-0.2588204
@@ -49032,6 +49662,7 @@ GAME
 				name = strutConnector
 				uid = 3546133932
 				mid = 2844628339
+				launchID = 0
 				parent = 1
 				position = 1.12372016906738,-0.198460578918457,-0.468471795320511
 				rotation = -7.315631E-08,-0.9659262,1.960206E-08,0.2588177
@@ -49067,6 +49698,7 @@ GAME
 				name = strutConnector
 				uid = 408784063
 				mid = 2844628339
+				launchID = 0
 				parent = 1
 				position = 0.156152129173279,-0.198460578918457,-1.20740747451782
 				rotation = -5.355419E-08,-0.7071078,5.355403E-08,0.7071058
@@ -49102,6 +49734,7 @@ GAME
 				name = liquidEngine1-2
 				uid = 1919788729
 				mid = 2844628339
+				launchID = 0
 				parent = 1
 				position = 0,-2.0028076171875,0
 				rotation = 0,0,0,1
@@ -49350,6 +49983,7 @@ GAME
 			stg = 0
 			prst = False
 			ref = 0
+			ctrl = False
 			cPch = 0
 			cHdg = 0
 			cMod = -1
@@ -49369,6 +50003,7 @@ GAME
 				name = dockingPort2
 				uid = 65126285
 				mid = 1977793760
+				launchID = 0
 				parent = 0
 				position = 0,0,0
 				rotation = 0,0,0,1
@@ -49511,6 +50146,7 @@ GAME
 				name = fuelTank4-2
 				uid = 1826369264
 				mid = 1977793760
+				launchID = 0
 				parent = 0
 				position = -7.56462613935582E-05,-0.468726813793182,2.93739276457927E-07
 				rotation = 0,0,0,1
@@ -49563,6 +50199,7 @@ GAME
 				name = strutConnector
 				uid = 4180789093
 				mid = 1977793760
+				launchID = 0
 				parent = 1
 				position = -0.967553973197937,-0.198411151766777,-0.73893666267395
 				rotation = 8.524079E-09,0.2588205,-6.605319E-08,-0.9659257
@@ -49598,6 +50235,7 @@ GAME
 				name = strutConnector
 				uid = 2779843940
 				mid = 1977793760
+				launchID = 0
 				parent = 1
 				position = -1.12372648715973,-0.198463723063469,0.468472361564636
 				rotation = -4.00774E-08,-0.2588177,-4.437291E-08,-0.9659264
@@ -49633,6 +50271,7 @@ GAME
 				name = strutConnector
 				uid = 2083547671
 				mid = 1977793760
+				launchID = 0
 				parent = 1
 				position = -0.156240701675415,-0.198480471968651,1.20740830898285
 				rotation = -6.125222E-08,-0.707106,-7.243723E-08,-0.707108
@@ -49668,6 +50307,7 @@ GAME
 				name = strutConnector
 				uid = 3003501585
 				mid = 1977793760
+				launchID = 0
 				parent = 1
 				position = 0.967438399791718,-0.198503330349922,0.738938510417938
 				rotation = -6.326034E-08,-0.9659256,2.829809E-08,-0.2588204
@@ -49703,6 +50343,7 @@ GAME
 				name = strutConnector
 				uid = 1101682184
 				mid = 1977793760
+				launchID = 0
 				parent = 1
 				position = 1.12361085414886,-0.198449805378914,-0.468470513820648
 				rotation = -5.958013E-08,-0.9659265,1.287735E-08,0.2588178
@@ -49738,6 +50379,7 @@ GAME
 				name = strutConnector
 				uid = 368785239
 				mid = 1977793760
+				launchID = 0
 				parent = 1
 				position = 0.156125023961067,-0.198433011770248,-1.20740842819214
 				rotation = -7.283139E-08,-0.707108,2.72125E-08,0.707106
@@ -49773,6 +50415,7 @@ GAME
 				name = liquidEngine1-2
 				uid = 508744958
 				mid = 1977793760
+				launchID = 0
 				parent = 1
 				position = 4.67507052235305E-05,-2.0027871131897,-2.06537674785068E-06
 				rotation = 0,0,0,1
@@ -50021,6 +50664,7 @@ GAME
 			stg = 0
 			prst = False
 			ref = 0
+			ctrl = False
 			cPch = 0
 			cHdg = 0
 			cMod = 0
@@ -50040,6 +50684,7 @@ GAME
 				name = dockingPort2
 				uid = 889121989
 				mid = 1100263819
+				launchID = 0
 				parent = 0
 				position = 0,0,0
 				rotation = 0,0,0,1
@@ -50182,6 +50827,7 @@ GAME
 				name = fuelTank4-2
 				uid = 3334845513
 				mid = 1100263819
+				launchID = 0
 				parent = 0
 				position = 0,-0.46875,0
 				rotation = 0,0,0,1
@@ -50234,6 +50880,7 @@ GAME
 				name = strutConnector
 				uid = 58471867
 				mid = 1100263819
+				launchID = 0
 				parent = 1
 				position = -0.967568874359131,-0.198460578918457,-0.738934814929962
 				rotation = 1.960228E-08,0.2588205,-7.315626E-08,-0.9659255
@@ -50269,6 +50916,7 @@ GAME
 				name = strutConnector
 				uid = 2830051610
 				mid = 1100263819
+				launchID = 0
 				parent = 1
 				position = -1.12372088432312,-0.198460578918457,0.468471586704254
 				rotation = -1.960206E-08,-0.2588176,-7.315631E-08,-0.9659262
@@ -50304,6 +50952,7 @@ GAME
 				name = strutConnector
 				uid = 3874340501
 				mid = 1100263819
+				launchID = 0
 				parent = 1
 				position = -0.156151726841927,-0.198460578918457,1.20740652084351
 				rotation = -5.355404E-08,-0.7071058,-5.355419E-08,-0.7071078
@@ -50339,6 +50988,7 @@ GAME
 				name = strutConnector
 				uid = 354847060
 				mid = 1100263819
+				launchID = 0
 				parent = 1
 				position = 0.967568635940552,-0.198460578918457,0.738934814929962
 				rotation = -7.315626E-08,-0.9659255,-1.960227E-08,-0.2588204
@@ -50374,6 +51024,7 @@ GAME
 				name = strutConnector
 				uid = 2363331307
 				mid = 1100263819
+				launchID = 0
 				parent = 1
 				position = 1.12372016906738,-0.198460578918457,-0.468471795320511
 				rotation = -7.315631E-08,-0.9659262,1.960206E-08,0.2588177
@@ -50409,6 +51060,7 @@ GAME
 				name = strutConnector
 				uid = 1688949324
 				mid = 1100263819
+				launchID = 0
 				parent = 1
 				position = 0.156152129173279,-0.198460578918457,-1.20740747451782
 				rotation = -5.355419E-08,-0.7071078,5.355403E-08,0.7071058
@@ -50444,6 +51096,7 @@ GAME
 				name = liquidEngine1-2
 				uid = 1674990440
 				mid = 1100263819
+				launchID = 0
 				parent = 1
 				position = 0,-2.0028076171875,0
 				rotation = 0,0,0,1
@@ -50678,248 +51331,273 @@ GAME
 	}
 	ROSTER
 	{
-		CREW
+		KERBAL
 		{
 			name = Jebediah Kerman
+			type = Crew
 			brave = 0.5
 			dumb = 0.5
 			badS = True
-			state = 0
+			state = Available
 			ToD = 681537.090958241
 			idx = 0
 		}
-		CREW
+		KERBAL
 		{
 			name = Bill Kerman
+			type = Crew
 			brave = 0.5
 			dumb = 0.8
 			badS = False
-			state = 0
+			state = Available
 			ToD = 265479.103647121
 			idx = 1
 		}
-		CREW
+		KERBAL
 		{
 			name = Bob Kerman
+			type = Crew
 			brave = 0.3
 			dumb = 0.1
 			badS = False
-			state = 0
+			state = Available
 			ToD = 13913.4132061894
 			idx = 2
 		}
-		CREW
+		KERBAL
 		{
 			name = Danwig Kerman
+			type = Crew
 			brave = 0.9780903
 			dumb = 0.925786
 			badS = False
-			state = 0
+			state = Available
 			ToD = 225629.236809703
 			idx = 2
 		}
-		CREW
+		KERBAL
 		{
 			name = Kirely Kerman
+			type = Crew
 			brave = 0.659991
 			dumb = 0.6329733
 			badS = False
-			state = 0
+			state = Available
 			ToD = 23827.634334144
 			idx = 0
 		}
-		CREW
+		KERBAL
 		{
 			name = Kelcan Kerman
+			type = Crew
 			brave = 0.05310261
 			dumb = 0.9603001
 			badS = False
-			state = 0
+			state = Available
 			ToD = 254312.307946178
 			idx = 0
 		}
-		CREW
+		KERBAL
 		{
 			name = Seanrey Kerman
+			type = Crew
 			brave = 0.2223599
 			dumb = 0.2746434
 			badS = False
-			state = 0
+			state = Available
 			ToD = 1531304.87395096
 			idx = -1
 		}
-		CREW
+		KERBAL
 		{
 			name = Halster Kerman
+			type = Crew
 			brave = 0.3827845
 			dumb = 0.3775967
 			badS = False
-			state = 0
+			state = Available
 			ToD = 1550379.90675736
 			idx = -1
 		}
-		CREW
+		KERBAL
 		{
 			name = Ancott Kerman
+			type = Crew
 			brave = 0.08456254
 			dumb = 0.1636282
 			badS = False
-			state = 0
+			state = Available
 			ToD = 1585643.91890335
 			idx = -1
 		}
-		CREW
+		KERBAL
 		{
 			name = Sigzor Kerman
+			type = Crew
 			brave = 0.8068023
 			dumb = 0.995047
 			badS = False
-			state = 0
+			state = Available
 			ToD = 1495055.66626358
 			idx = -1
 		}
-		CREW
+		KERBAL
 		{
 			name = Geofdos Kerman
+			type = Crew
 			brave = 0.8926712
 			dumb = 0.4629887
 			badS = False
-			state = 0
+			state = Available
 			ToD = 1452839.52284623
 			idx = -1
 		}
-		CREW
+		KERBAL
 		{
 			name = Lanmal Kerman
+			type = Crew
 			brave = 0.501626
 			dumb = 0.09197652
 			badS = False
-			state = 0
+			state = Available
 			ToD = 1479890.22818375
 			idx = -1
 		}
-		CREW
+		KERBAL
 		{
 			name = Mitrigh Kerman
+			type = Crew
 			brave = 0.5627957
 			dumb = 0.02509689
 			badS = False
-			state = 0
+			state = Available
 			ToD = 1541267.28316117
 			idx = -1
 		}
-		CREW
+		KERBAL
 		{
 			name = Sigdous Kerman
+			type = Crew
 			brave = 0.04617441
 			dumb = 0.1930683
 			badS = False
-			state = 0
+			state = Available
 			ToD = 1473315.36398697
 			idx = -1
 		}
-		CREW
+		KERBAL
 		{
 			name = Merdorf Kerman
+			type = Crew
 			brave = 0.5864547
 			dumb = 0.8564247
 			badS = False
-			state = 0
+			state = Available
 			ToD = 1522690.09581376
 			idx = -1
 		}
-		APPLICANTS
+		KERBAL
 		{
-			RECRUIT
-			{
-				name = Kurt Kerman
-				brave = 0.8790874
-				dumb = 0.7694228
-				badS = False
-				state = 0
-				ToD = 1549122.19191361
-				idx = -1
-			}
-			RECRUIT
-			{
-				name = Orby Kerman
-				brave = 0.605333
-				dumb = 0.1764116
-				badS = False
-				state = 0
-				ToD = 1495732.23181534
-				idx = -1
-			}
-			RECRUIT
-			{
-				name = Geofman Kerman
-				brave = 0.1797185
-				dumb = 0.9022896
-				badS = False
-				state = 0
-				ToD = 1493640.01608658
-				idx = -1
-			}
-			RECRUIT
-			{
-				name = Lanburry Kerman
-				brave = 0.524908
-				dumb = 0.3635191
-				badS = False
-				state = 0
-				ToD = 1499257.42178727
-				idx = -1
-			}
-			RECRUIT
-			{
-				name = Burgun Kerman
-				brave = 0.680655
-				dumb = 0.927001
-				badS = False
-				state = 0
-				ToD = 1438846.88902665
-				idx = -1
-			}
-			RECRUIT
-			{
-				name = Lemlock Kerman
-				brave = 0.6400666
-				dumb = 0.5968624
-				badS = False
-				state = 0
-				ToD = 1544304.65956498
-				idx = -1
-			}
-			RECRUIT
-			{
-				name = Sonmy Kerman
-				brave = 0.06494057
-				dumb = 0.1080626
-				badS = False
-				state = 0
-				ToD = 1583097.69316483
-				idx = -1
-			}
-			RECRUIT
-			{
-				name = Matrim Kerman
-				brave = 0.2056787
-				dumb = 0.9187546
-				badS = False
-				state = 0
-				ToD = 1555469.82451249
-				idx = -1
-			}
-			RECRUIT
-			{
-				name = Sidfield Kerman
-				brave = 0.02991354
-				dumb = 0.4376001
-				badS = False
-				state = 0
-				ToD = 1595143.56337357
-				idx = -1
-			}
+			name = Kurt Kerman
+			type = Applicant
+			brave = 0.8790874
+			dumb = 0.7694228
+			badS = False
+			state = Available
+			ToD = 1549122.19191361
+			idx = -1
 		}
+		KERBAL
+		{
+			name = Orby Kerman
+			type = Applicant
+			brave = 0.605333
+			dumb = 0.1764116
+			badS = False
+			state = Available
+			ToD = 1495732.23181534
+			idx = -1
+		}
+		KERBAL
+		{
+			name = Geofman Kerman
+			type = Applicant
+			brave = 0.1797185
+			dumb = 0.9022896
+			badS = False
+			state = Available
+			ToD = 1493640.01608658
+			idx = -1
+		}
+		KERBAL
+		{
+			name = Lanburry Kerman
+			type = Applicant
+			brave = 0.524908
+			dumb = 0.3635191
+			badS = False
+			state = Available
+			ToD = 1499257.42178727
+			idx = -1
+		}
+		KERBAL
+		{
+			name = Burgun Kerman
+			type = Applicant
+			brave = 0.680655
+			dumb = 0.927001
+			badS = False
+			state = Available
+			ToD = 1438846.88902665
+			idx = -1
+		}
+		KERBAL
+		{
+			name = Lemlock Kerman
+			type = Applicant
+			brave = 0.6400666
+			dumb = 0.5968624
+			badS = False
+			state = Available
+			ToD = 1544304.65956498
+			idx = -1
+		}
+		KERBAL
+		{
+			name = Sonmy Kerman
+			type = Applicant
+			brave = 0.06494057
+			dumb = 0.1080626
+			badS = False
+			state = Available
+			ToD = 1583097.69316483
+			idx = -1
+		}
+		KERBAL
+		{
+			name = Matrim Kerman
+			type = Applicant
+			brave = 0.2056787
+			dumb = 0.9187546
+			badS = False
+			state = Available
+			ToD = 1555469.82451249
+			idx = -1
+		}
+		KERBAL
+		{
+			name = Sidfield Kerman
+			type = Applicant
+			brave = 0.02991354
+			dumb = 0.4376001
+			badS = False
+			state = Available
+			ToD = 1595143.56337357
+			idx = -1
+		}
+	}
+	MESSAGESYSTEM
+	{
+		flash = False
 	}
 }
