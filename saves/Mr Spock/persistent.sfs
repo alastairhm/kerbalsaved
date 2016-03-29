@@ -1,6 +1,6 @@
 GAME
 {
-	version = 0.24.0
+	version = 1.0.5
 	Title = Mr Spock (SCIENCE_SANDBOX)
 	Description = No description available.
 	linkURL = 
@@ -8,10 +8,12 @@ GAME
 	Mode = SCIENCE_SANDBOX
 	Status = 1
 	scene = 5
+	editor = None
 	flag = Squad/Flags/rocketScience
-	launchID = 5
+	launchID = 14
 	PARAMETERS
 	{
+		preset = Normal
 		FLIGHT
 		{
 			CanQuickSave = True
@@ -60,15 +62,33 @@ GAME
 		}
 		DIFFICULTY
 		{
+			AutoHireCrews = False
 			MissingCrewsRespawn = True
+			BypassEntryPurchaseAfterResearch = True
 			AllowStockVessels = False
+			IndestructibleFacilities = False
+			ResourceAbundance = 1
+			ReentryHeatScale = 1
+		}
+		CAREER
+		{
+			TechTreeUrl = GameData/Squad/Resources/TechTree.cfg
+			StartingFunds = 25000
+			StartingScience = 0
+			StartingReputation = 0
+			FundsGainMultiplier = 1
+			RepGainMultiplier = 1
+			ScienceGainMultiplier = 1
+			FundsLossMultiplier = 1
+			RepLossMultiplier = 1
+			RepLossDeclined = 1
 		}
 	}
 	SCENARIO
 	{
 		name = ScenarioDiscoverableObjects
 		scene = 7, 8, 5
-		 = 835967096
+		lastSeed = 0
 		sizeCurve
 		{
 			key = 0 0 1.5 1.5
@@ -95,10 +115,25 @@ GAME
 					crews = Jebediah Kerman
 				}
 			}
-			AltitudeRecord
+			RecordsAltitude
 			{
-				completed = 647.920646972423
+				completed = 2019.2524584952
 				record = 70000
+			}
+			RecordsDepth
+			{
+				reached = 10120.0414133223
+				record = 0.797275536810048
+			}
+			RecordsSpeed
+			{
+				completed = 5809.66575218415
+				record = 2500
+			}
+			RecordsDistance
+			{
+				completed = 2116.69168701076
+				record = 100000
 			}
 			ReachedSpace
 			{
@@ -108,14 +143,6 @@ GAME
 					name = Sub Orbital
 					flag = Squad/Flags/rocketScience
 				}
-				crew
-				{
-					crews = Jebediah Kerman
-				}
-			}
-			Spacewalk
-			{
-				completed = 670.540646972402
 				crew
 				{
 					crews = Jebediah Kerman
@@ -141,6 +168,27 @@ GAME
 				{
 					completed = 1482.19790527301
 				}
+				Science
+				{
+					completedManned = 1559.45790527295
+					vessel
+					{
+						name = Sub Orbital 2
+						flag = Squad/Flags/rocketScience
+					}
+					crew
+					{
+						crews = Jebediah Kerman
+					}
+				}
+				Spacewalk
+				{
+					completed = 8016.98865765326
+					crew
+					{
+						crews = Jebediah Kerman
+					}
+				}
 				SurfaceEVA
 				{
 					completed = 95.6399999999981
@@ -156,14 +204,14 @@ GAME
 	{
 		name = ResearchAndDevelopment
 		scene = 7, 8, 5, 6, 9
-		sci = 40.6
+		sci = 29.8464
 		Tech
 		{
 			id = start
 			state = Available
+			cost = 0
 			part = Engineer7500
 			part = EngineerChip
-			part = EngineerChipFlight
 			part = mk1pod
 			part = liquidEngine
 			part = solidBooster
@@ -171,20 +219,27 @@ GAME
 			part = trussPiece1x
 			part = longAntenna
 			part = parachuteSingle
+			part = basicFin
+			part = solidBooster.sm
+			part = GooExperiment
 		}
 		Tech
 		{
 			id = basicRocketry
 			state = Available
+			cost = 5
 			part = fuelTank
 			part = fuelTankSmallFlat
 			part = GooExperiment
 			part = stackDecoupler
+			part = liquidEngine
+			part = solidBooster
 		}
 		Tech
 		{
 			id = stability
 			state = Available
+			cost = 18
 			part = noseCone
 			part = winglet
 			part = radialDecoupler
@@ -193,17 +248,96 @@ GAME
 		{
 			id = survivability
 			state = Available
+			cost = 15
 			part = liquidEngine3
 			part = landingLeg1
 			part = parachuteRadial
+			part = HeatShield1
+			part = radPanelSm
+			part = ServiceBay.125
+			part = miniLandingLeg
 		}
 		Tech
 		{
 			id = generalRocketry
 			state = Available
+			cost = 20
 			part = liquidEngine2
 			part = sepMotor1
 			part = solidBooster1-1
+			part = fuelTankSmall
+		}
+		Tech
+		{
+			id = engineering101
+			state = Available
+			cost = 5
+			part = science.module
+			part = longAntenna
+			part = stackDecoupler
+		}
+		Tech
+		{
+			id = advRocketry
+			state = Available
+			cost = 45
+			part = liquidEngine3
+			part = radialLiquidEngine1-2
+			part = fuelTank
+		}
+		Tech
+		{
+			id = basicScience
+			state = Available
+			cost = 45
+			part = probeCoreSphere
+			part = batteryPack
+			part = sensorThermometer
+			part = radPanelEdge
+			part = radPanelLg
+			part = mediumDishAntenna
+		}
+		Tech
+		{
+			id = flightControl
+			state = Available
+			cost = 45
+			part = R8winglet
+			part = winglet3
+			part = sasModule
+			part = mumech.MJ2.AR202
+		}
+		Tech
+		{
+			id = generalConstruction
+			state = Available
+			cost = 45
+			part = MK1CrewCabin
+			part = strutConnector
+			part = Mk1FuselageStructural
+			part = decoupler1-2
+			part = largeAdapter
+			part = launchClamp1
+		}
+		Tech
+		{
+			id = aviation
+			state = Available
+			cost = 45
+			part = sweptWing
+			part = tailfin
+			part = airplaneTail
+			part = miniIntake
+			part = wingConnector2
+			part = wingConnector5
+			part = StandardCtrlSrf
+			part = structuralWing3
+			part = Mark1Cockpit
+			part = miniJetEngine
+			part = miniFuselage
+			part = MK1Fuselage
+			part = GearFixed
+			part = GearFree
 		}
 		Science
 		{
@@ -240,9 +374,9 @@ GAME
 			id = mysteryGoo@KerbinSrfLandedLaunchPad
 			title = Mystery Goo™ Observation from LaunchPad
 			dsc = 1
-			scv = 0.2307692
+			scv = 0.01228962
 			sbv = 0.3
-			sci = 3
+			sci = 3.852071
 			cap = 3.9
 		}
 		Science
@@ -250,9 +384,9 @@ GAME
 			id = mysteryGoo@KerbinFlyingLow
 			title = Mystery Goo™ Observation while flying at Kerbin
 			dsc = 1
-			scv = 0.2307692
+			scv = 0.01228951
 			sbv = 0.7
-			sci = 7
+			sci = 8.988165
 			cap = 9.099999
 		}
 		Science
@@ -290,9 +424,9 @@ GAME
 			id = recovery@KerbinFlew
 			title = Recovery of a vessel that survived a flight.
 			dsc = 1
-			scv = 0.1666667
+			scv = 0.004629692
 			sbv = 5
-			sci = 5
+			sci = 5.972222
 			cap = 6
 		}
 		Science
@@ -301,28 +435,28 @@ GAME
 			title = Mystery Goo™ Observation from Kerbin's upper atmosphere
 			dsc = 1
 			scv = 0.2307692
-			sbv = 0.7
+			sbv = 0.9
 			sci = 7
-			cap = 9.099999
+			cap = 11.7
 		}
 		Science
 		{
 			id = crewReport@KerbinFlyingHigh
 			title = Crew Report from Kerbin's upper atmosphere
 			dsc = 1
-			scv = 1
-			sbv = 0.7
-			sci = 0
-			cap = 3.5
+			scv = 0
+			sbv = 0.9
+			sci = 4.5
+			cap = 4.5
 		}
 		Science
 		{
 			id = mysteryGoo@KerbinInSpaceLow
 			title = Mystery Goo™ Observation while in space near Kerbin
 			dsc = 1
-			scv = 0.2307692
+			scv = 0.01228949
 			sbv = 1
-			sci = 10
+			sci = 12.84024
 			cap = 13
 		}
 		Science
@@ -370,22 +504,424 @@ GAME
 			id = recovery@KerbinSubOrbited
 			title = Recovery of a vessel after a sub-orbital flight.
 			dsc = 1
-			scv = 0.1666667
+			scv = 0.0001285473
 			sbv = 8
-			sci = 8
+			sci = 9.598766
 			cap = 9.6
+		}
+		Science
+		{
+			id = mobileMaterialsLab@KerbinSrfLandedLaunchPad
+			title = Materials Study from LaunchPad
+			dsc = 1
+			scv = 0.0478516
+			sbv = 0.3
+			sci = 9.140625
+			cap = 9.6
+		}
+		Science
+		{
+			id = mobileMaterialsLab@KerbinFlyingLow
+			title = Materials Study while flying at Kerbin
+			dsc = 1
+			scv = 0.04785155
+			sbv = 0.7
+			sci = 21.32813
+			cap = 22.4
+		}
+		Science
+		{
+			id = mobileMaterialsLab@KerbinFlyingHigh
+			title = Materials Study from Kerbin's upper atmosphere
+			dsc = 1
+			scv = 0.21875
+			sbv = 0.9
+			sci = 22.5
+			cap = 28.8
+		}
+		Science
+		{
+			id = mobileMaterialsLab@KerbinInSpaceHigh
+			title = Materials Study while in space high over Kerbin
+			dsc = 1
+			scv = 0.04785156
+			sbv = 1.5
+			sci = 45.70313
+			cap = 48
+		}
+		Science
+		{
+			id = mysteryGoo@KerbinInSpaceHigh
+			title = Mystery Goo™ Observation while in space high over Kerbin
+			dsc = 1
+			scv = 0.2307692
+			sbv = 1.5
+			sci = 15
+			cap = 19.5
+		}
+		Science
+		{
+			id = crewReport@KerbinInSpaceHigh
+			title = Crew Report while in space high over Kerbin
+			dsc = 1
+			scv = 0
+			sbv = 1.5
+			sci = 7.5
+			cap = 7.5
+		}
+		Science
+		{
+			id = crewReport@KerbinSrfLandedGrasslands
+			title = Crew Report from Kerbin's Grasslands
+			dsc = 1
+			scv = 0
+			sbv = 0.3
+			sci = 1.5
+			cap = 1.5
+		}
+		Science
+		{
+			id = temperatureScan@KerbinSrfLandedLaunchPad
+			title = Temperature Scan from LaunchPad
+			dsc = 1
+			scv = 0
+			sbv = 0.3
+			sci = 2.4
+			cap = 2.4
+		}
+		Science
+		{
+			id = temperatureScan@KerbinFlyingLowShores
+			title = Temperature Scan while flying over Kerbin's Shores
+			dsc = 1
+			scv = 0
+			sbv = 0.7
+			sci = 5.6
+			cap = 5.6
+		}
+		Science
+		{
+			id = mysteryGoo@KerbinSrfSplashedShores
+			title = Mystery Goo™ Observation from Kerbin's Shores
+			dsc = 1
+			scv = 0.05325446
+			sbv = 0.4
+			sci = 4.923077
+			cap = 5.2
+		}
+		Science
+		{
+			id = crewReport@KerbinSrfSplashedShores
+			title = Crew Report from Kerbin's Shores
+			dsc = 1
+			scv = 0
+			sbv = 0.4
+			sci = 2
+			cap = 2
+		}
+		Science
+		{
+			id = temperatureScan@KerbinSrfSplashedShores
+			title = Temperature Scan from Kerbin's Shores
+			dsc = 1
+			scv = 0
+			sbv = 0.4
+			sci = 3.2
+			cap = 3.2
+		}
+		Science
+		{
+			id = evaReport@KerbinInSpaceHigh
+			title = EVA Report while in space high over Kerbin
+			dsc = 1
+			scv = 0
+			sbv = 1.5
+			sci = 12
+			cap = 12
+		}
+		Science
+		{
+			id = crewReport@KerbinFlyingLowWater
+			title = Crew Report while flying over Kerbin's Water
+			dsc = 1
+			scv = 0
+			sbv = 0.7
+			sci = 3.5
+			cap = 3.5
+		}
+		Science
+		{
+			id = crewReport@KerbinSrfSplashedWater
+			title = Crew Report from Kerbin's Water
+			dsc = 1
+			scv = 0
+			sbv = 0.4
+			sci = 2
+			cap = 2
+		}
+		Science
+		{
+			id = surfaceSample@KerbinSrfSplashedWater
+			title = Surface Sample from Kerbin's Water
+			dsc = 1
+			scv = 0.25
+			sbv = 0.4
+			sci = 12
+			cap = 16
+		}
+		Science
+		{
+			id = evaReport@KerbinSrfSplashedWater
+			title = EVA Report from Kerbin's Water
+			dsc = 1
+			scv = 0
+			sbv = 0.4
+			sci = 3.2
+			cap = 3.2
+		}
+		Science
+		{
+			id = mobileMaterialsLab@KerbinInSpaceLow
+			title = Materials Study while in space near Kerbin
+			dsc = 1
+			scv = 0.21875
+			sbv = 1
+			sci = 25
+			cap = 32
+		}
+		Science
+		{
+			id = temperatureScan@KerbinInSpaceLow
+			title = Temperature Scan while in space near Kerbin
+			dsc = 1
+			scv = 0
+			sbv = 1
+			sci = 8
+			cap = 8
 		}
 	}
 	SCENARIO
 	{
 		name = VesselRecovery
-		scene = 5, 7, 8, 6, 9
+		scene = 5, 7, 8, 6
+	}
+	SCENARIO
+	{
+		name = ScenarioDestructibles
+		scene = 5, 7, 6, 8
+		SpaceCenter/VehicleAssemblyBuilding/Facility/VAB2
+		{
+			intact = True
+		}
+		SpaceCenter/TrackingStation/Facility/OuterDish
+		{
+			intact = True
+		}
+		SpaceCenter/TrackingStation/Facility/building
+		{
+			intact = True
+		}
+		SpaceCenter/SpaceplaneHangar/Facility/Building
+		{
+			intact = True
+		}
+		SpaceCenter/ResearchAndDevelopment/Facility/ForeverAlone
+		{
+			intact = True
+		}
+		SpaceCenter/ResearchAndDevelopment/Facility/mainBuilding
+		{
+			intact = True
+		}
+		SpaceCenter/MissionControl/Facility/mainBuilding
+		{
+			intact = True
+		}
+		SpaceCenter/LaunchPad/Facility/Flag
+		{
+			intact = True
+		}
+		SpaceCenter/AstronautComplex/Facility/mainBuilding
+		{
+			intact = True
+		}
+		SpaceCenter/FlagPole/Facility
+		{
+			intact = True
+		}
+		SpaceCenter/Administration/Facility/Building
+		{
+			intact = True
+		}
+		SpaceCenter/VehicleAssemblyBuilding/Facility/ksp_pad_cylTank
+		{
+			intact = True
+		}
+		SpaceCenter/VehicleAssemblyBuilding/Facility/Tank
+		{
+			intact = True
+		}
+		SpaceCenter/VehicleAssemblyBuilding/Facility/mainBuilding
+		{
+			intact = True
+		}
+		SpaceCenter/VehicleAssemblyBuilding/Facility/PodMemorial
+		{
+			intact = True
+		}
+		SpaceCenter/TrackingStation/Facility/dish_array/dish_south
+		{
+			intact = True
+		}
+		SpaceCenter/TrackingStation/Facility/dish_array/dish_north
+		{
+			intact = True
+		}
+		SpaceCenter/TrackingStation/Facility/dish_array/dish_east
+		{
+			intact = True
+		}
+		SpaceCenter/TrackingStation/Facility/MainBuilding
+		{
+			intact = True
+		}
+		SpaceCenter/SpaceplaneHangar/Facility/Tank
+		{
+			intact = True
+		}
+		SpaceCenter/SpaceplaneHangar/Facility/ksp_pad_cylTank
+		{
+			intact = True
+		}
+		SpaceCenter/SpaceplaneHangar/Facility/ksp_pad_waterTower
+		{
+			intact = True
+		}
+		SpaceCenter/SpaceplaneHangar/Facility/mainBuilding
+		{
+			intact = True
+		}
+		SpaceCenter/Runway/Facility/model_runway_new_v43/runway_light_SE
+		{
+			intact = True
+		}
+		SpaceCenter/Runway/Facility/model_runway_new_v43/runway_light_NE
+		{
+			intact = True
+		}
+		SpaceCenter/Runway/Facility/model_runway_new_v43/runway_light_NW
+		{
+			intact = True
+		}
+		SpaceCenter/Runway/Facility/model_runway_new_v43/runway_light_SW
+		{
+			intact = True
+		}
+		SpaceCenter/Runway/Facility/End09
+		{
+			intact = True
+		}
+		SpaceCenter/Runway/Facility/End27
+		{
+			intact = True
+		}
+		SpaceCenter/Runway/Facility/Section1
+		{
+			intact = True
+		}
+		SpaceCenter/Runway/Facility/Section2
+		{
+			intact = True
+		}
+		SpaceCenter/Runway/Facility/Section3
+		{
+			intact = True
+		}
+		SpaceCenter/Runway/Facility/Section4
+		{
+			intact = True
+		}
+		SpaceCenter/ResearchAndDevelopment/Facility/ksp_pad_cylTank
+		{
+			intact = True
+		}
+		SpaceCenter/ResearchAndDevelopment/Facility/SmallLab
+		{
+			intact = True
+		}
+		SpaceCenter/ResearchAndDevelopment/Facility/CentralBuilding
+		{
+			intact = True
+		}
+		SpaceCenter/ResearchAndDevelopment/Facility/MainBuilding
+		{
+			intact = True
+		}
+		SpaceCenter/ResearchAndDevelopment/Facility/CornerLab
+		{
+			intact = True
+		}
+		SpaceCenter/ResearchAndDevelopment/Facility/WindTunnel
+		{
+			intact = True
+		}
+		SpaceCenter/ResearchAndDevelopment/Facility/Observatory
+		{
+			intact = True
+		}
+		SpaceCenter/ResearchAndDevelopment/Facility/SideLab
+		{
+			intact = True
+		}
+		SpaceCenter/MissionControl/Facility/building
+		{
+			intact = True
+		}
+		SpaceCenter/LaunchPad/Facility/LaunchPadMedium/ksp_pad_cylTank
+		{
+			intact = True
+		}
+		SpaceCenter/LaunchPad/Facility/LaunchPadMedium/ksp_pad_launchPad
+		{
+			intact = True
+		}
+		SpaceCenter/LaunchPad/Facility/LaunchPadMedium/ksp_pad_sphereTank
+		{
+			intact = True
+		}
+		SpaceCenter/LaunchPad/Facility/LaunchPadMedium/ksp_pad_waterTower
+		{
+			intact = True
+		}
+		SpaceCenter/LaunchPad/Facility/LaunchPadMedium/KSCFlagPoleLaunchPad
+		{
+			intact = True
+		}
+		SpaceCenter/AstronautComplex/Facility/building
+		{
+			intact = True
+		}
+		SpaceCenter/Administration/Facility/mainBuilding
+		{
+			intact = True
+		}
+	}
+	SCENARIO
+	{
+		name = ResourceScenario
+		scene = 5, 7, 6
+		RESOURCE_SETTINGS
+		{
+			GameSeed = 103582688
+			MaxDeltaTime = 21600
+		}
 	}
 	FLIGHTSTATE
 	{
-		version = 0.24.0
-		UT = 1522.49790527298
+		version = 1.0.5
+		UT = 10748.4900900902
 		activeVessel = 0
+		mapViewFiltering = -1026
 		VESSEL
 		{
 			pid = 2efce905472c41b5b4cb61509f941351
@@ -397,6 +933,7 @@ GAME
 			splashed = False
 			met = 0.02
 			lct = 0.02
+			lastUT = -1
 			root = 0
 			lat = -2.83448057339367
 			lon = 181.081314397368
@@ -423,6 +960,7 @@ GAME
 			PART
 			{
 				name = PotatoRoid
+				cid = 0
 				uid = 559298752
 				mid = 559298752
 				launchID = 0
@@ -430,20 +968,25 @@ GAME
 				position = 0,0,0
 				rotation = 0,0,0,1
 				mirror = 1,1,1
+				symMethod = Radial
 				istg = 0
 				dstg = 0
 				sqor = 0
+				sepI = 0
 				sidx = 0
 				attm = 0
 				srfN = None, -1
 				mass = 150
 				temp = -1
+				tempExt = 0
+				tempExtUnexp = 0
 				expt = 0.1
 				state = 1
 				connected = True
 				attached = True
 				flag = 
 				rTrf = 
+				modCost = 0
 			}
 			ACTIONGROUPS
 			{
@@ -474,6 +1017,7 @@ GAME
 			splashed = False
 			met = 15.0199999999998
 			lct = 15.0199999999998
+			lastUT = -1
 			root = 0
 			lat = 1.17502960865585
 			lon = 183.020641674716
@@ -500,6 +1044,7 @@ GAME
 			PART
 			{
 				name = PotatoRoid
+				cid = 0
 				uid = 1245471819
 				mid = 1245471819
 				launchID = 0
@@ -507,20 +1052,25 @@ GAME
 				position = 0,0,0
 				rotation = 0,0,0,1
 				mirror = 1,1,1
+				symMethod = Radial
 				istg = 0
 				dstg = 0
 				sqor = 0
+				sepI = 0
 				sidx = 0
 				attm = 0
 				srfN = None, -1
 				mass = 150
 				temp = -1
+				tempExt = 0
+				tempExtUnexp = 0
 				expt = 0.1
 				state = 1
 				connected = True
 				attached = True
 				flag = 
 				rTrf = 
+				modCost = 0
 			}
 			ACTIONGROUPS
 			{
@@ -551,6 +1101,7 @@ GAME
 			splashed = False
 			met = 45.0600000000014
 			lct = 45.0600000000014
+			lastUT = -1
 			root = 0
 			lat = -0.942789126772467
 			lon = 186.399594466257
@@ -577,6 +1128,7 @@ GAME
 			PART
 			{
 				name = PotatoRoid
+				cid = 0
 				uid = 219187421
 				mid = 219187421
 				launchID = 0
@@ -584,20 +1136,25 @@ GAME
 				position = 0,0,0
 				rotation = 0,0,0,1
 				mirror = 1,1,1
+				symMethod = Radial
 				istg = 0
 				dstg = 0
 				sqor = 0
+				sepI = 0
 				sidx = 0
 				attm = 0
 				srfN = None, -1
 				mass = 150
 				temp = -1
+				tempExt = 0
+				tempExtUnexp = 0
 				expt = 0.1
 				state = 1
 				connected = True
 				attached = True
 				flag = 
 				rTrf = 
+				modCost = 0
 			}
 			ACTIONGROUPS
 			{
@@ -628,6 +1185,7 @@ GAME
 			splashed = False
 			met = 60.0600000000038
 			lct = 60.0600000000038
+			lastUT = -1
 			root = 0
 			lat = -0.629644269699376
 			lon = 182.322715379393
@@ -654,6 +1212,7 @@ GAME
 			PART
 			{
 				name = PotatoRoid
+				cid = 0
 				uid = 568938382
 				mid = 568938382
 				launchID = 0
@@ -661,20 +1220,25 @@ GAME
 				position = 0,0,0
 				rotation = 0,0,0,1
 				mirror = 1,1,1
+				symMethod = Radial
 				istg = 0
 				dstg = 0
 				sqor = 0
+				sepI = 0
 				sidx = 0
 				attm = 0
 				srfN = None, -1
 				mass = 150
 				temp = -1
+				tempExt = 0
+				tempExtUnexp = 0
 				expt = 0.1
 				state = 1
 				connected = True
 				attached = True
 				flag = 
 				rTrf = 
+				modCost = 0
 			}
 			ACTIONGROUPS
 			{
@@ -705,6 +1269,7 @@ GAME
 			splashed = False
 			met = 75.0600000000022
 			lct = 75.0600000000022
+			lastUT = -1
 			root = 0
 			lat = -0.150932018551515
 			lon = 187.293513141396
@@ -731,6 +1296,7 @@ GAME
 			PART
 			{
 				name = PotatoRoid
+				cid = 0
 				uid = 849503590
 				mid = 849503590
 				launchID = 0
@@ -738,20 +1304,25 @@ GAME
 				position = 0,0,0
 				rotation = 0,0,0,1
 				mirror = 1,1,1
+				symMethod = Radial
 				istg = 0
 				dstg = 0
 				sqor = 0
+				sepI = 0
 				sidx = 0
 				attm = 0
 				srfN = None, -1
 				mass = 150
 				temp = -1
+				tempExt = 0
+				tempExtUnexp = 0
 				expt = 0.1
 				state = 1
 				connected = True
 				attached = True
 				flag = 
 				rTrf = 
+				modCost = 0
 			}
 			ACTIONGROUPS
 			{
@@ -782,6 +1353,7 @@ GAME
 			splashed = False
 			met = 203.579453125022
 			lct = 203.579453125022
+			lastUT = -1
 			root = 0
 			lat = -1.05465223026408
 			lon = 176.632690854303
@@ -808,6 +1380,7 @@ GAME
 			PART
 			{
 				name = PotatoRoid
+				cid = 0
 				uid = 2090472699
 				mid = 2090472699
 				launchID = 0
@@ -815,20 +1388,25 @@ GAME
 				position = 0,0,0
 				rotation = 0,0,0,1
 				mirror = 1,1,1
+				symMethod = Radial
 				istg = 0
 				dstg = 0
 				sqor = 0
+				sepI = 0
 				sidx = 0
 				attm = 0
 				srfN = None, -1
 				mass = 150
 				temp = -1
+				tempExt = 0
+				tempExtUnexp = 0
 				expt = 0.1
 				state = 1
 				connected = True
 				attached = True
 				flag = 
 				rTrf = 
+				modCost = 0
 			}
 			ACTIONGROUPS
 			{
@@ -859,6 +1437,7 @@ GAME
 			splashed = False
 			met = 289.108688964875
 			lct = 289.108688964875
+			lastUT = -1
 			root = 0
 			lat = 1.0695244342851
 			lon = 177.833018056835
@@ -885,6 +1464,7 @@ GAME
 			PART
 			{
 				name = PotatoRoid
+				cid = 0
 				uid = 835967096
 				mid = 835967096
 				launchID = 0
@@ -892,20 +1472,25 @@ GAME
 				position = 0,0,0
 				rotation = 0,0,0,1
 				mirror = 1,1,1
+				symMethod = Radial
 				istg = 0
 				dstg = 0
 				sqor = 0
+				sepI = 0
 				sidx = 0
 				attm = 0
 				srfN = None, -1
 				mass = 150
 				temp = -1
+				tempExt = 0
+				tempExtUnexp = 0
 				expt = 0.1
 				state = 1
 				connected = True
 				attached = True
 				flag = 
 				rTrf = 
+				modCost = 0
 			}
 			ACTIONGROUPS
 			{
@@ -925,429 +1510,109 @@ GAME
 			{
 			}
 		}
-		VESSEL
-		{
-			pid = f6530284282245aa9c74201630c7923f
-			name = Sub Orbital Debris
-			type = Debris
-			sit = LANDED
-			landed = True
-			landedAt = LaunchPad
-			splashed = False
-			met = 22.9799999999791
-			lct = 448.120646972604
-			root = 0
-			lat = -0.0972085343414035
-			lon = 285.442190415612
-			alt = 73.7466542574111
-			hgt = 1.132268
-			nrm = 5.045272E-07,1,1.385953E-07
-			rot = -0.09658281,-0.7003741,0.7010831,-0.09290064
-			CoM = 2.787417E-09,-0.4944761,-3.36488E-08
-			stg = 5
-			prst = False
-			ref = 0
-			ctrl = False
-			cPch = 0
-			cHdg = 0
-			cMod = -1
-			ORBIT
-			{
-				SMA = 300036.62607811
-				ECC = 1
-				INC = NaN
-				LPE = 24.7383670103045
-				LAN = 245.469113258611
-				MNA = 0.288150375758712
-				EPH = 1517.31790527298
-				REF = 1
-			}
-			PART
-			{
-				name = stackDecoupler
-				uid = 156157634
-				mid = 2947770229
-				launchID = 4
-				parent = 0
-				position = 0,0,0
-				rotation = 0,0,0,1
-				mirror = 1,1,1
-				istg = 4
-				dstg = 1
-				sqor = 4
-				sidx = 3
-				attm = 0
-				srfN = None, -1
-				attN = bottom, 1
-				attN = None, -1
-				mass = 0.05
-				temp = 42.28105
-				expt = 0.5
-				state = 1
-				connected = False
-				attached = False
-				flag = Squad/Flags/rocketScience
-				rTrf = stackDecoupler
-				EVENTS
-				{
-				}
-				ACTIONS
-				{
-				}
-				MODULE
-				{
-					name = ModuleDecouple
-					isEnabled = True
-					isDecoupled = True
-					EVENTS
-					{
-						Decouple
-						{
-							active = False
-							guiActive = True
-							guiIcon = Decouple
-							guiName = Decouple
-							category = Decouple
-							guiActiveUnfocused = False
-							unfocusedRange = 2
-							externalToEVAOnly = True
-						}
-					}
-					ACTIONS
-					{
-						DecoupleAction
-						{
-							actionGroup = None
-						}
-					}
-				}
-				MODULE
-				{
-					name = ModuleTestSubject
-					isEnabled = True
-					EVENTS
-					{
-						RunTestEvent
-						{
-							active = False
-							guiActive = True
-							guiIcon = Run Test
-							guiName = Run Test
-							category = Run Test
-							guiActiveUnfocused = False
-							unfocusedRange = 2
-							externalToEVAOnly = True
-						}
-					}
-					ACTIONS
-					{
-					}
-				}
-			}
-			PART
-			{
-				name = trussPiece1x
-				uid = 1228843806
-				mid = 2947770229
-				launchID = 4
-				parent = 0
-				position = -3.37757376028549E-29,-0.692266464233398,-5.04348084468144E-22
-				rotation = 0,0,0,1
-				mirror = 1,1,1
-				istg = 2
-				dstg = 2
-				sqor = -1
-				sidx = -1
-				attm = 0
-				srfN = None, -1
-				attN = None, -1
-				attN = top, 0
-				mass = 0.125
-				temp = 41.87655
-				expt = 0.5
-				state = 0
-				connected = False
-				attached = True
-				flag = Squad/Flags/rocketScience
-				rTrf = trussPiece1x
-				EVENTS
-				{
-				}
-				ACTIONS
-				{
-				}
-			}
-			ACTIONGROUPS
-			{
-				Stage = False, 0
-				Gear = True, 0
-				Light = False, 0
-				RCS = False, 0
-				SAS = True, 427.220646972623
-				Brakes = False, 0
-				Abort = False, 0
-				Custom01 = False, 0
-				Custom02 = False, 0
-				Custom03 = False, 0
-				Custom04 = False, 0
-				Custom05 = False, 0
-				Custom06 = False, 0
-				Custom07 = False, 0
-				Custom08 = False, 0
-				Custom09 = False, 0
-				Custom10 = False, 0
-			}
-			DISCOVERY
-			{
-				state = -1
-				lastObservedTime = 0
-				lifetime = Infinity
-				refTime = Infinity
-				size = 2
-			}
-			FLIGHTPLAN
-			{
-			}
-			CTRLSTATE
-			{
-				pitch = 0
-				yaw = 0
-				roll = 0
-				trimPitch = 0
-				trimYaw = 0
-				trimRoll = 0
-				mainThrottle = 0
-			}
-		}
-		VESSEL
-		{
-			pid = 2cc93512fe9f45a2bc1fc6371cedc21d
-			name = Sub Orbital Debris
-			type = Debris
-			sit = LANDED
-			landed = True
-			landedAt = LaunchPad
-			splashed = False
-			met = 22.9799999999791
-			lct = 448.120646972604
-			root = 0
-			lat = -0.0972109041848316
-			lon = 285.442460543009
-			alt = 73.7487607421353
-			hgt = 1.132267
-			nrm = -6.997777E-07,1,1.684683E-07
-			rot = -0.7011665,-0.09350724,-0.09597585,0.7002932
-			CoM = 5.888124E-09,-0.4944761,-2.093884E-08
-			stg = 5
-			prst = False
-			ref = 0
-			ctrl = False
-			cPch = 0
-			cHdg = 0
-			cMod = -1
-			ORBIT
-			{
-				SMA = 0
-				ECC = 1
-				INC = NaN
-				LPE = 24.7380968944702
-				LAN = 245.469113258611
-				MNA = -8.40714670366795
-				EPH = 1517.31790527298
-				REF = 1
-			}
-			PART
-			{
-				name = stackDecoupler
-				uid = 340345794
-				mid = 2947770229
-				launchID = 4
-				parent = 0
-				position = 0,0,0
-				rotation = 0,0,0,1
-				mirror = 1,1,1
-				istg = 4
-				dstg = 1
-				sqor = 4
-				sidx = 2
-				attm = 0
-				srfN = None, -1
-				attN = bottom, 1
-				attN = None, -1
-				mass = 0.05
-				temp = 42.28098
-				expt = 0.5
-				state = 1
-				connected = False
-				attached = False
-				flag = Squad/Flags/rocketScience
-				rTrf = stackDecoupler
-				EVENTS
-				{
-				}
-				ACTIONS
-				{
-				}
-				MODULE
-				{
-					name = ModuleDecouple
-					isEnabled = True
-					isDecoupled = True
-					EVENTS
-					{
-						Decouple
-						{
-							active = False
-							guiActive = True
-							guiIcon = Decouple
-							guiName = Decouple
-							category = Decouple
-							guiActiveUnfocused = False
-							unfocusedRange = 2
-							externalToEVAOnly = True
-						}
-					}
-					ACTIONS
-					{
-						DecoupleAction
-						{
-							actionGroup = None
-						}
-					}
-				}
-				MODULE
-				{
-					name = ModuleTestSubject
-					isEnabled = True
-					EVENTS
-					{
-						RunTestEvent
-						{
-							active = False
-							guiActive = True
-							guiIcon = Run Test
-							guiName = Run Test
-							category = Run Test
-							guiActiveUnfocused = False
-							unfocusedRange = 2
-							externalToEVAOnly = True
-						}
-					}
-					ACTIONS
-					{
-					}
-				}
-			}
-			PART
-			{
-				name = trussPiece1x
-				uid = 474380764
-				mid = 2947770229
-				launchID = 4
-				parent = 0
-				position = -1.08833972054414E-23,-0.692266464233398,-1.8952927246415E-22
-				rotation = 0,0,0,1
-				mirror = 1,1,1
-				istg = 2
-				dstg = 2
-				sqor = -1
-				sidx = -1
-				attm = 0
-				srfN = None, -1
-				attN = None, -1
-				attN = top, 0
-				mass = 0.125
-				temp = 41.87645
-				expt = 0.5
-				state = 0
-				connected = False
-				attached = True
-				flag = Squad/Flags/rocketScience
-				rTrf = trussPiece1x
-				EVENTS
-				{
-				}
-				ACTIONS
-				{
-				}
-			}
-			ACTIONGROUPS
-			{
-				Stage = False, 0
-				Gear = True, 0
-				Light = False, 0
-				RCS = False, 0
-				SAS = True, 427.220646972623
-				Brakes = False, 0
-				Abort = False, 0
-				Custom01 = False, 0
-				Custom02 = False, 0
-				Custom03 = False, 0
-				Custom04 = False, 0
-				Custom05 = False, 0
-				Custom06 = False, 0
-				Custom07 = False, 0
-				Custom08 = False, 0
-				Custom09 = False, 0
-				Custom10 = False, 0
-			}
-			DISCOVERY
-			{
-				state = -1
-				lastObservedTime = 0
-				lifetime = Infinity
-				refTime = Infinity
-				size = 2
-			}
-			FLIGHTPLAN
-			{
-			}
-			CTRLSTATE
-			{
-				pitch = 0
-				yaw = 0
-				roll = 0
-				trimPitch = 0
-				trimYaw = 0
-				trimRoll = 0
-				mainThrottle = 0
-			}
-		}
 	}
 	ROSTER
 	{
 		KERBAL
 		{
 			name = Jebediah Kerman
+			gender = Male
 			type = Crew
+			trait = Pilot
 			brave = 0.5
 			dumb = 0.5
 			badS = True
+			tour = False
 			state = Available
 			ToD = 0
 			idx = 0
+			CAREER_LOG
+			{
+				flight = 9
+				0 = Recover
+				1 = Flight,Kerbin
+				1 = Land,Kerbin
+				1 = Recover
+				2 = Flight,Kerbin
+				2 = Suborbit,Kerbin
+				2 = Land,Kerbin
+				2 = Recover
+				3 = Recover
+				4 = Flight,Kerbin
+				4 = Suborbit,Kerbin
+				4 = Land,Kerbin
+				4 = Recover
+				5 = Recover
+				6 = Flight,Kerbin
+				6 = Land,Kerbin
+				6 = Recover
+				7 = Flight,Kerbin
+				7 = Suborbit,Kerbin
+				7 = ExitVessel,Kerbin
+				7 = BoardVessel,Kerbin
+				7 = Land,Kerbin
+				7 = Recover
+				8 = Flight,Kerbin
+				8 = Suborbit,Kerbin
+				8 = Land,Kerbin
+				8 = Recover
+			}
+			FLIGHT_LOG
+			{
+				flight = 9
+			}
 		}
 		KERBAL
 		{
 			name = Bill Kerman
+			gender = Male
 			type = Crew
+			trait = Engineer
 			brave = 0.5
 			dumb = 0.8
 			badS = False
+			tour = False
 			state = Available
 			ToD = 0
-			idx = -1
+			idx = 1
+			CAREER_LOG
+			{
+				flight = 1
+				0 = Flight,Kerbin
+				0 = Suborbit,Kerbin
+				0 = Land,Kerbin
+				0 = Recover
+			}
+			FLIGHT_LOG
+			{
+				flight = 1
+			}
 		}
 		KERBAL
 		{
 			name = Bob Kerman
+			gender = Male
 			type = Crew
+			trait = Scientist
 			brave = 0.3
 			dumb = 0.1
 			badS = False
+			tour = False
 			state = Available
 			ToD = 0
-			idx = -1
+			idx = 0
+			CAREER_LOG
+			{
+				flight = 1
+				0 = Flight,Kerbin
+				0 = Suborbit,Kerbin
+				0 = Land,Kerbin
+				0 = Recover
+			}
+			FLIGHT_LOG
+			{
+				flight = 1
+			}
 		}
 	}
 	MESSAGESYSTEM
