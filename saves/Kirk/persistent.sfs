@@ -10,7 +10,7 @@ GAME
 	scene = 5
 	editor = None
 	flag = Squad/Flags/default
-	launchID = 18
+	launchID = 19
 	PARAMETERS
 	{
 		preset = Normal
@@ -88,31 +88,31 @@ GAME
 	{
 		name = ContractSystem
 		scene = 7, 8, 5, 6
-		update = 10783.548702425
+		update = 11276.7287024357
 		version = 1.0.5
 		CONTRACTS
 		{
 			CONTRACT
 			{
-				guid = 3b3b43db-b1da-4730-8b5a-dc8fe5beb893
+				guid = 7333c8b5-6c41-4746-bd3d-3ac850e674a5
 				type = SurveyContract
 				prestige = 0
-				seed = -1554210764
+				seed = -1192318544
 				state = Offered
-				agent = Reaction Systems Ltd
+				agent = Sean's Cannery
 				deadlineType = Floating
 				expiryType = Floating
-				values = 129600,46008000,7500,13912.4993681908,7874.99964237213,0,1.904762,2,129636.6,0,0,0
+				values = 125825.248718262,44667963.2949829,7724.99978542328,14329.8739511967,7874.99964237213,0,1.904762,2,126029.128718262,0,0,0
 				targetBody = 1
-				centerLatitude = -0.300829287436866
-				centerLongitude = -77.5690808754944
+				centerLatitude = 3.48558865806971
+				centerLongitude = -72.2772715413379
 				randomTopic = Kerbin
 				dataName = observational
 				anomalyName = inconsistencies
 				reportName = reports
 				locationName = Kerbin
 				focusedSurvey = True
-				targetBand = LOW
+				targetBand = HIGH
 				contextual = False
 				PARAM
 				{
@@ -122,16 +122,16 @@ GAME
 					targetBody = 1
 					actionDescription = Take a crew report
 					experiment = crewReport
-					flightThreshold = 19200
-					band = 2
+					flightThreshold = 17500
+					band = 3
 					clusterState = MIXED
 					verified = True
 					contextual = False
-					wpSeed = -2127982230
+					wpSeed = -1891797763
 					wpIndex = 0
 					wpTexture = report
-					wpLatitude = -0.300783439109112
-					wpLongitude = -77.5690221475343
+					wpLatitude = 3.48555503281342
+					wpLongitude = -72.2772799796384
 					wpLandlocked = False
 				}
 			}
@@ -180,25 +180,25 @@ GAME
 			}
 			CONTRACT
 			{
-				guid = 7333c8b5-6c41-4746-bd3d-3ac850e674a5
+				guid = 3b3b43db-b1da-4730-8b5a-dc8fe5beb893
 				type = SurveyContract
 				prestige = 0
-				seed = -1192318544
+				seed = -1554210764
 				state = Offered
-				agent = Sean's Cannery
+				agent = Reaction Systems Ltd
 				deadlineType = Floating
 				expiryType = Floating
-				values = 125825.248718262,44667963.2949829,7724.99978542328,14329.8739511967,7874.99964237213,0,1.904762,2,126029.128718262,0,0,0
+				values = 129600,46008000,7500,13912.4993681908,7874.99964237213,0,1.904762,2,129636.6,0,0,0
 				targetBody = 1
-				centerLatitude = 3.48558865806971
-				centerLongitude = -72.2772715413379
+				centerLatitude = -0.300829287436866
+				centerLongitude = -77.5690808754944
 				randomTopic = Kerbin
 				dataName = observational
 				anomalyName = inconsistencies
 				reportName = reports
 				locationName = Kerbin
 				focusedSurvey = True
-				targetBand = HIGH
+				targetBand = LOW
 				contextual = False
 				PARAM
 				{
@@ -208,16 +208,16 @@ GAME
 					targetBody = 1
 					actionDescription = Take a crew report
 					experiment = crewReport
-					flightThreshold = 17500
-					band = 3
+					flightThreshold = 19200
+					band = 2
 					clusterState = MIXED
 					verified = True
 					contextual = False
-					wpSeed = -1891797763
+					wpSeed = -2127982230
 					wpIndex = 0
 					wpTexture = report
-					wpLatitude = 3.48555503281342
-					wpLongitude = -72.2772799796384
+					wpLatitude = -0.300783439109112
+					wpLongitude = -77.5690221475343
 					wpLandlocked = False
 				}
 			}
@@ -347,67 +347,59 @@ GAME
 			}
 			CONTRACT
 			{
-				guid = ffe2f42d-f272-4969-877e-06f6a49ad2ef
-				type = PartTest
+				guid = 2cb4a6bc-16bb-4e93-9a2c-ed5f59432df0
+				type = TourismContract
 				prestige = 0
-				seed = -1554210758
+				seed = 1444333230
 				state = Offered
-				agent = Research & Development Department
+				agent = Kerbal Motion LLC
 				deadlineType = Floating
 				expiryType = Floating
-				values = 21600,9201600,6750,16875,6750,2,4,3,21636.6,0,0,0
-				part = solidBooster.sm
-				haul = True
-				dest = 1
-				sit = FLYING
-				exp = False
+				values = 64800,46008000,0,0,0,0,20,10,75786.9687024294,0,0,0
+				gender = 0
+				preposition = right here on Kerbin
+				homeDestinations = True
+				tourists = Neldas Kerman|Mitsby Kerman
 				PARAM
 				{
-					name = PartTest
+					name = KerbalTourParameter
 					state = Incomplete
-					values = 0,0,0,0,0
-					part = solidBooster.sm
-					body = Kerbin
-					situation = FLYING
-					uniqueID = 0.080333403814739274
-					haul = True
-					repeatability = ONCEPERPART
+					values = 19500,0,0,0,0
+					kerbalName = Neldas Kerman
+					PARAM
+					{
+						name = KerbalDestinationParameter
+						state = Incomplete
+						values = 3250,0,0,0,0
+						targetBody = 1
+						targetType = Orbit
+						kerbalName = Neldas Kerman
+					}
+					PARAM
+					{
+						name = KerbalDestinationParameter
+						state = Incomplete
+						values = 3250,0,0,0,0
+						targetBody = 1
+						targetType = Suborbit
+						kerbalName = Neldas Kerman
+					}
 				}
 				PARAM
 				{
-					name = ReachDestination
+					name = KerbalTourParameter
 					state = Incomplete
-					disableOnStateChange = False
-					values = 0,0,0,0,0
-					dest = 1
-					title = 
-				}
-				PARAM
-				{
-					name = ReachSituation
-					state = Incomplete
-					disableOnStateChange = False
-					values = 0,0,0,0,0
-					sit = FLYING
-					title = 
-				}
-				PARAM
-				{
-					name = ReachAltitudeEnvelope
-					state = Incomplete
-					disableOnStateChange = False
-					values = 0,0,0,0,0
-					minAlt = 57000
-					maxAlt = 65000
-				}
-				PARAM
-				{
-					name = ReachSpeedEnvelope
-					state = Incomplete
-					disableOnStateChange = False
-					values = 0,0,0,0,0
-					minSpd = 370
-					maxSpd = 530
+					values = 9750,0,0,0,0
+					kerbalName = Mitsby Kerman
+					PARAM
+					{
+						name = KerbalDestinationParameter
+						state = Incomplete
+						values = 3250,0,0,0,0
+						targetBody = 1
+						targetType = Suborbit
+						kerbalName = Mitsby Kerman
+					}
 				}
 			}
 			CONTRACT
@@ -416,16 +408,16 @@ GAME
 				type = PartTest
 				prestige = 0
 				seed = -1554210777
-				state = Offered
+				state = Active
 				agent = Research & Development Department
 				deadlineType = Floating
 				expiryType = Floating
-				values = 21600,9201600,9000,22500,9000,3,6,4,21636.6,0,0,0
+				values = 21600,9201600,9000,22500,9000,3,6,4,21636.6,11259.7087024353,9212859.70870244,0
 				part = solidBooster
 				haul = False
 				dest = 1
 				sit = FLYING
-				exp = True
+				exp = False
 				PARAM
 				{
 					name = PartTest
@@ -736,6 +728,72 @@ GAME
 			}
 			CONTRACT_FINISHED
 			{
+				guid = ffe2f42d-f272-4969-877e-06f6a49ad2ef
+				type = PartTest
+				prestige = 0
+				seed = -1554210758
+				state = Completed
+				agent = Research & Development Department
+				deadlineType = Floating
+				expiryType = Floating
+				values = 21600,9201600,6750,16875,6750,2,4,3,21636.6,10791.2287024252,9212391.22870243,0
+				part = solidBooster.sm
+				haul = True
+				dest = 1
+				sit = FLYING
+				exp = False
+				PARAM
+				{
+					name = PartTest
+					state = Complete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					part = solidBooster.sm
+					body = Kerbin
+					situation = FLYING
+					uniqueID = 0.080333403814739274
+					haul = True
+					repeatability = ONCEPERPART
+				}
+				PARAM
+				{
+					name = ReachDestination
+					state = Complete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					dest = 1
+					title = 
+				}
+				PARAM
+				{
+					name = ReachSituation
+					state = Complete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					sit = FLYING
+					title = 
+				}
+				PARAM
+				{
+					name = ReachAltitudeEnvelope
+					state = Complete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					minAlt = 57000
+					maxAlt = 65000
+				}
+				PARAM
+				{
+					name = ReachSpeedEnvelope
+					state = Complete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					minSpd = 370
+					maxSpd = 530
+				}
+			}
+			CONTRACT_FINISHED
+			{
 				guid = f7dca033-4aa8-4420-b8ea-94ab13770fc2
 				type = WorldFirstContract
 				prestige = 0
@@ -933,7 +991,7 @@ GAME
 	{
 		name = Funding
 		scene = 7, 8, 5, 6
-		funds = 131871.563045212
+		funds = 156588.016428658
 	}
 	SCENARIO
 	{
@@ -1056,7 +1114,7 @@ GAME
 	{
 		name = ResearchAndDevelopment
 		scene = 7, 8, 5, 6
-		sci = 31.73774
+		sci = 37.23774
 		Tech
 		{
 			id = start
@@ -1176,7 +1234,7 @@ GAME
 			id = recovery@KerbinFlew
 			title = Recovery of a vessel that survived a flight.
 			dsc = 1
-			scv = 7.947286E-08
+			scv = 0
 			sbv = 5
 			sci = 6
 			cap = 6
@@ -1401,6 +1459,16 @@ GAME
 			sci = 1.5
 			cap = 1.5
 		}
+		Science
+		{
+			id = crewReport@KerbinFlyingLowWater
+			title = Crew Report while flying over Kerbin's Water
+			dsc = 1
+			scv = 0
+			sbv = 0.7
+			sci = 3.5
+			cap = 3.5
+		}
 	}
 	SCENARIO
 	{
@@ -1411,7 +1479,7 @@ GAME
 	{
 		name = Reputation
 		scene = 7, 8, 5, 6
-		rep = 84.27325
+		rep = 88.27301
 	}
 	SCENARIO
 	{
@@ -1569,7 +1637,7 @@ GAME
 	FLIGHTSTATE
 	{
 		version = 1.0.5
-		UT = 10786.9087024251
+		UT = 11278.8887024358
 		activeVessel = 0
 		mapViewFiltering = -1026
 		VESSEL
@@ -2855,7 +2923,7 @@ GAME
 			idx = 0
 			CAREER_LOG
 			{
-				flight = 12
+				flight = 13
 				0 = Flight,Kerbin
 				0 = Land,Kerbin
 				0 = ExitVessel,Kerbin
@@ -2901,10 +2969,13 @@ GAME
 				11 = ExitVessel,Kerbin
 				11 = BoardVessel,Kerbin
 				11 = Recover
+				12 = Flight,Kerbin
+				12 = Land,Kerbin
+				12 = Recover
 			}
 			FLIGHT_LOG
 			{
-				flight = 12
+				flight = 13
 			}
 		}
 		KERBAL
@@ -3208,6 +3279,50 @@ GAME
 			trait = Pilot
 			brave = 0.0132113
 			dumb = 0.7100834
+			badS = False
+			tour = False
+			state = Assigned
+			ToD = 0
+			idx = -1
+			CAREER_LOG
+			{
+				flight = 0
+			}
+			FLIGHT_LOG
+			{
+				flight = 0
+			}
+		}
+		KERBAL
+		{
+			name = Neldas Kerman
+			gender = Male
+			type = Unowned
+			trait = Scientist
+			brave = 0.008188418
+			dumb = 0.7428556
+			badS = False
+			tour = False
+			state = Assigned
+			ToD = 0
+			idx = -1
+			CAREER_LOG
+			{
+				flight = 0
+			}
+			FLIGHT_LOG
+			{
+				flight = 0
+			}
+		}
+		KERBAL
+		{
+			name = Mitsby Kerman
+			gender = Male
+			type = Unowned
+			trait = Scientist
+			brave = 0.6521406
+			dumb = 0.338018
 			badS = False
 			tour = False
 			state = Assigned
