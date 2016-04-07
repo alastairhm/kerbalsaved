@@ -1,15 +1,15 @@
-ship = Fuel
+ship = Science Bird
 version = 1.0.5
 description = The Aeris 3A is a small and nimble one-seater plane, mostly used as a training craft for fixed-wing flight, and to annoy ground staff by 'buzzing' the space center facilities. ¨¨
 type = SPH
-size = 8.846818,3.326102,7.575754
+size = 8.846818,3.949612,7.950752
 PART
 {
 	part = Mark1Cockpit_4294820102
 	partName = Part
-	pos = 0.8438076,7.251642,-0.2433757
+	pos = 0.4847732,7.831072,2.746332
 	attPos = 0,0,0
-	attPos0 = 0.8438076,7.251642,-0.2433757
+	attPos0 = 0.4847732,7.831072,2.746332
 	rot = -0.7071068,0,0,-0.7071068
 	attRot = 0,0,0,-0.9999999
 	attRot0 = 0.7071068,0,0,0.7071068
@@ -27,8 +27,10 @@ PART
 	link = R8winglet_4294820038
 	link = R8winglet_4294820000
 	link = GearFree_4294474060
-	link = MK1Fuselage_4294368504
-	attN = bottom,MK1Fuselage_4294368504
+	link = science.module_4294467456
+	link = longAntenna_4294732190
+	link = GooExperiment_4294732912
+	attN = bottom,science.module_4294467456
 	EVENTS
 	{
 	}
@@ -498,7 +500,7 @@ PART
 {
 	part = R8winglet_4294820038
 	partName = Part
-	pos = 1.692627,7.114633,1.524789
+	pos = 1.333593,7.694062,4.514497
 	attPos = 0.8268352,1.671359,0.1341456
 	attPos0 = 0,0,0
 	rot = -0.01603673,0.706925,0.6989146,0.1073245
@@ -592,7 +594,7 @@ PART
 {
 	part = R8winglet_4294820000
 	partName = Part
-	pos = -0.005012214,7.114633,1.524789
+	pos = -0.3640466,7.694062,4.514497
 	attPos = -0.8268352,1.671359,0.1341456
 	attPos0 = 0,0,0
 	rot = 0.6989146,0.1073246,-0.01603672,0.706925
@@ -686,7 +688,7 @@ PART
 {
 	part = GearFree_4294474060
 	partName = Part
-	pos = 0.8438076,6.685582,0.9254333
+	pos = 0.4847732,7.265012,3.91514
 	attPos = 0,0,0
 	attPos0 = 0,1.168808,0.5660581
 	rot = -0.03213674,-1.68614E-10,5.244053E-09,0.9994835
@@ -861,11 +863,11 @@ PART
 }
 PART
 {
-	part = MK1Fuselage_4294368504
+	part = science.module_4294467456
 	partName = Part
-	pos = 0.8438076,7.251642,-1.355876
+	pos = 0.4847732,7.831072,1.958832
 	attPos = 0,0,0
-	attPos0 = 0,-1.1125,1.326203E-07
+	attPos0 = 0,-0.7875,9.38773E-08
 	rot = 0.7071068,0,0,0.7071068
 	attRot = 0,0,0,1
 	attRot0 = 0,0,0,-1
@@ -880,99 +882,9 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	link = batteryPack_4294365974
-	link = parachuteRadial_4294365044
-	link = Mk1FuselageStructural_4294712934
-	link = fuelLine_4294362038
-	link = fuelLine_4294361020
+	link = science.module_4294466298
 	attN = top,Mark1Cockpit_4294820102
-	attN = bottom,Mk1FuselageStructural_4294712934
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-	}
-	RESOURCE
-	{
-		name = LiquidFuel
-		amount = 400
-		maxAmount = 400
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		isVisible = True
-		flowMode = Both
-	}
-}
-PART
-{
-	part = batteryPack_4294365974
-	partName = Part
-	pos = 0.838288,7.253121,-2.293376
-	attPos = 0,0,0
-	attPos0 = -0.005519569,-0.9375,-0.001479037
-	rot = 0,0,1,0
-	attRot = 0,0,0,1
-	attRot0 = 0,0.7071068,0.7071068,0
-	mir = 1,1,1
-	symMethod = Radial
-	istg = 0
-	dstg = 0
-	sidx = -1
-	sqor = -1
-	sepI = 0
-	attm = 1
-	modCost = 0
-	modMass = 0
-	modSize = (0.0, 0.0, 0.0)
-	srfN = srfAttach,MK1Fuselage_4294368504
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-	}
-	RESOURCE
-	{
-		name = ElectricCharge
-		amount = 100
-		maxAmount = 100
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		isVisible = True
-		flowMode = Both
-	}
-}
-PART
-{
-	part = parachuteRadial_4294365044
-	partName = Part
-	pos = 0.8438075,7.875326,-1.71769
-	attPos = 0,0,0
-	attPos0 = -5.960464E-08,-0.3618145,-0.6236835
-	rot = -0.7071066,-4.139249E-08,-4.139252E-08,-0.707107
-	attRot = 0,0,0,1
-	attRot0 = 2.682209E-07,-5.853784E-08,-1.953992E-14,-1
-	mir = 1,1,1
-	symMethod = Radial
-	istg = 0
-	dstg = 0
-	sidx = -1
-	sqor = -1
-	sepI = 0
-	attm = 1
-	modCost = 0
-	modMass = 0
-	modSize = (0.0, 0.0, 0.0)
-	srfN = srfAttach,MK1Fuselage_4294368504
+	attN = bottom,science.module_4294466298
 	EVENTS
 	{
 	}
@@ -984,74 +896,148 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleParachute
+		name = ModuleAnimateGeneric
 		isEnabled = True
-		persistentState = STOWED
-		minAirPressureToOpen = 0.04
-		deployAltitude = 1000
+		aniState = LOCKED
+		animSwitch = True
+		animTime = 0
+		animSpeed = 1
+		deployPercent = 100
 		stagingEnabled = True
-		minAirPressureToOpen_UIFlight
+		deployPercent_UIFlight
 		{
 			controlEnabled = True
-			minValue = 0.01
-			maxValue = 0.75
-			stepIncrement = 0.01
-		}
-		deployAltitude_UIFlight
-		{
-			controlEnabled = True
-			minValue = 50
-			maxValue = 5000
-			stepIncrement = 50
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 1
 		}
 		EVENTS
 		{
-			Deploy
+			Toggle
 			{
 				active = True
-				guiActive = True
+				guiActive = False
+				guiActiveEditor = True
 				guiActiveUncommand = False
-				guiIcon = Deploy Chute
-				guiName = Deploy Chute
-				category = Deploy Chute
+				guiIcon = Toggle
+				guiName = Deploy
+				category = Toggle
 				guiActiveUnfocused = True
-				unfocusedRange = 4
+				unfocusedRange = 5
 				externalToEVAOnly = True
 			}
-			CutParachute
+			ToggleStaging
 			{
 				active = True
-				guiActive = True
-				guiActiveUncommand = False
-				guiIcon = Cut Parachute
-				guiName = Cut Parachute
-				category = Cut Parachute
-				guiActiveUnfocused = True
-				unfocusedRange = 4
-				externalToEVAOnly = True
-			}
-			Repack
-			{
-				active = False
 				guiActive = False
 				guiActiveUncommand = False
-				guiIcon = Repack Chute
-				guiName = Repack Chute
-				category = Repack Chute
-				guiActiveUnfocused = True
-				unfocusedRange = 4
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
 				externalToEVAOnly = True
 			}
-			Disarm
+		}
+		ACTIONS
+		{
+			ToggleAction
 			{
-				active = False
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleScienceExperiment
+		isEnabled = True
+		Deployed = False
+		Inoperable = False
+		stagingEnabled = True
+		EVENTS
+		{
+			DeployExperiment
+			{
+				active = True
 				guiActive = True
 				guiActiveUncommand = False
-				guiIcon = Disarm
-				guiName = Disarm
-				category = Disarm
+				guiIcon = Deploy
+				guiName = Deploy
+				category = Deploy
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			CollectDataExternalEvent
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = 
+				guiName = 
+				category = 
 				guiActiveUnfocused = True
-				unfocusedRange = 4
+				unfocusedRange = 1.5
+				externalToEVAOnly = True
+			}
+			ReviewDataEvent
+			{
+				active = True
+				guiActive = True
+				guiActiveUncommand = False
+				guiIcon = Review Data
+				guiName = Review Data
+				category = Review Data
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ResetExperiment
+			{
+				active = True
+				guiActive = True
+				guiActiveUncommand = False
+				guiIcon = Reset
+				guiName = Reset
+				category = Reset
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			DeployExperimentExternal
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Deploy
+				guiName = Deploy
+				category = Deploy
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ResetExperimentExternal
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Reset
+				guiName = Reset
+				category = Reset
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			CleanUpExperimentExternal
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Restore
+				guiName = Restore
+				category = Restore
+				guiActiveUnfocused = True
+				unfocusedRange = 2
 				externalToEVAOnly = True
 			}
 			ToggleStaging
@@ -1073,7 +1059,96 @@ PART
 			{
 				actionGroup = None
 			}
-			CutAction
+			ResetAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+}
+PART
+{
+	part = science.module_4294466298
+	partName = Part
+	pos = 0.4847732,7.831071,0.8338308
+	attPos = 0,0,0
+	attPos0 = 0,-1.125,1.341105E-07
+	rot = 0.7071068,0,0,0.7071068
+	attRot = 0,0,0,1
+	attRot0 = 0,0,0,1
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 1
+	dstg = 1
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	link = Mk1FuselageStructural_4294712934
+	link = batteryPack_4294728430
+	link = parachuteRadial_4294623972
+	attN = top,science.module_4294467456
+	attN = bottom,Mk1FuselageStructural_4294712934
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleAnimateGeneric
+		isEnabled = True
+		aniState = LOCKED
+		animSwitch = True
+		animTime = 0
+		animSpeed = 1
+		deployPercent = 100
+		stagingEnabled = True
+		deployPercent_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 1
+		}
+		EVENTS
+		{
+			Toggle
+			{
+				active = True
+				guiActive = False
+				guiActiveEditor = True
+				guiActiveUncommand = False
+				guiIcon = Toggle
+				guiName = Deploy
+				category = Toggle
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleAction
 			{
 				actionGroup = None
 			}
@@ -1081,20 +1156,94 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleTestSubject
+		name = ModuleScienceExperiment
 		isEnabled = True
+		Deployed = False
+		Inoperable = False
 		stagingEnabled = True
 		EVENTS
 		{
-			RunTestEvent
+			DeployExperiment
 			{
-				active = False
+				active = True
 				guiActive = True
 				guiActiveUncommand = False
-				guiIcon = Run Test
-				guiName = Run Test
-				category = Run Test
+				guiIcon = Deploy
+				guiName = Deploy
+				category = Deploy
 				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			CollectDataExternalEvent
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = 
+				guiName = 
+				category = 
+				guiActiveUnfocused = True
+				unfocusedRange = 1.5
+				externalToEVAOnly = True
+			}
+			ReviewDataEvent
+			{
+				active = True
+				guiActive = True
+				guiActiveUncommand = False
+				guiIcon = Review Data
+				guiName = Review Data
+				category = Review Data
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ResetExperiment
+			{
+				active = True
+				guiActive = True
+				guiActiveUncommand = False
+				guiIcon = Reset
+				guiName = Reset
+				category = Reset
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			DeployExperimentExternal
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Deploy
+				guiName = Deploy
+				category = Deploy
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ResetExperimentExternal
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Reset
+				guiName = Reset
+				category = Reset
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			CleanUpExperimentExternal
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Restore
+				guiName = Restore
+				category = Restore
+				guiActiveUnfocused = True
 				unfocusedRange = 2
 				externalToEVAOnly = True
 			}
@@ -1113,54 +1262,14 @@ PART
 		}
 		ACTIONS
 		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleDragModifier
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-			ToggleStaging
+			DeployAction
 			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
+				actionGroup = None
 			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleDragModifier
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-			ToggleStaging
+			ResetAction
 			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
+				actionGroup = None
 			}
-		}
-		ACTIONS
-		{
 		}
 	}
 }
@@ -1168,16 +1277,16 @@ PART
 {
 	part = Mk1FuselageStructural_4294712934
 	partName = Part
-	pos = 0.8438076,7.251642,-3.230877
+	pos = 0.4847732,7.831071,-0.6161706
 	attPos = 0,0,0
-	attPos0 = 0,-1.875,2.235175E-07
+	attPos0 = 0,-1.450001,1.728535E-07
 	rot = 0.7071068,0,0,0.7071068
 	attRot = 0,0,0,1
 	attRot0 = 0,0,0,1
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 0
-	dstg = 0
+	istg = 2
+	dstg = 2
 	sidx = -1
 	sqor = -1
 	sepI = 0
@@ -1187,10 +1296,9 @@ PART
 	modSize = (0.0, 0.0, 0.0)
 	link = wingConnector2_4294679780
 	link = wingConnector2_4294679458
+	link = sensorThermometer_4294731122
 	link = noseCone_4294643556
-	link = GearFree_4294478528
-	link = GearFree_4294477796
-	attN = top,MK1Fuselage_4294368504
+	attN = top,science.module_4294466298
 	attN = bottom,noseCone_4294643556
 	EVENTS
 	{
@@ -1206,7 +1314,7 @@ PART
 {
 	part = wingConnector2_4294679780
 	partName = Part
-	pos = 0.2328996,7.304222,-3.411467
+	pos = -0.1261348,7.883651,-0.7967579
 	attPos = 0,0,0
 	attPos0 = -0.610908,-0.1805862,-0.05258082
 	rot = -0.7071068,2.456086E-06,1.753943E-06,-0.7071069
@@ -1214,8 +1322,8 @@ PART
 	attRot0 = 5.960464E-08,2.97694E-06,-4.964901E-07,-1
 	mir = 1,1,1
 	symMethod = Mirror
-	istg = 0
-	dstg = 0
+	istg = 2
+	dstg = 2
 	sidx = -1
 	sqor = -1
 	sepI = 0
@@ -1267,7 +1375,7 @@ PART
 {
 	part = miniFuselage_4294650592
 	partName = Part
-	pos = -2.38005,6.897492,-3.482641
+	pos = -2.739084,7.476921,-0.8679321
 	attPos = 0,0,0
 	attPos0 = -2.612947,-0.0711716,0.4067491
 	rot = 0.5000013,0.4999984,0.4999988,0.5000018
@@ -1275,8 +1383,8 @@ PART
 	attRot0 = 6.616125E-08,-0.7071068,6.575556E-08,-0.7071068
 	mir = 1,1,1
 	symMethod = Mirror
-	istg = 0
-	dstg = 0
+	istg = 2
+	dstg = 2
 	sidx = -1
 	sqor = -1
 	sepI = 0
@@ -1286,6 +1394,7 @@ PART
 	modSize = (0.0, 0.0, 0.0)
 	link = miniIntake_4294644760
 	link = miniJetEngine_4294637740
+	link = GearFixed_4294619746
 	sym = miniFuselage_4294650150
 	srfN = srfAttach,wingConnector2_4294679780
 	attN = top,miniIntake_4294644760
@@ -1315,16 +1424,16 @@ PART
 {
 	part = miniIntake_4294644760
 	partName = Part
-	pos = -2.38005,6.897492,-3.013888
+	pos = -2.739084,7.476921,-0.3991816
 	attPos = 0,0,0
 	attPos0 = -8.744921E-08,0.4687494,2.689379E-10
-	rot = 0.7071068,-5.677201E-07,-6.498824E-07,0.7071068
+	rot = 0.7071068,-3.925135E-07,-4.457674E-07,0.7071068
 	attRot = 0,0,0,1
 	attRot0 = 4.172324E-07,-0.7071047,-2.384185E-07,0.7071089
 	mir = 1,1,1
 	symMethod = Mirror
-	istg = 0
-	dstg = 0
+	istg = 2
+	dstg = 2
 	sidx = -1
 	sqor = -1
 	sepI = 0
@@ -1412,16 +1521,16 @@ PART
 {
 	part = miniJetEngine_4294637740
 	partName = Part
-	pos = -2.380049,6.897492,-3.951392
+	pos = -2.739083,7.476921,-1.336683
 	attPos = 0,0,0
 	attPos0 = 8.744949E-08,-0.4687509,-2.689387E-10
-	rot = 0.7071068,-5.677201E-07,-6.498824E-07,0.7071068
+	rot = 0.7071068,-3.925135E-07,-4.457674E-07,0.7071068
 	attRot = 0,0,0,1
 	attRot0 = 4.172324E-07,-0.7071047,-2.384185E-07,0.7071089
 	mir = 1,1,1
 	symMethod = Mirror
 	istg = 0
-	dstg = 0
+	dstg = 2
 	sidx = 0
 	sqor = 0
 	sepI = 0
@@ -1612,9 +1721,106 @@ PART
 }
 PART
 {
+	part = GearFixed_4294619746
+	partName = Part
+	pos = -2.780936,7.175631,-0.8899481
+	attPos = 0,0,0
+	attPos0 = -0.3012861,-0.02201609,-0.04185013
+	rot = 0.1305287,0.9914292,-0.0007254481,0.005508319
+	attRot = 0,0,-0.7071067,0.7071067
+	attRot0 = 0.5585862,0.4273353,-0.4335683,0.5633689
+	mir = 1,1,1
+	symMethod = Mirror
+	istg = 2
+	dstg = 2
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	sym = GearFixed_4294619898
+	srfN = srfAttach,miniFuselage_4294650592
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleLandingGearFixed
+		isEnabled = True
+		BrakeTorque = 20
+		brakesEngaged = False
+		brakesEnabled = True
+		stagingEnabled = True
+		BrakeTorque_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 30
+			stepIncrement = 1
+		}
+		EVENTS
+		{
+			EnableBrakes
+			{
+				active = False
+				guiActive = False
+				guiActiveEditor = True
+				guiActiveUncommand = False
+				guiIcon = Enable brakes
+				guiName = Enable brakes
+				category = Enable brakes
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			DisableBrakes
+			{
+				active = True
+				guiActive = False
+				guiActiveEditor = True
+				guiActiveUncommand = False
+				guiIcon = Disable brakes
+				guiName = Disable brakes
+				category = Disable brakes
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			BrakesAction
+			{
+				actionGroup = Brakes
+			}
+		}
+	}
+}
+PART
+{
 	part = StandardCtrlSrf_4294316758
 	partName = Part
-	pos = -0.7241405,7.30423,-4.281592
+	pos = -1.083175,7.88366,-1.666883
 	attPos = 0,0,0
 	attPos0 = -0.9570416,-0.8701234,-2.335628E-08
 	rot = -0.7071069,2.444518E-06,1.685874E-06,-0.7071068
@@ -1622,8 +1828,8 @@ PART
 	attRot0 = 1.192094E-07,5.631238E-08,3.99516E-08,1
 	mir = 1,1,1
 	symMethod = Mirror
-	istg = 0
-	dstg = 0
+	istg = 2
+	dstg = 2
 	sidx = -1
 	sqor = -1
 	sepI = 0
@@ -1708,7 +1914,7 @@ PART
 {
 	part = StandardCtrlSrf_4294316146
 	partName = Part
-	pos = -2.521877,7.304241,-4.24878
+	pos = -2.880911,7.883671,-1.634071
 	attPos = 0,0,0
 	attPos0 = -2.754777,-0.8373104,1.899134E-07
 	rot = -0.7071069,2.444518E-06,1.685874E-06,-0.7071068
@@ -1716,8 +1922,8 @@ PART
 	attRot0 = 1.192094E-07,5.631238E-08,3.99516E-08,1
 	mir = 1,1,1
 	symMethod = Mirror
-	istg = 0
-	dstg = 0
+	istg = 2
+	dstg = 2
 	sidx = -1
 	sqor = -1
 	sepI = 0
@@ -1802,16 +2008,16 @@ PART
 {
 	part = tailfin_4294303034
 	partName = Part
-	pos = -3.476676,7.304242,-3.588394
+	pos = -3.83571,7.883671,-0.973685
 	attPos = 0,0,0
 	attPos0 = -3.709575,-0.1769234,1.531134E-07
-	rot = 0.5000011,0.4999984,0.4999991,0.5000017
+	rot = 0.5000011,0.4999984,0.499999,0.5000017
 	attRot = 0,-0.7071068,0,0.7071068
 	attRot0 = -2.324606E-08,-0.7071069,-5.345385E-08,-0.7071067
 	mir = 1,1,1
 	symMethod = Mirror
-	istg = 0
-	dstg = 0
+	istg = 2
+	dstg = 2
 	sidx = -1
 	sqor = -1
 	sepI = 0
@@ -1896,7 +2102,7 @@ PART
 {
 	part = wingConnector2_4294679458
 	partName = Part
-	pos = 1.454715,7.304222,-3.411467
+	pos = 1.095681,7.883651,-0.7967579
 	attPos = 0,0,0
 	attPos0 = 0.6109079,-0.1805862,-0.05258082
 	rot = -1.784852E-06,0.7071069,0.7071068,-2.486994E-06
@@ -1904,8 +2110,8 @@ PART
 	attRot0 = 4.964897E-07,1,-1.192093E-07,-3.020651E-06
 	mir = 1,1,1
 	symMethod = Mirror
-	istg = 0
-	dstg = 0
+	istg = 2
+	dstg = 2
 	sidx = -1
 	sqor = -1
 	sepI = 0
@@ -1957,7 +2163,7 @@ PART
 {
 	part = miniFuselage_4294650150
 	partName = Part
-	pos = 4.067666,6.897492,-3.482642
+	pos = 3.708631,7.476921,-0.8679326
 	attPos = 0,0,0
 	attPos0 = -2.612947,-0.07117213,-0.4067493
 	rot = 0.4999987,0.5000019,0.5000012,0.4999983
@@ -1965,8 +2171,8 @@ PART
 	attRot0 = 2.980232E-08,-0.7071067,2.980232E-08,0.7071068
 	mir = 1,1,1
 	symMethod = Mirror
-	istg = 0
-	dstg = 0
+	istg = 2
+	dstg = 2
 	sidx = -1
 	sqor = -1
 	sepI = 0
@@ -1976,6 +2182,7 @@ PART
 	modSize = (0.0, 0.0, 0.0)
 	link = miniIntake_4294644602
 	link = miniJetEngine_4294637594
+	link = GearFixed_4294619898
 	sym = miniFuselage_4294650592
 	srfN = srfAttach,wingConnector2_4294679458
 	attN = top,miniIntake_4294644602
@@ -2005,16 +2212,16 @@ PART
 {
 	part = miniIntake_4294644602
 	partName = Part
-	pos = 4.067667,6.897492,-3.013888
+	pos = 3.708632,7.476921,-0.3991821
 	attPos = 0,0,0
 	attPos0 = -5.960472E-08,0.4687494,4.373245E-07
-	rot = 0.7071068,-5.043694E-07,-2.852558E-08,0.7071068
+	rot = 0.7071069,-2.627307E-07,2.486429E-08,0.7071069
 	attRot = 0,0,0,1
 	attRot0 = -2.384186E-07,-0.707109,5.662441E-07,0.7071046
 	mir = 1,1,1
 	symMethod = Mirror
-	istg = 0
-	dstg = 0
+	istg = 2
+	dstg = 2
 	sidx = -1
 	sqor = -1
 	sepI = 0
@@ -2102,16 +2309,16 @@ PART
 {
 	part = miniJetEngine_4294637594
 	partName = Part
-	pos = 4.067666,6.897492,-3.951393
+	pos = 3.708631,7.476921,-1.336684
 	attPos = 0,0,0
 	attPos0 = 5.960455E-08,-0.468751,5.163498E-07
-	rot = 0.7071068,-5.043694E-07,-2.852558E-08,0.7071068
+	rot = 0.7071069,-2.627307E-07,2.486429E-08,0.7071069
 	attRot = 0,0,0,1
 	attRot0 = -2.384186E-07,-0.707109,5.662441E-07,0.7071046
 	mir = 1,1,1
 	symMethod = Mirror
 	istg = 0
-	dstg = 0
+	dstg = 2
 	sidx = 1
 	sqor = 0
 	sepI = 0
@@ -2302,9 +2509,106 @@ PART
 }
 PART
 {
+	part = GearFixed_4294619898
+	partName = Part
+	pos = 3.750483,7.175631,-0.8899486
+	attPos = 0,0,0
+	attPos0 = -0.301286,-0.02201607,0.04185003
+	rot = -0.0007253885,0.0055084,0.1305287,0.991429
+	attRot = 0,0,-0.7071067,0.7071067
+	attRot0 = -0.5585862,-0.4273354,-0.4335683,0.5633689
+	mir = 1,1,1
+	symMethod = Mirror
+	istg = 2
+	dstg = 2
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	sym = GearFixed_4294619746
+	srfN = srfAttach,miniFuselage_4294650150
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleLandingGearFixed
+		isEnabled = True
+		BrakeTorque = 20
+		brakesEngaged = False
+		brakesEnabled = True
+		stagingEnabled = True
+		BrakeTorque_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 30
+			stepIncrement = 1
+		}
+		EVENTS
+		{
+			EnableBrakes
+			{
+				active = False
+				guiActive = False
+				guiActiveEditor = True
+				guiActiveUncommand = False
+				guiIcon = Enable brakes
+				guiName = Enable brakes
+				category = Enable brakes
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			DisableBrakes
+			{
+				active = True
+				guiActive = False
+				guiActiveEditor = True
+				guiActiveUncommand = False
+				guiIcon = Disable brakes
+				guiName = Disable brakes
+				category = Disable brakes
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			BrakesAction
+			{
+				actionGroup = Brakes
+			}
+		}
+	}
+}
+PART
+{
 	part = StandardCtrlSrf_4294316690
 	partName = Part
-	pos = 2.411757,7.30423,-4.281592
+	pos = 2.052722,7.88366,-1.666883
 	attPos = 0,0,0
 	attPos0 = -0.9570421,-0.8701234,-6.03136E-08
 	rot = -1.716782E-06,0.7071068,0.7071069,-2.475424E-06
@@ -2312,8 +2616,8 @@ PART
 	attRot0 = -1.192093E-07,-5.631284E-08,3.995194E-08,1
 	mir = 1,1,1
 	symMethod = Mirror
-	istg = 0
-	dstg = 0
+	istg = 2
+	dstg = 2
 	sidx = -1
 	sqor = -1
 	sepI = 0
@@ -2398,7 +2702,7 @@ PART
 {
 	part = StandardCtrlSrf_4294316076
 	partName = Part
-	pos = 4.209492,7.304241,-4.248781
+	pos = 3.850458,7.883671,-1.634072
 	attPos = 0,0,0
 	attPos0 = -2.754778,-0.8373109,-4.307458E-07
 	rot = -1.716782E-06,0.7071068,0.7071069,-2.475424E-06
@@ -2406,8 +2710,8 @@ PART
 	attRot0 = -1.192093E-07,-5.631284E-08,3.995194E-08,1
 	mir = 1,1,1
 	symMethod = Mirror
-	istg = 0
-	dstg = 0
+	istg = 2
+	dstg = 2
 	sidx = -1
 	sqor = -1
 	sepI = 0
@@ -2492,7 +2796,7 @@ PART
 {
 	part = tailfin_4294302212
 	partName = Part
-	pos = 5.16429,7.304242,-3.588395
+	pos = 4.805256,7.883671,-0.9736855
 	attPos = 0,0,0
 	attPos0 = -3.709575,-0.1769239,-4.774156E-07
 	rot = 0.4999989,0.5000018,0.5000012,0.4999983
@@ -2500,8 +2804,8 @@ PART
 	attRot0 = 0,-0.7071069,5.960464E-08,0.7071067
 	mir = 1,1,1
 	symMethod = Mirror
-	istg = 0
-	dstg = 0
+	istg = 2
+	dstg = 2
 	sidx = -1
 	sqor = -1
 	sepI = 0
@@ -2584,9 +2888,389 @@ PART
 }
 PART
 {
+	part = longAntenna_4294732190
+	partName = Part
+	pos = 0.4974412,8.421069,3.324975
+	attPos = 0,0,0
+	attPos0 = 0.01266798,0.5786428,-0.5899972
+	rot = 0.08748874,0.9933074,0.07511747,0.006616224
+	attRot = 0,0,0,1
+	attRot0 = -0.0571855,-0.7554905,0.6492582,-0.06654225
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	srfN = srfAttach,Mark1Cockpit_4294820102
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleAnimateGeneric
+		isEnabled = True
+		aniState = LOCKED
+		animSwitch = True
+		animTime = 0
+		animSpeed = 1
+		deployPercent = 100
+		stagingEnabled = True
+		deployPercent_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 1
+		}
+		EVENTS
+		{
+			Toggle
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiActiveUncommand = False
+				guiIcon = Toggle
+				guiName = Extend
+				category = Toggle
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleDataTransmitter
+		isEnabled = True
+		xmitIncomplete = False
+		stagingEnabled = True
+		EVENTS
+		{
+			StartTransmission
+			{
+				active = True
+				guiActive = True
+				guiActiveUncommand = False
+				guiIcon = Transmit Data
+				guiName = Transmit Data
+				category = Transmit Data
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			TransmitIncompleteToggle
+			{
+				active = True
+				guiActive = True
+				guiActiveUncommand = False
+				guiIcon = Toggle Transmit Incomplete
+				guiName = Require Complete
+				category = Toggle Transmit Incomplete
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			StopTransmission
+			{
+				active = False
+				guiActive = True
+				guiActiveUncommand = False
+				guiIcon = Stop Transmitting
+				guiName = Stop Transmitting
+				category = Stop Transmitting
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	part = sensorThermometer_4294731122
+	partName = Part
+	pos = 0.4938575,8.453634,-0.0204618
+	attPos = 0,0,0
+	attPos0 = 0.009084255,0.595708,-0.6225629
+	rot = -0.7010573,0.0922977,0.09229769,-0.7010571
+	attRot = 0,0,0,1
+	attRot0 = -8.940697E-08,0.1305287,-1.490116E-08,-0.9914446
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 2
+	dstg = 2
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	srfN = srfAttach,Mk1FuselageStructural_4294712934
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleEnviroSensor
+		isEnabled = True
+		sensorActive = False
+		stagingEnabled = True
+		EVENTS
+		{
+			Toggle
+			{
+				active = True
+				guiActive = True
+				guiActiveUncommand = False
+				guiIcon = Toggle Display
+				guiName = Toggle Display
+				category = Toggle Display
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleScienceExperiment
+		isEnabled = True
+		Deployed = False
+		Inoperable = False
+		stagingEnabled = True
+		EVENTS
+		{
+			DeployExperiment
+			{
+				active = True
+				guiActive = True
+				guiActiveUncommand = False
+				guiIcon = Deploy
+				guiName = Deploy
+				category = Deploy
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			CollectDataExternalEvent
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = 
+				guiName = 
+				category = 
+				guiActiveUnfocused = True
+				unfocusedRange = 1.5
+				externalToEVAOnly = True
+			}
+			ReviewDataEvent
+			{
+				active = True
+				guiActive = True
+				guiActiveUncommand = False
+				guiIcon = Review Data
+				guiName = Review Data
+				category = Review Data
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ResetExperiment
+			{
+				active = True
+				guiActive = True
+				guiActiveUncommand = False
+				guiIcon = Reset
+				guiName = Reset
+				category = Reset
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			DeployExperimentExternal
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Deploy
+				guiName = Deploy
+				category = Deploy
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ResetExperimentExternal
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Reset
+				guiName = Reset
+				category = Reset
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			CleanUpExperimentExternal
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Restore
+				guiName = Restore
+				category = Restore
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			DeployAction
+			{
+				actionGroup = None
+			}
+			ResetAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+}
+PART
+{
+	part = batteryPack_4294728430
+	partName = Part
+	pos = 0.4116588,7.785292,0.3442616
+	attPos = 0,0,0
+	attPos0 = -0.07311445,-0.4895693,0.04577981
+	rot = 0,0,1,0
+	attRot = 0,0,0,1
+	attRot0 = 0,0.7071068,0.7071068,0
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 2
+	dstg = 2
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	srfN = srfAttach,science.module_4294466298
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	RESOURCE
+	{
+		name = ElectricCharge
+		amount = 100
+		maxAmount = 100
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
 	part = noseCone_4294643556
 	partName = Part
-	pos = 0.8438076,7.251642,-4.168379
+	pos = 0.4847732,7.831071,-1.55367
 	attPos = 0,0,0
 	attPos0 = 0,-0.937499,-1.803042E-07
 	rot = 0,0.7071068,-0.7071068,0
@@ -2594,8 +3278,8 @@ PART
 	attRot0 = 0,0,-1,0
 	mir = 1,1,1
 	symMethod = Mirror
-	istg = 0
-	dstg = 0
+	istg = 2
+	dstg = 2
 	sidx = -1
 	sqor = -1
 	sepI = 0
@@ -2616,14 +3300,14 @@ PART
 }
 PART
 {
-	part = GearFree_4294478528
+	part = GooExperiment_4294732912
 	partName = Part
-	pos = 0.6795262,6.670664,-2.832753
+	pos = 0.4847732,8.356452,2.880241
 	attPos = 0,0,0
-	attPos0 = -0.1642814,0.3981247,0.5809774
-	rot = 1.788139E-07,0,-0.1305285,0.9914446
+	attPos0 = 5.960464E-08,0.1339087,-0.5253802
+	rot = -0.7098246,3.141368E-08,3.117268E-08,-0.7043786
 	attRot = 0,0,0,1
-	attRot0 = -0.7010571,-0.09229758,-0.09229758,0.7010573
+	attRot0 = 0.003850907,-4.425524E-08,1.704201E-10,0.9999926
 	mir = 1,1,1
 	symMethod = Mirror
 	istg = 0
@@ -2635,8 +3319,7 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	sym = GearFree_4294477796
-	srfN = srfAttach,Mk1FuselageStructural_4294712934
+	srfN = srfAttach,Mark1Cockpit_4294820102
 	EVENTS
 	{
 	}
@@ -2648,45 +3331,34 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleLandingGearFixed
+		name = ModuleAnimateGeneric
 		isEnabled = True
-		BrakeTorque = 20
-		brakesEngaged = False
-		brakesEnabled = True
+		aniState = LOCKED
+		animSwitch = True
+		animTime = 0
+		animSpeed = 1
+		deployPercent = 100
 		stagingEnabled = True
-		BrakeTorque_UIFlight
+		deployPercent_UIFlight
 		{
 			controlEnabled = True
 			minValue = 0
-			maxValue = 30
+			maxValue = 100
 			stepIncrement = 1
 		}
 		EVENTS
 		{
-			EnableBrakes
-			{
-				active = False
-				guiActive = False
-				guiActiveEditor = True
-				guiActiveUncommand = False
-				guiIcon = Enable brakes
-				guiName = Enable brakes
-				category = Enable brakes
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			DisableBrakes
+			Toggle
 			{
 				active = True
 				guiActive = False
 				guiActiveEditor = True
 				guiActiveUncommand = False
-				guiIcon = Disable brakes
-				guiName = Disable brakes
-				category = Disable brakes
-				guiActiveUnfocused = False
-				unfocusedRange = 2
+				guiIcon = Toggle
+				guiName = Deploy
+				category = Toggle
+				guiActiveUnfocused = True
+				unfocusedRange = 5
 				externalToEVAOnly = True
 			}
 			ToggleStaging
@@ -2704,57 +3376,102 @@ PART
 		}
 		ACTIONS
 		{
-			BrakesAction
+			ToggleAction
 			{
-				actionGroup = Brakes
+				actionGroup = None
 			}
 		}
 	}
 	MODULE
 	{
-		name = ModuleSteering
+		name = ModuleScienceExperiment
 		isEnabled = True
-		steeringLocked = False
-		invertSteering = False
+		Deployed = False
+		Inoperable = False
 		stagingEnabled = True
 		EVENTS
 		{
-			UnLockSteering
+			DeployExperiment
 			{
-				active = False
+				active = True
 				guiActive = True
-				guiActiveEditor = True
 				guiActiveUncommand = False
-				guiIcon = Unlock Steering
-				guiName = Unlock Steering
-				category = Unlock Steering
+				guiIcon = Deploy
+				guiName = Deploy
+				category = Deploy
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
 			}
-			LockSteering
+			CollectDataExternalEvent
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = 
+				guiName = 
+				category = 
+				guiActiveUnfocused = True
+				unfocusedRange = 1.5
+				externalToEVAOnly = True
+			}
+			ReviewDataEvent
 			{
 				active = True
 				guiActive = True
-				guiActiveEditor = True
 				guiActiveUncommand = False
-				guiIcon = Lock Steering
-				guiName = Lock Steering
-				category = Lock Steering
+				guiIcon = Review Data
+				guiName = Review Data
+				category = Review Data
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
 			}
-			InvertSteering
+			ResetExperiment
 			{
 				active = True
 				guiActive = True
-				guiActiveEditor = True
 				guiActiveUncommand = False
-				guiIcon = Invert Steering
-				guiName = Invert Steering
-				category = Invert Steering
+				guiIcon = Reset
+				guiName = Reset
+				category = Reset
 				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			DeployExperimentExternal
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Deploy
+				guiName = Deploy
+				category = Deploy
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ResetExperimentExternal
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Reset
+				guiName = Reset
+				category = Reset
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			CleanUpExperimentExternal
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Restore
+				guiName = Restore
+				category = Restore
+				guiActiveUnfocused = True
 				unfocusedRange = 2
 				externalToEVAOnly = True
 			}
@@ -2773,19 +3490,11 @@ PART
 		}
 		ACTIONS
 		{
-			InvertSteeringAction
+			DeployAction
 			{
 				actionGroup = None
 			}
-			LockSteeringAction
-			{
-				actionGroup = None
-			}
-			UnlockSteeringAction
-			{
-				actionGroup = None
-			}
-			ToggleSteeringAction
+			ResetAction
 			{
 				actionGroup = None
 			}
@@ -2794,27 +3503,26 @@ PART
 }
 PART
 {
-	part = GearFree_4294477796
+	part = parachuteRadial_4294623972
 	partName = Part
-	pos = 1.008089,6.670664,-2.832753
+	pos = 0.4847732,8.450629,0.9941745
 	attPos = 0,0,0
-	attPos0 = 0.1642813,0.3981247,0.5809774
-	rot = 1.788139E-07,0,0.1305285,0.9914446
+	attPos0 = 5.960464E-08,0.1603435,-0.6195584
+	rot = -0.7071069,-4.154749E-08,-4.154749E-08,-0.7071067
 	attRot = 0,0,0,1
-	attRot0 = -0.7010571,0.09229758,0.09229758,0.7010573
+	attRot0 = -1.788139E-07,-5.875702E-08,1.776357E-15,-1
 	mir = 1,1,1
-	symMethod = Mirror
-	istg = 0
-	dstg = 0
-	sidx = -1
-	sqor = -1
+	symMethod = Radial
+	istg = 1
+	dstg = 1
+	sidx = 0
+	sqor = 1
 	sepI = 0
 	attm = 1
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	sym = GearFree_4294478528
-	srfN = srfAttach,Mk1FuselageStructural_4294712934
+	srfN = srfAttach,science.module_4294466298
 	EVENTS
 	{
 	}
@@ -2826,112 +3534,116 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleLandingGearFixed
+		name = ModuleParachute
 		isEnabled = True
-		BrakeTorque = 20
-		brakesEngaged = False
-		brakesEnabled = True
+		persistentState = STOWED
+		minAirPressureToOpen = 0.04
+		deployAltitude = 1000
 		stagingEnabled = True
-		BrakeTorque_UIFlight
+		minAirPressureToOpen_UIFlight
 		{
 			controlEnabled = True
-			minValue = 0
-			maxValue = 30
-			stepIncrement = 1
+			minValue = 0.01
+			maxValue = 0.75
+			stepIncrement = 0.01
+		}
+		deployAltitude_UIFlight
+		{
+			controlEnabled = True
+			minValue = 50
+			maxValue = 5000
+			stepIncrement = 50
 		}
 		EVENTS
 		{
-			EnableBrakes
+			Deploy
+			{
+				active = True
+				guiActive = True
+				guiActiveUncommand = False
+				guiIcon = Deploy Chute
+				guiName = Deploy Chute
+				category = Deploy Chute
+				guiActiveUnfocused = True
+				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+			CutParachute
+			{
+				active = True
+				guiActive = True
+				guiActiveUncommand = False
+				guiIcon = Cut Parachute
+				guiName = Cut Parachute
+				category = Cut Parachute
+				guiActiveUnfocused = True
+				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+			Repack
 			{
 				active = False
 				guiActive = False
-				guiActiveEditor = True
 				guiActiveUncommand = False
-				guiIcon = Enable brakes
-				guiName = Enable brakes
-				category = Enable brakes
-				guiActiveUnfocused = False
-				unfocusedRange = 2
+				guiIcon = Repack Chute
+				guiName = Repack Chute
+				category = Repack Chute
+				guiActiveUnfocused = True
+				unfocusedRange = 4
 				externalToEVAOnly = True
 			}
-			DisableBrakes
-			{
-				active = True
-				guiActive = False
-				guiActiveEditor = True
-				guiActiveUncommand = False
-				guiIcon = Disable brakes
-				guiName = Disable brakes
-				category = Disable brakes
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			BrakesAction
-			{
-				actionGroup = Brakes
-			}
-		}
-	}
-	MODULE
-	{
-		name = ModuleSteering
-		isEnabled = True
-		steeringLocked = False
-		invertSteering = False
-		stagingEnabled = True
-		EVENTS
-		{
-			UnLockSteering
+			Disarm
 			{
 				active = False
 				guiActive = True
-				guiActiveEditor = True
 				guiActiveUncommand = False
-				guiIcon = Unlock Steering
-				guiName = Unlock Steering
-				category = Unlock Steering
+				guiIcon = Disarm
+				guiName = Disarm
+				category = Disarm
+				guiActiveUnfocused = True
+				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
 			}
-			LockSteering
+		}
+		ACTIONS
+		{
+			DeployAction
 			{
-				active = True
+				actionGroup = None
+			}
+			CutAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleTestSubject
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+			RunTestEvent
+			{
+				active = False
 				guiActive = True
-				guiActiveEditor = True
 				guiActiveUncommand = False
-				guiIcon = Lock Steering
-				guiName = Lock Steering
-				category = Lock Steering
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			InvertSteering
-			{
-				active = True
-				guiActive = True
-				guiActiveEditor = True
-				guiActiveUncommand = False
-				guiIcon = Invert Steering
-				guiName = Invert Steering
-				category = Invert Steering
+				guiIcon = Run Test
+				guiName = Run Test
+				category = Run Test
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
@@ -2951,64 +3663,11 @@ PART
 		}
 		ACTIONS
 		{
-			InvertSteeringAction
-			{
-				actionGroup = None
-			}
-			LockSteeringAction
-			{
-				actionGroup = None
-			}
-			UnlockSteeringAction
-			{
-				actionGroup = None
-			}
-			ToggleSteeringAction
-			{
-				actionGroup = None
-			}
 		}
-	}
-}
-PART
-{
-	part = fuelLine_4294362038
-	partName = CompoundPart
-	pos = 0.256592,7.094298,-1.720794
-	attPos = 0,0,0
-	attPos0 = -0.5872155,-0.3649185,0.1573439
-	rot = 0.7010576,0.0922956,0.09229548,0.7010574
-	attRot = 0,0,0,1
-	attRot0 = 8.940696E-08,0.1305256,-8.195638E-08,0.9914449
-	mir = 1,1,1
-	symMethod = Mirror
-	istg = 0
-	dstg = 0
-	sidx = -1
-	sqor = -1
-	sepI = 0
-	attm = 1
-	modCost = 0
-	modMass = 0
-	modSize = (0.0, 0.0, 0.0)
-	sym = fuelLine_4294361020
-	srfN = srfAttach,MK1Fuselage_4294368504
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-		tgt = 4294650592
-		pos = -2.35559,-1.817497,-0.3080171
-		rot = 0,-0.2588219,-1.953195E-07,0.965925
-		dir = -0.7875204,-0.6076245,-0.1029764
 	}
 	MODULE
 	{
-		name = CModuleLinkedMesh
+		name = ModuleDragModifier
 		isEnabled = True
 		stagingEnabled = True
 		EVENTS
@@ -3032,92 +3691,7 @@ PART
 	}
 	MODULE
 	{
-		name = CModuleFuelLine
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-}
-PART
-{
-	part = fuelLine_4294361020
-	partName = CompoundPart
-	pos = 1.431023,7.094298,-1.720794
-	attPos = 0,0,0
-	attPos0 = 0.5872155,-0.3649185,0.1573439
-	rot = 0.09229545,0.7010574,0.7010577,0.09229553
-	attRot = 0,0,0,1
-	attRot0 = -6.705523E-08,0.991445,1.788139E-07,0.1305255
-	mir = 1,1,1
-	symMethod = Mirror
-	istg = 0
-	dstg = 0
-	sidx = -1
-	sqor = -1
-	sepI = 0
-	attm = 1
-	modCost = 0
-	modMass = 0
-	modSize = (0.0, 0.0, 0.0)
-	sym = fuelLine_4294362038
-	srfN = srfAttach,MK1Fuselage_4294368504
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-		tgt = 4294650150
-		pos = -2.355591,-1.817496,0.3080179
-		rot = 0,0.2588223,1.022374E-06,0.965925
-		dir = -0.7875209,-0.6076245,0.1029764
-	}
-	MODULE
-	{
-		name = CModuleLinkedMesh
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-			ToggleStaging
-			{
-				active = True
-				guiActive = False
-				guiActiveUncommand = False
-				guiIcon = Disable Staging
-				guiName = Disable Staging
-				category = Disable Staging
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = CModuleFuelLine
+		name = ModuleDragModifier
 		isEnabled = True
 		stagingEnabled = True
 		EVENTS
